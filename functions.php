@@ -102,7 +102,8 @@ function closeclient_setup() {
 		array(
 			'menu-1'   => esc_html__( 'Primary', 'closeclient' ),
 			'footer-1' => esc_html__( 'Footer Solutions', 'closeclient' ),
-			'footer-2' => esc_html__( 'Footer Resources', 'closeclient' ),
+			'footer-2' => esc_html__( 'Footer Strategic', 'closeclient' ),
+			'footer-3' => esc_html__( 'Footer Connect', 'closeclient' ),
 		)
 	);
 
@@ -465,9 +466,20 @@ function closeclient_footer_1_fallback() {
  */
 function closeclient_footer_2_fallback() {
     echo '<ul class="list-unstyled small text-muted">';
-    echo '<li><a href="' . esc_url( home_url( '/strategic-assets' ) ) . '">Strategic Assets</a></li>';
-    echo '<li><a href="' . esc_url( home_url( '/the-method' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_about', 'The Method' ) ) . '</a></li>';
-    echo '<li><a href="#audit">Authority Audit</a></li>';
+    echo '<li><a href="' . esc_url( home_url( '/strategic-assets' ) ) . '">Authority Blueprints</a></li>';
+    echo '<li><a href="' . esc_url( home_url( '/training' ) ) . '">VSL Protocol</a></li>';
+    echo '<li><a href="' . esc_url( home_url( '/the-method' ) ) . '">The Framework</a></li>';
+    echo '</ul>';
+}
+
+/**
+ * Footer 3 Fallback
+ */
+function closeclient_footer_3_fallback() {
+    echo '<ul class="list-unstyled small text-muted">';
+    echo '<li><a href="' . esc_url( home_url( '/about' ) ) . '">Our Mission</a></li>';
+    echo '<li><a href="' . esc_url( home_url( '/blog' ) ) . '">Strategic Insights</a></li>';
+    echo '<li><a href="' . esc_url( home_url( '/contact' ) ) . '">Direct Command</a></li>';
     echo '</ul>';
 }
 

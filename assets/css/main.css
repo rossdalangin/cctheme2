@@ -522,6 +522,20 @@ input:focus, textarea:focus, select:focus {
     100% { left: 200%; }
 }
 
+.ticker-mode-content {
+    animation: ticker-scroll 30s linear infinite;
+    width: max-content;
+}
+
+@keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
 .authority-ribbon:hover {
     background: rgba(255, 255, 255, 0.02);
 }
@@ -537,17 +551,17 @@ input:focus, textarea:focus, select:focus {
     flex-direction: column;
 }
 .footer-column:hover {
-    border-color: rgba(var(--c-accent-rgb), 0.3);
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    border-color: var(--c-accent);
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.6), 0 0 40px rgba(var(--c-accent-rgb), 0.1);
 }
 .footer-title {
     color: var(--c-white);
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     font-weight: 900;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin-bottom: var(--s-md);
     position: relative;
     display: inline-block;
@@ -1478,6 +1492,11 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
+.footer-column.footer-command {
+    background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(99, 102, 241, 0.05) 100%);
+    border-color: rgba(var(--c-accent-rgb), 0.2);
+}
+
 .sidebar-widgets, .widget-area {
     padding: 0;
 }
@@ -1956,6 +1975,17 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(0.8); }
 }
+
+.status-dot-mini {
+    width: 6px; height: 6px;
+    background: #10B981;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+    animation: pulse-status 2s infinite;
+}
+
+.letter-spacing-xs { letter-spacing: 0.05em; }
 
 @keyframes float-shapes {
     0% { transform: translate3d(0, 0, 0) scale(1); }
