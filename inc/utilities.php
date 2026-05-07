@@ -330,8 +330,10 @@ function closeclient_generate_cpt_data() {
             'Vortex Authority Funnels' => 'Dynamic, automated lead-intake systems that function as your most elite, 24/7 global sales associate. Our funnels are designed to liquidate lead costs while building immense perceived value, ensuring you only speak with highly qualified, ready-to-buy clients.'
         ),
         'portfolio' => array(
-            'The 340% Authority Pivot' => 'Re-architecting the digital ecosystem for an international strategy firm. By implementing our "Authority Flywheel" framework, we increased lead quality by 340% and enabled the partner to manage $500k/mo in new inquiry volume with zero additional headcount.',
-            'The $10M Architectural Overhaul' => 'How we engineered the core digital infrastructure for a world-class education brand. By optimizing technical performance and strategic positioning, we helped them achieve eight figures in attributable revenue within 12 months of deployment.'
+            'The 340% Authority Pivot' => 'Re-architecting the digital ecosystem for a global consulting firm. By implementing our "Authority Flywheel" framework, we liquidated lead-cost and enabled the partner to manage $500k/mo in new inquiry volume with zero additional headcount.',
+            'The $10M Architectural Overhaul' => 'How we engineered the core digital infrastructure for a world-class education brand. By optimizing technical performance and strategic positioning, we helped them achieve eight figures in attributable revenue within 12 months of deployment.',
+            'Elite Performance Scaling' => 'Engineering a high-fidelity revenue engine for a premium SaaS brand. Our architectural protocol resulted in a 420% increase in deal velocity and absolute market dominance within 6 months.',
+            'Strategic Authority Protocol' => 'Deploying a high-performance digital ecosystem for a top-tier coaching brand. We engineered the tactical infrastructure necessary to command a 5x increase in high-ticket inquiry volume.'
         ),
         'testimonial' => array(
             'Strategic Authority Partner' => 'CloseClient didn\'t just build a "website"; they engineered a high-fidelity revenue engine. Our lead quality tripled within 30 days of deployment, and for the first time, our digital presence actually matches the caliber of our expertise.'
@@ -377,10 +379,16 @@ function closeclient_generate_cpt_data() {
                     update_post_meta($pid, '_testimonial_result', '3.4x ROI');
                 }
                 if ($type === 'portfolio') {
-                    update_post_meta($pid, '_portfolio_metric', '340% Growth');
-                    update_post_meta($pid, '_portfolio_challenge', 'Inconsistent lead flow and low-authority positioning.');
-                    update_post_meta($pid, '_portfolio_solution', 'Full authority architecture build and Vortex funnel implementation.');
-                    update_post_meta($pid, '_portfolio_outcome', '$1.2M in new attributable revenue.');
+                    $metrics = array(
+                        'The 340% Authority Pivot' => '340% Lead Quality',
+                        'The $10M Architectural Overhaul' => '$10M Revenue',
+                        'Elite Performance Scaling' => '420% Deal Velocity',
+                        'Strategic Authority Protocol' => '5x Inquiry Volume'
+                    );
+                    update_post_meta($pid, '_portfolio_metric', isset($metrics[$title]) ? $metrics[$title] : 'Strategic ROI');
+                    update_post_meta($pid, '_portfolio_challenge', 'Inconsistent high-ticket lead flow and structural authority leaks.');
+                    update_post_meta($pid, '_portfolio_solution', 'Full-stack high-fidelity architecture build and Vortex funnel implementation.');
+                    update_post_meta($pid, '_portfolio_outcome', 'Absolute market dominance and multi-year attributable revenue growth.');
                 }
                 if ($type === 'service') {
                     update_post_meta($pid, '_service_blueprint', 'Technical Audit, UI/UX Strategy, High-Fidelity Development, CRM Integration');
