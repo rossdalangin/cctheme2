@@ -9,7 +9,7 @@ function closeclient_register_section_shortcodes() {
     $sections = array(
         'hero', 'authority', 'vsl', 'stats', 'about', 'services',
         'portfolio', 'process', 'pricing', 'testimonials', 'team',
-        'lead_magnet', 'newsletter', 'faq', 'booking_cta', 'products', 'logo_ticker'
+        'lead_magnet', 'newsletter', 'faq', 'booking_cta', 'products', 'logo_ticker', 'thank_you'
     );
 
     foreach ( $sections as $section ) {

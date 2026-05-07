@@ -320,13 +320,13 @@ function closeclient_reset_defaults() {
 function closeclient_generate_cpt_data() {
     $cpts = array(
         'service' => array(
-            'Authority Architecture' => 'We engineer the technical infrastructure required to position you as the pre-eminent leader in your niche. High-fidelity, performance-optimized, and built for conversion.',
-            'Revenue Engineering' => 'Strategic implementation of psychological triggers and frictionless checkout systems designed to accelerate your cash-collected metrics.',
-            'Vortex Funnels' => 'Dynamic lead-intake systems that pre-qualify and filter prospects before they ever reach your calendar.'
+            'High-Performance Web Design' => 'We architect world-class digital homes for elite coaches. High-fidelity, authority-first, and engineered for conversion.',
+            'Revenue Architecture' => 'Strategic implementation of psychological triggers and frictionless conversion systems designed to accelerate your cash-collected metrics.',
+            'Vortex Authority Engines' => 'Dynamic lead-intake systems that pre-qualify, position, and close premium clients before they ever reach your calendar.'
         ),
         'portfolio' => array(
-            'Global Consultancy Scale' => 'Re-architecting the digital presence of an international strategy firm to handle $500k/mo in new inquiry volume.',
-            'The $10M System Build' => 'How we engineered the core infrastructure for a leading education brand to hit eight figures in attribution.'
+            '7-Figure Coach Transformation' => 'Re-architecting the digital presence of a global leadership consultant to handle $250k/mo in new inquiry volume.',
+            'The Authority Engine Build' => 'How we engineered the core infrastructure for a leading high-ticket expert to hit eight figures in attributable revenue.'
         ),
         'testimonial' => array(
             'Elite Partner' => 'CloseClient didn\'t just build a website; they built a revenue engine. Our lead quality has tripled since deployment.'
@@ -394,13 +394,13 @@ function closeclient_generate_pages() {
 
     $pages = array(
         'Home' => array('content' => '[closeclient_hero][closeclient_logo_ticker][closeclient_authority][closeclient_stats][closeclient_portfolio][closeclient_services][closeclient_vsl][closeclient_process][closeclient_testimonials][closeclient_pricing][closeclient_faq][closeclient_booking_cta]', 'template' => ''),
-        'Services' => array('content' => '[closeclient_hero][closeclient_services][closeclient_process][closeclient_pricing][closeclient_booking_cta]', 'template' => 'template-services.php'),
-        'About' => array('content' => '[closeclient_team][closeclient_authority][closeclient_booking_cta]', 'template' => 'template-about.php'),
-        'Contact' => array('content' => '[closeclient_booking_cta]', 'template' => 'template-contact.php'),
+        'Solutions' => array('content' => '[closeclient_hero][closeclient_services][closeclient_process][closeclient_pricing][closeclient_booking_cta]', 'template' => 'template-services.php'),
+        'The Method' => array('content' => '[closeclient_about][closeclient_team][closeclient_authority][closeclient_booking_cta]', 'template' => 'template-about.php'),
+        'Book Your Audit' => array('content' => '[closeclient_booking_cta]', 'template' => 'template-contact.php'),
         'Insights' => array('content' => '', 'template' => 'home.php'),
         'Success Stories' => array('content' => '', 'template' => 'archive-portfolio.php'),
         'Success Blueprint' => array('content' => '[closeclient_lead_magnet]', 'template' => 'template-lead-magnet.php'),
-        'Thank You' => array('content' => '<h2>Request Received</h2>', 'template' => 'template-thank-you.php'),
+        'Thank You' => array('content' => '[closeclient_thank_you]', 'template' => 'template-thank-you.php'),
     );
 
     foreach ( $pages as $title => $pdata ) {
