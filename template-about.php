@@ -7,8 +7,8 @@
 
 get_header();
 
-$headline = get_theme_mod( 'closeclient_about_headline_tpl', 'Digital Architects for Elite Brands' );
-$text     = get_theme_mod( 'closeclient_about_text_tpl', 'Engineering digital experiences that command attention and drive exponential growth.' );
+$headline = get_theme_mod( 'closeclient_about_headline_tpl', 'Digital Architects for World-Class Experts' );
+$text     = get_theme_mod( 'closeclient_about_text_tpl', 'Engineering premium digital experiences that command authority, pre-qualify leads, and drive exponential growth for high-ticket service brands.' );
 ?>
 
 <main id="primary" class="site-main about-page">

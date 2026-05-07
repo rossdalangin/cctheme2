@@ -15,17 +15,17 @@
     </div>
     <div class="container hero-content-wrapper text-center">
         <h1 class="hero-headline">
-            <span class="gradient-text <?php echo get_theme_mod( 'closeclient_hero_typewriter', false ) ? 'typewriter-text' : ''; ?>" data-text="<?php echo esc_attr( get_theme_mod( 'closeclient_hero_headline', 'We Architect High-Fidelity Digital Machines for the 1%.' ) ); ?>">
+            <span class="gradient-text <?php echo get_theme_mod( 'closeclient_hero_typewriter', false ) ? 'typewriter-text' : ''; ?>" data-text="<?php echo esc_attr( get_theme_mod( 'closeclient_hero_headline', 'We Engineer High-Performance Authority Machines for Elite Coaches.' ) ); ?>">
                 <?php
                 if ( ! get_theme_mod( 'closeclient_hero_typewriter', false ) ) {
-                    echo esc_html( get_theme_mod( 'closeclient_hero_headline', 'We Architect High-Fidelity Digital Machines for the 1%.' ) );
+                    echo esc_html( get_theme_mod( 'closeclient_hero_headline', 'We Engineer High-Performance Authority Machines for Elite Coaches.' ) );
                 }
                 ?>
             </span>
         </h1>
 
         <div class="container-narrow">
-            <p class="hero-subheadline"><?php echo esc_html( get_theme_mod( 'closeclient_hero_subheadline', 'Stop settling for "pretty" websites. We engineer high-performance authority engines that pre-qualify, position, and close premium clients — automatically.' ) ); ?></p>
+            <p class="hero-subheadline"><?php echo esc_html( get_theme_mod( 'closeclient_hero_subheadline', 'Stop settling for "pretty" websites. We architect high-fidelity digital infrastructure that positions your expertise, pre-qualifies your leads, and closes premium clients — on autopilot.' ) ); ?></p>
         </div>
 
         <div class="hero-cta mb-5">

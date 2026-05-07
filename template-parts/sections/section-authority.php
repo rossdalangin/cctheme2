@@ -6,7 +6,7 @@
  */
 ?>
 
-<section class="section section-authority text-center reveal">
+<section class="section section-lg section-authority text-center reveal">
     <div class="container py-xl glass rounded-xl border-accent-soft">
         <p class="section-tag small mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_authority_tag', 'POWERING WORLD-CLASS AUTHORITIES' ) ); ?></p>
         <div class="container-narrow">

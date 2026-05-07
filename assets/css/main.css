@@ -675,9 +675,9 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem;
 select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1.5rem center; background-size: 1rem; padding-right: 3.5rem; }
 
 /* Post Body Typography & Content */
-.post-body p { margin-bottom: var(--s-md); font-size: 1.15rem; color: var(--c-text-muted); }
-.post-body h2 { margin-top: var(--s-lg); margin-bottom: var(--s-md); font-size: 2.25rem; }
-.post-body h3 { margin-top: var(--s-md); margin-bottom: var(--s-sm); font-size: 1.75rem; }
+.post-body p { margin-bottom: 1.8rem; font-size: 1.15rem; color: var(--c-text-muted); line-height: 1.8; }
+.post-body h2 { margin-top: 2.5rem; margin-bottom: 1.5rem; font-size: 2.25rem; }
+.post-body h3 { margin-top: 2rem; margin-bottom: 1.2rem; font-size: 1.75rem; }
 .post-body ul, .post-body ol { margin-bottom: var(--s-md); padding-left: var(--s-md); }
 .post-body li { margin-bottom: var(--s-xs); color: var(--c-text-muted); }
 .post-body blockquote { border-left: 4px solid var(--c-accent); padding: var(--s-md); background: rgba(255, 255, 255, 0.02); border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: var(--s-md); font-style: italic; }
@@ -1228,8 +1228,8 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
 }
 .blog-posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: var(--s-sm);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-lg);
 }
 
 /* Sticky Blog CTA Enhancements */
@@ -1460,7 +1460,7 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     box-shadow: 0 0 20px rgba(var(--c-accent-rgb), 0.1);
 }
 
-.faq-item.active {
+.faq-item.faq-open {
     border-color: var(--c-accent);
     background: rgba(255, 255, 255, 0.03);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -1487,7 +1487,7 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     justify-content: center;
 }
 
-.faq-item.active .faq-icon {
+.faq-item.faq-open .faq-icon {
     transform: rotate(90deg);
 }
 
@@ -1498,7 +1498,7 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.faq-item.active .faq-body {
+.faq-item.faq-open .faq-body {
     max-height: 500px;
     opacity: 1;
 }
@@ -1714,6 +1714,8 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     position: relative;
     max-width: 1100px;
     width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
     z-index: 10000;
     animation: modalIn 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     padding: clamp(40px, 6vw, 80px) !important;

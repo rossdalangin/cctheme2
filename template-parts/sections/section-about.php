@@ -5,7 +5,7 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_about_headline_home', 'We Build High-Performance Digital Infrastructure for the 1%.' );
+$headline = get_theme_mod( 'closeclient_about_headline_home', 'We Engineer High-Performance Digital Infrastructure for Elite Coaches & Consultants.' );
 $p1 = get_theme_mod( 'closeclient_about_text_p1', 'Most digital agencies focus on "pretty" designs. We focus on engineering high-fidelity digital machines that act as your top-performing sales associates.' );
 $p2 = get_theme_mod( 'closeclient_about_text_p2', 'By combining technical excellence with conversion psychology, we build the infrastructure that allows elite brands to scale without friction.' );
 $btn = get_theme_mod( 'closeclient_about_button_text', 'Explore Our Methodology' );
@@ -24,7 +24,7 @@ $img = get_theme_mod( 'closeclient_about_image' );
             </div>
 
             <div class="about-content bento-span-7 glass p-5 p-md-5 reveal">
-                <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_tag_home', 'OUR PHILOSOPHY' ) ); ?></span>
+                <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_tag_home', 'THE METHODOLOGY' ) ); ?></span>
                 <h2 class="section-headline gradient-text mb-5"><?php echo esc_html( $headline ); ?></h2>
                 <div class="about-text mb-5">
                     <p class="lead text-muted mb-4"><?php echo esc_html( $p1 ); ?></p>
