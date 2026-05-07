@@ -14,11 +14,12 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header section section-lg text-center reveal bg-dark overflow-hidden">
+			<header class="page-header section section-xl text-center reveal bg-dark overflow-hidden">
                 <div class="mesh-gradient"></div>
+                <div class="hero-bg-glow"></div>
                 <div class="container">
-                    <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_label_search', 'SEARCH RESULTS' ) ); ?></span>
-				<h1 class="hero-headline gradient-text">
+                    <span class="section-tag reveal"><?php echo esc_html( get_theme_mod( 'closeclient_label_search', 'SEARCH RESULTS' ) ); ?></span>
+				<h1 class="hero-headline gradient-text mb-4">
 					<?php
 					printf( esc_html( get_theme_mod( 'closeclient_label_search_query', 'Search Results for: %s' ) ), '<span>' . get_search_query() . '</span>' );
 					?>

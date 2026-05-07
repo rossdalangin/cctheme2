@@ -25,15 +25,17 @@ add_action( 'admin_menu', 'closeclient_authority_hub_page' );
 
 function closeclient_render_authority_hub() {
     ?>
-    <div class="wrap authority-hub-wrap" style="max-width: 1000px; margin: 40px auto; font-family: 'Inter', sans-serif;">
-        <div style="background: #020203; color: #fff; padding: 60px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <span style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.5em; color: #6366F1; text-transform: uppercase; display: block; margin-bottom: 20px;">CENTRAL COMMAND</span>
-                <h1 style="font-size: 3rem; font-weight: 900; letter-spacing: -0.05em; margin-bottom: 20px; line-height: 1;">Authority Growth Hub</h1>
-                <p style="font-size: 1.1rem; color: #94A3B8; max-width: 600px; margin: 0 auto; line-height: 1.6;">The definitive tactical repository for 8-figure agency scale and high-ticket authority engineering.</p>
+    <div class="wrap authority-hub-wrap" style="max-width: 1200px; margin: 40px auto; font-family: 'Inter', sans-serif;">
+        <div style="background: #020203; color: #fff; padding: 80px 60px; border-radius: 32px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 50px 120px rgba(0,0,0,0.8); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(99,102,241,0.05) 0%, transparent 70%); pointer-events: none;"></div>
+
+            <div style="text-align: center; margin-bottom: 70px; position: relative; z-index: 1;">
+                <span style="font-size: 0.7rem; font-weight: 900; letter-spacing: 0.6em; color: #6366F1; text-transform: uppercase; display: block; margin-bottom: 25px; opacity: 0.8;">CENTRAL COMMAND PROTOCOL</span>
+                <h1 style="font-size: 3.5rem; font-weight: 900; letter-spacing: -0.06em; margin-bottom: 25px; line-height: 0.9; color: #fff;">Authority Growth Hub</h1>
+                <p style="font-size: 1.15rem; color: #94A3B8; max-width: 650px; margin: 0 auto; line-height: 1.7; font-weight: 500;">The definitive tactical repository for 8-figure agency scale and high-fidelity authority engineering.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px;">
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-top: 50px; position: relative; z-index: 1;">
                 <?php
                 $docs = array(
                     'AUTHORITY_PLAYBOOK.md' => array('title' => 'Authority Playbook', 'icon' => '📖', 'desc' => 'The definitive protocol for absolute market dominance.'),
@@ -42,12 +44,25 @@ function closeclient_render_authority_hub() {
                     'MARKETING_PLAN.md' => array('title' => 'Tactical Acquisition', 'icon' => '🎯', 'desc' => 'Zero-friction client acquisition and authority systems.')
                 );
 
-                foreach ( $docs as $file => $data ) : ?>
-                    <div style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
-                        <div style="font-size: 2rem; margin-bottom: 20px;"><?php echo $data['icon']; ?></div>
-                        <h3 style="color: #fff; margin-bottom: 10px; font-size: 1.25rem; font-weight: 800;"><?php echo $data['title']; ?></h3>
-                        <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 25px; line-height: 1.5;"><?php echo $data['desc']; ?></p>
-                        <a href="<?php echo esc_url( home_url( '/' . $file ) ); ?>" target="_blank" style="display: inline-block; background: #6366F1; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 100px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;">Read Strategic Document →</a>
+                foreach ( $docs as $file => $data ) :
+                    $content = '';
+                    $file_path = get_template_directory() . '/' . $file;
+                    if ( file_exists( $file_path ) ) {
+                        $content = file_get_contents( $file_path );
+                        // Basic markdown preview (first 150 chars)
+                        $preview = wp_trim_words( strip_tags($content), 20 );
+                    } else {
+                        $preview = "Asset currently undergoing high-fidelity technical audit.";
+                    }
+                    ?>
+                    <div style="background: rgba(255,255,255,0.03); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                            <div style="font-size: 2.5rem;"><?php echo $data['icon']; ?></div>
+                            <span style="font-size: 0.6rem; color: #6366F1; border: 1px solid #6366F1; padding: 4px 10px; border-radius: 100px; font-weight: 900; letter-spacing: 0.1em;">ENCRYPTED</span>
+                        </div>
+                        <h3 style="color: #fff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 900; letter-spacing: -0.02em;"><?php echo $data['title']; ?></h3>
+                        <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; font-style: italic;">"<?php echo esc_html($preview); ?>..."</p>
+                        <a href="<?php echo esc_url( home_url( '/' . $file ) ); ?>" target="_blank" style="display: inline-block; background: #6366F1; color: #fff; text-decoration: none; padding: 14px 28px; border-radius: 100px; font-weight: 900; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; box-shadow: 0 10px 30px rgba(99,102,241,0.3);">Access Strategic Data →</a>
                     </div>
                 <?php endforeach; ?>
             </div>

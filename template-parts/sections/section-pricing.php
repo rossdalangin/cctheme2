@@ -5,8 +5,8 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_pricing_headline', 'Investment Tiers' );
-$tag      = get_theme_mod( 'closeclient_pricing_tag', 'INVESTMENT' );
+$headline = get_theme_mod( 'closeclient_pricing_headline', 'Strategic Investment' );
+$tag      = get_theme_mod( 'closeclient_pricing_tag', 'THE COMMITMENT' );
 ?>
 
 <section id="pricing" class="section section-lg section-pricing bg-dark">
@@ -54,9 +54,9 @@ $tag      = get_theme_mod( 'closeclient_pricing_tag', 'INVESTMENT' );
             else :
                 // Fallback
                 $plans = array(
-                    array('name' => 'Foundation', 'price' => '$2,997', 'featured' => false, 'features' => array('Authority Audit', 'Infrastructure Build', 'Core Copy')),
-                    array('name' => 'Ecosystem', 'price' => '$5,997', 'featured' => true, 'features' => array('Everything in Foundation', 'Vortex Funnel', 'Lead Intake Automation')),
-                    array('name' => 'Mastery', 'price' => '$9,997', 'featured' => false, 'features' => array('Everything in Ecosystem', 'Omnipresent Branding', 'White-Glove Support'))
+                    array('name' => 'The Foundation', 'price' => '$4,997', 'featured' => false, 'features' => array('Authority Audit', 'Technical Infrastructure Build', 'Performance Copywriting')),
+                    array('name' => 'The Ecosystem', 'price' => '$9,997', 'featured' => true, 'features' => array('Strategic Ecosystem Build', 'Vortex Automated Funnel', 'Lead Intake Architecture')),
+                    array('name' => 'The Mastery', 'price' => '$19,997', 'featured' => false, 'features' => array('The Complete Authority Protocol', 'Omnipresent Positioning', 'White-Glove Architectural Support'))
                 );
                 foreach ( $plans as $plan ) : ?>
                     <div class="pricing-item glass reveal p-4 p-md-5 d-flex flex-column h-100 <?php echo $plan['featured'] ? 'featured-plan' : ''; ?>">

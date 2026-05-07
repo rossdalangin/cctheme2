@@ -14,6 +14,10 @@
         <div class="shape shape-2"></div>
     </div>
     <div class="container hero-content-wrapper text-center">
+        <div class="hero-status-bar mb-4 reveal no-reveal">
+            <span class="status-dot"></span>
+            <span class="status-text uppercase letter-spacing-lg small fw-black opacity-50">SYSTEM STATUS: ARCHITECTING DOMINANCE</span>
+        </div>
         <h1 class="hero-headline">
             <span class="gradient-text <?php echo get_theme_mod( 'closeclient_hero_typewriter', false ) ? 'typewriter-text' : ''; ?>" data-text="<?php echo esc_attr( get_theme_mod( 'closeclient_hero_headline', 'We Engineer High-Fidelity Digital Infrastructure for 8-Figure Authorities.' ) ); ?>">
                 <?php

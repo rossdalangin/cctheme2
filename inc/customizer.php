@@ -46,6 +46,7 @@ function closeclient_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'closeclient_utilities', array( 'title' => '5. Theme Setup & Tools' ) );
     $wp_customize->add_section( 'closeclient_visibility', array( 'title' => '0. Visibility', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_vsl', array( 'title' => '2. VSL Training', 'panel' => 'closeclient_homepage_panel' ) );
+    $wp_customize->add_section( 'closeclient_assets', array( 'title' => 'Strategic Assets', 'panel' => 'closeclient_pages_panel' ) );
 
     // Helpers
     $labels = array(
@@ -230,6 +231,7 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_show_team' => 'Show Team Section',
         'closeclient_show_testimonials' => 'Show Testimonials Section',
         'closeclient_show_vsl' => 'Show VSL Section',
+        'closeclient_show_strategic_assets' => 'Show Strategic Assets Section',
         'closeclient_social_facebook' => 'Facebook URL',
         'closeclient_social_instagram' => 'Instagram URL',
         'closeclient_social_linkedin' => 'LinkedIn URL',
@@ -265,6 +267,8 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_audit_modal_email_placeholder' => 'Audit Modal: Email Placeholder',
         'closeclient_audit_modal_btn' => 'Audit Modal: Button Text',
         'closeclient_authority_desc' => 'Authority Section: Description',
+        'closeclient_assets_headline' => 'Strategic Assets Headline',
+        'closeclient_assets_desc' => 'Strategic Assets Description',
         'closeclient_footer_col2_title' => 'Footer Col 2 Title',
         'closeclient_footer_col3_title' => 'Footer Col 3 Title',
         'closeclient_footer_col4_title' => 'Footer Col 4 Title',

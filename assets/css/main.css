@@ -274,6 +274,17 @@ input:focus, textarea:focus, select:focus {
 /* --- Section Layouts --- */
 .section { padding: var(--s-xl) 0; position: relative; }
 
+.section-services::before, .section-process::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(var(--c-border) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+}
+
 .section-lg { padding: clamp(80px, 12vw, 160px) 0; }
 .section-xl { padding: clamp(120px, 18vw, 240px) 0; }
 .section-sm { padding: var(--s-lg) 0; }
@@ -484,6 +495,22 @@ input:focus, textarea:focus, select:focus {
     background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(5px);
     transition: all 0.5s ease;
+    border-top: 1px solid var(--c-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.authority-ribbon::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
+    animation: ribbon-shimmer 10s infinite linear;
+}
+
+@keyframes ribbon-shimmer {
+    0% { left: -100%; }
+    100% { left: 200%; }
 }
 
 .authority-ribbon:hover {
@@ -752,7 +779,7 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
 .post-body li { margin-bottom: var(--s-sm); color: var(--c-text-muted); }
 
 .post-body blockquote {
-    border-left: 4px solid var(--c-accent);
+    border-left: 6px solid var(--c-accent);
     padding: 40px 60px;
     background: var(--c-onyx-light);
     border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
@@ -1609,6 +1636,48 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     background: none;
 }
 
+/* Strategic Assets Enhancements */
+.asset-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.asset-card::after {
+    content: "STRATEGIC ASSET";
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: var(--c-accent);
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 900;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+.asset-card::before {
+    content: "CONFIDENTIAL";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--c-white);
+    opacity: 0.02;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 0;
+}
+
+.asset-card:hover {
+    border-color: var(--c-accent);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 40px 100px rgba(var(--c-accent-rgb), 0.2);
+}
+
 /* Related Posts */
 .related-posts-grid {
     display: grid;
@@ -1854,6 +1923,29 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     width: 500px; height: 500px;
     background: var(--c-cyan);
     animation-delay: -5s;
+}
+
+.hero-status-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 24px;
+    border-radius: 100px;
+    border: 1px solid var(--c-border);
+}
+
+.status-dot {
+    width: 8px; height: 8px;
+    background: #10B981;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #10B981;
+    animation: pulse-status 2s infinite;
+}
+
+@keyframes pulse-status {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
 }
 
 @keyframes float-shapes {
