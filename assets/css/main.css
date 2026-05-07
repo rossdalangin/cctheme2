@@ -1255,6 +1255,13 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     margin-bottom: var(--s-md);
 }
 
+.post-sidebar h1, .post-sidebar h2, .post-sidebar h3, .post-sidebar h4, .post-sidebar h5, .post-sidebar h6 {
+    font-size: 1.25rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: var(--s-sm);
+}
+
 .sidebar-widgets {
     padding: 0;
 }
@@ -1907,6 +1914,13 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     border-radius: 100px;
     padding-left: 20px;
 }
+
+/* WP Block Search Sidebar Fix */
+.wp-block-search { display: flex; flex-direction: column; gap: 10px; }
+.wp-block-search__label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 5px; display: block; }
+.wp-block-search__inside-wrapper { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+.wp-block-search__input { width: 100% !important; margin: 0 !important; }
+.wp-block-search__button { width: 100% !important; margin: 0 !important; justify-content: center; }
 
 /* --- Archive Filter Bar --- */
 .archive-filters .filter-link {

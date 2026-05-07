@@ -320,13 +320,13 @@ function closeclient_reset_defaults() {
 function closeclient_generate_cpt_data() {
     $cpts = array(
         'service' => array(
-            'High-Performance Web Design' => 'We architect world-class digital homes for elite coaches. High-fidelity, authority-first, and engineered for conversion.',
-            'Revenue Architecture' => 'Strategic implementation of psychological triggers and frictionless conversion systems designed to accelerate your cash-collected metrics.',
-            'Vortex Authority Engines' => 'Dynamic lead-intake systems that pre-qualify, position, and close premium clients before they ever reach your calendar.'
+            'High-Performance Authority Engineering' => 'We don\'t just build "pretty" websites. We architect high-performance digital infrastructure for world-class coaches and consultants. Our systems are engineered to position you as the only logical choice in your niche, pre-qualify every lead, and accelerate deal velocity through strategic conversion psychology.',
+            'Conversion-First UI/UX Systems' => 'Strategic implementation of psychological triggers, frictionless user journeys, and high-fidelity design systems. We engineer every pixel with a singular focus: transforming your expertise into a measurable revenue engine that operates with zero-latency.',
+            'Vortex Authority Funnels' => 'Dynamic, automated lead-intake systems that act as your top-performing sales associate. Our funnels are designed to filter out low-intent prospects while building immense perceived value, ensuring you only speak with highly qualified, ready-to-buy clients.'
         ),
         'portfolio' => array(
-            '7-Figure Coach Transformation' => 'Re-architecting the digital presence of a global leadership consultant to handle $250k/mo in new inquiry volume.',
-            'The Authority Engine Build' => 'How we engineered the core infrastructure for a leading high-ticket expert to hit eight figures in attributable revenue.'
+            'Global Leadership Consultant Scale' => 'Re-architecting the digital ecosystem of an international strategy firm. We implemented the "Authority Flywheel" framework, resulting in a 340% increase in lead quality and enabling the partner to handle $500k/mo in new inquiry volume without increasing headcount.',
+            'The $10M High-Ticket Infrastructure' => 'How we engineered the core digital infrastructure for a leading education brand. By optimizing technical performance and strategic positioning, we helped them achieve eight figures in attributable revenue within 12 months of deployment.'
         ),
         'testimonial' => array(
             'Elite Partner' => 'CloseClient didn\'t just build a website; they built a revenue engine. Our lead quality has tripled since deployment.'
@@ -393,10 +393,10 @@ function closeclient_generate_pages() {
     closeclient_generate_cpt_data();
 
     $pages = array(
-        'Home' => array('content' => '[closeclient_hero][closeclient_logo_ticker][closeclient_authority][closeclient_stats][closeclient_portfolio][closeclient_services][closeclient_vsl][closeclient_process][closeclient_testimonials][closeclient_pricing][closeclient_faq][closeclient_booking_cta]', 'template' => ''),
+        'Home' => array('content' => '[closeclient_hero][closeclient_logo_ticker][closeclient_authority][closeclient_stats][closeclient_portfolio][closeclient_about][closeclient_services][closeclient_vsl][closeclient_process][closeclient_testimonials][closeclient_pricing][closeclient_faq][closeclient_booking_cta]', 'template' => ''),
         'Solutions' => array('content' => '[closeclient_hero][closeclient_services][closeclient_process][closeclient_pricing][closeclient_booking_cta]', 'template' => 'template-services.php'),
         'The Method' => array('content' => '[closeclient_about][closeclient_team][closeclient_authority][closeclient_booking_cta]', 'template' => 'template-about.php'),
-        'Book Your Audit' => array('content' => '[closeclient_booking_cta]', 'template' => 'template-contact.php'),
+        'Book Your Audit' => array('content' => '[closeclient_booking_cta][closeclient_faq]', 'template' => 'template-contact.php'),
         'Insights' => array('content' => '', 'template' => 'home.php'),
         'Success Stories' => array('content' => '', 'template' => 'archive-portfolio.php'),
         'Success Blueprint' => array('content' => '[closeclient_lead_magnet]', 'template' => 'template-lead-magnet.php'),
