@@ -18,7 +18,7 @@ get_header();
                 <div class="mesh-gradient"></div>
                 <div class="hero-bg-glow"></div>
                 <div class="container">
-                    <span class="section-tag reveal"><?php echo esc_html( get_theme_mod( 'closeclient_label_archive', 'INSIGHTS ARCHIVE' ) ); ?></span>
+                    <span class="section-tag reveal"><?php echo esc_html( get_theme_mod( 'closeclient_label_archive', 'STRATEGIC INSIGHTS' ) ); ?></span>
 				<?php
 				the_archive_title( '<h1 class="hero-headline gradient-text mb-4">', '</h1>' );
 				the_archive_description( '<div class="archive-description text-muted py-md max-w-800 mx-auto fs-5">', '</div>' );

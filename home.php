@@ -16,8 +16,8 @@ get_header();
             <div class="mesh-gradient"></div>
             <div class="hero-bg-glow"></div>
             <div class="container">
-                <span class="section-tag reveal"><?php echo esc_html( get_theme_mod( 'closeclient_blog_title', 'Insights & Engineering' ) ); ?></span>
-                <h1 class="hero-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_blog_description', 'Systems, strategies, and engineering insights to scale your digital brand.' ) ); ?></h1>
+                <span class="section-tag reveal"><?php echo esc_html( get_theme_mod( 'closeclient_blog_title', 'Strategic Insights' ) ); ?></span>
+                <h1 class="hero-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_blog_description', 'Definitive strategic protocols for 8-figure authority and digital scale.' ) ); ?></h1>
             </div>
         </header>
 

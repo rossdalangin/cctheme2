@@ -61,8 +61,8 @@ $tag      = get_theme_mod( 'closeclient_faq_tag', 'FAQ' );
         </div>
 
         <div class="faq-footer text-center mt-5 reveal">
-            <p class="text-muted small mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_faq_footer_text', 'Still have technical or strategic questions about our process?' ) ); ?></p>
-            <a href="#audit" class="cc-button cc-button-secondary"><?php echo esc_html( get_theme_mod( 'closeclient_faq_footer_btn', 'Talk to an Architect →' ) ); ?></a>
+            <p class="text-muted small mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_faq_footer_text', 'Have technical or strategic queries regarding your authority infrastructure?' ) ); ?></p>
+            <a href="#audit" class="cc-button cc-button-secondary"><?php echo esc_html( get_theme_mod( 'closeclient_faq_footer_btn', 'Consult with a Strategic Architect →' ) ); ?></a>
         </div>
     </div>
 </section>

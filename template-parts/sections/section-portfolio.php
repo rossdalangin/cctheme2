@@ -5,8 +5,8 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_portfolio_headline', 'Our Engineered Success Stories' );
-$tag      = get_theme_mod( 'closeclient_portfolio_tag', 'FEATURED WORK' );
+$headline = get_theme_mod( 'closeclient_portfolio_headline', 'Engineered Success Case Studies' );
+$tag      = get_theme_mod( 'closeclient_portfolio_tag', 'PROOF OF ARCHITECTURE' );
 ?>
 
 <section id="portfolio" class="section section-lg section-portfolio bg-dark">
@@ -48,7 +48,7 @@ $tag      = get_theme_mod( 'closeclient_portfolio_tag', 'FEATURED WORK' );
                             <h3 class="h4 mb-3 text-white"><?php the_title(); ?></h3>
                             <div class="text-muted small mb-5 lead"><?php the_excerpt(); ?></div>
                             <div class="mt-auto">
-                                <a href="<?php the_permalink(); ?>" class="cc-button cc-button-secondary w-100"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_btn', 'View Case Study' ) ); ?></a>
+                                <a href="<?php the_permalink(); ?>" class="cc-button cc-button-secondary w-100"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_btn', 'Analyze Protocol →' ) ); ?></a>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ $tag      = get_theme_mod( 'closeclient_portfolio_tag', 'FEATURED WORK' );
                 wp_reset_postdata();
             else : ?>
                 <div class="portfolio-empty-card cc-card reveal">
-                    <p class="text-muted"><?php echo esc_html( get_theme_mod( 'closeclient_portfolio_empty_text', 'Success stories are being engineered. Check back soon.' ) ); ?></p>
+                    <p class="text-muted"><?php echo esc_html( get_theme_mod( 'closeclient_portfolio_empty_text', 'New success stories are currently undergoing technical audit. Check back soon.' ) ); ?></p>
                 </div>
             <?php endif; ?>
         </div>

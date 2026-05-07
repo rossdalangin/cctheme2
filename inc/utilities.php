@@ -90,8 +90,10 @@ function closeclient_get_defaults() {
         'closeclient_footer_col3_title' => 'Strategic',
         'closeclient_footer_col4_title' => 'Company',
         'closeclient_footer_col5_title' => 'Command',
+        'closeclient_footer_status_text' => 'System: 100% Operational',
+        'closeclient_footer_status_color' => '#10B981',
         'closeclient_footer_ribbon_tag' => 'TRUSTED BY INNOVATORS AT:',
-        'closeclient_footer_ribbon_logos' => 'STRATEGY.CO, ELITE.IO, CORE.ENGINE, VORTEX.MEDIA',
+        'closeclient_footer_ribbon_logos' => 'STRATEGY.CO, ELITE.IO, CORE.ENGINE, VORTEX.MEDIA, ATLAS.SYS, NEXUS.BND, OMNI.CORP, QUANTUM.LEAD',
         'closeclient_footer_newsletter_show' => '0',
         'closeclient_footer_copyright' => '© CloseClient. All rights reserved.',
         'closeclient_footer_cta_text_label' => 'Ready to engineer your authority?',
@@ -307,6 +309,9 @@ function closeclient_get_defaults() {
         'closeclient_vsl_video_url' => '',
         'closeclient_assets_headline' => 'Elite Authority Asset Suite',
         'closeclient_assets_desc' => 'Strategic frameworks and high-fidelity protocols engineered for 8-figure coaches and consultants.',
+        'closeclient_contact_email' => 'solutions@closeclient.io',
+        'closeclient_contact_phone' => '+1 (888) 555-0123',
+        'closeclient_contact_address' => 'Technical HQ: 123 Innovation Drive, Silicon Valley, CA',
     );
 }
 

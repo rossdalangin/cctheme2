@@ -47,6 +47,7 @@ function closeclient_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'closeclient_visibility', array( 'title' => '0. Visibility', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_vsl', array( 'title' => '2. VSL Training', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_assets', array( 'title' => 'Strategic Assets', 'panel' => 'closeclient_pages_panel' ) );
+    $wp_customize->add_section( 'closeclient_footer_section', array( 'title' => 'Strategic Footer', 'panel' => 'closeclient_layout_panel' ) );
 
     // Helpers
     $labels = array(
@@ -272,6 +273,9 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_footer_col2_title' => 'Footer Col 2 Title',
         'closeclient_footer_col3_title' => 'Footer Col 3 Title',
         'closeclient_footer_col4_title' => 'Footer Col 4 Title',
+        'closeclient_footer_col5_title' => 'Footer Col 5 Title',
+        'closeclient_footer_status_text' => 'Footer Status Text',
+        'closeclient_footer_status_color' => 'Footer Status Color',
         'closeclient_footer_ribbon_tag' => 'Footer Authority Ribbon Tag',
         'closeclient_footer_ribbon_logos' => 'Footer Authority Ribbon Logos (Comma Sep)',
         'closeclient_footer_newsletter_show' => 'Show Newsletter in Footer',
@@ -293,6 +297,9 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_contact_email_label' => 'Contact Form: Email Label',
         'closeclient_contact_message_label' => 'Contact Form: Message Label',
         'closeclient_contact_btn_text' => 'Contact Form: Button Text',
+        'closeclient_contact_email' => 'Contact: Public Email',
+        'closeclient_contact_phone' => 'Contact: Public Phone',
+        'closeclient_contact_address' => 'Contact: Physical Address',
         'closeclient_products_tag' => 'Products Tag',
         'closeclient_label_search_btn' => 'Search: Button Text',
         'closeclient_author_tag' => 'Author Box: Tag',
@@ -349,7 +356,8 @@ function closeclient_customize_register( $wp_customize ) {
         elseif (strpos($key, 'booking') !== false) $section = 'closeclient_booking';
         elseif (strpos($key, 'social') !== false) $section = 'closeclient_social';
         elseif (strpos($key, 'show_') !== false) $section = 'closeclient_visibility';
-        elseif (strpos($key, 'width') !== false || strpos($key, 'header') !== false || strpos($key, 'footer') !== false) $section = 'closeclient_layout_section';
+        elseif (strpos($key, 'width') !== false || strpos($key, 'header') !== false) $section = 'closeclient_layout_section';
+        elseif (strpos($key, 'footer') !== false) $section = 'closeclient_footer_section';
         elseif (strpos($key, 'form_action') !== false || strpos($key, 'shortcode') !== false) $section = 'closeclient_forms';
         elseif (strpos($key, 'product') !== false) $section = 'closeclient_products';
         elseif (strpos($key, 'leadmagnet') !== false || strpos($key, 'lm_') !== false) $section = 'closeclient_leadmagnet_tpl';

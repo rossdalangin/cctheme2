@@ -24,7 +24,7 @@ $img = get_theme_mod( 'closeclient_about_image' );
             </div>
 
             <div class="about-content bento-span-7 glass p-5 p-md-5 reveal">
-                <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_tag_home', 'THE METHODOLOGY' ) ); ?></span>
+                <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_tag_home', 'THE CORE MECHANISM' ) ); ?></span>
                 <h2 class="section-headline gradient-text mb-5"><?php echo esc_html( $headline ); ?></h2>
                 <div class="about-text mb-5">
                     <p class="lead text-muted mb-4"><?php echo esc_html( $p1 ); ?></p>
@@ -32,7 +32,7 @@ $img = get_theme_mod( 'closeclient_about_image' );
                 </div>
 
                 <?php
-                $methodology = get_theme_mod( 'closeclient_about_methodology', 'Performance-First Engineering, Psych-Driven UI/UX Design, Conversion-Focused Architecture' );
+                $methodology = get_theme_mod( 'closeclient_about_methodology', 'Psychological Trigger Engineering, Frictionless UI/UX Systems, Data-Driven Scale Architecture' );
                 if ( $methodology ) : ?>
                     <div class="about-pillars mb-5 d-flex flex-column gap-3">
                         <?php
