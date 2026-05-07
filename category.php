@@ -28,14 +28,14 @@ get_header();
                         the_post();
                         get_template_part( 'template-parts/content/content', 'archive' );
                     endwhile;
-
-                    the_posts_navigation();
                     ?>
                 </div>
 
-                <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-                    <?php get_sidebar(); ?>
-                <?php endif; ?>
+                <?php get_sidebar(); ?>
+            </div>
+
+            <div class="pagination-wrapper mt-5 text-center">
+                <?php the_posts_navigation(); ?>
             </div>
 
         <?php else : ?>

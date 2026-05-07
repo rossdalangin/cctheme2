@@ -27,14 +27,17 @@ get_header();
 			</header>
 
             <div class="container section">
-			<div class="blog-posts-grid">
-				<?php
-				while ( have_posts() ) :
-					the_post();
-					get_template_part( 'template-parts/content/content', 'archive' );
-				endwhile;
-				?>
-			</div>
+                <div class="blog-layout-wrapper">
+                    <div class="blog-posts-grid">
+                        <?php
+                        while ( have_posts() ) :
+                            the_post();
+                            get_template_part( 'template-parts/content/content', 'archive' );
+                        endwhile;
+                        ?>
+                    </div>
+                    <?php get_sidebar(); ?>
+                </div>
 
                 <div class="pagination-wrapper mt-5 text-center">
                     <?php the_posts_navigation(); ?>

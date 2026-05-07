@@ -1342,34 +1342,40 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
 }
 
 .post-sidebar h1, .post-sidebar h2, .post-sidebar h3, .post-sidebar h4, .post-sidebar h5, .post-sidebar h6,
-.post-sidebar .wp-block-heading, .sidebar-widgets .widget_block h2, .sidebar-widgets .widget_block h3 {
+.post-sidebar .wp-block-heading, .sidebar-widgets .widget_block h2, .sidebar-widgets .widget_block h3,
+.widget-area h1, .widget-area h2, .widget-area h3, .widget-area h4, .widget-area h5, .widget-area h6,
+.widget-area .wp-block-heading, .widget-area .widgettitle {
     font-size: 1.25rem !important;
     line-height: 1.2 !important;
     letter-spacing: -0.02em !important;
     margin-bottom: var(--s-sm);
+    color: var(--c-white);
 }
 
-.sidebar-widgets .widget, .sidebar-widgets .widget_block {
+.sidebar-widgets .widget, .sidebar-widgets .widget_block,
+.widget-area .widget, .widget-area .widget_block {
     background: var(--c-onyx-light);
     border: 1px solid var(--c-border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     padding: var(--s-md);
     margin-bottom: var(--s-md);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sidebar-widgets .widget:hover, .sidebar-widgets .widget_block:hover {
-    border-color: var(--c-accent);
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+.sidebar-widgets .widget:hover, .sidebar-widgets .widget_block:hover,
+.widget-area .widget:hover, .widget-area .widget_block:hover {
+    border-color: rgba(var(--c-accent-rgb), 0.3);
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
-.sidebar-widgets {
+.sidebar-widgets, .widget-area {
     padding: 0;
 }
 
 
-.sidebar-widgets .widget-title {
+.sidebar-widgets .widget-title, .widget-area .widget-title {
     font-size: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -1380,33 +1386,33 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     padding-bottom: var(--s-xs);
 }
 
-.sidebar-widgets ul {
+.sidebar-widgets ul, .widget-area ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.sidebar-widgets li {
+.sidebar-widgets li, .widget-area li {
     margin-bottom: var(--s-xs);
     padding-bottom: var(--s-xs);
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     transition: all 0.3s ease;
 }
 
-.sidebar-widgets li:last-child {
+.sidebar-widgets li:last-child, .widget-area li:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
-.sidebar-widgets li a {
+.sidebar-widgets li a, .widget-area li a {
     color: var(--c-text-muted);
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
 }
 
-.sidebar-widgets li a:hover {
+.sidebar-widgets li a:hover, .widget-area li a:hover {
     color: var(--c-accent);
     transform: translateX(5px);
 }
