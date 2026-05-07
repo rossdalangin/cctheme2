@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: clamp(4rem, 15vw, 8rem); letter-spacing: -0.07em; line-height: 0.8; }
 h2 { font-size: clamp(3rem, 10vw, 5.5rem); letter-spacing: -0.06em; line-height: 0.9; }
-h3 { font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: -0.05em; line-height: 1.0; }
+h3 { font-size: clamp(1.5rem, 4vw, 2.25rem); letter-spacing: -0.05em; line-height: 1.1; }
 h4 { font-size: clamp(1.5rem, 4vw, 2.25rem); letter-spacing: -0.04em; line-height: 1.1; }
 
 .container { max-width: var(--container-width); margin: 0 auto; padding: 0 40px; }
@@ -467,10 +467,10 @@ input:focus, textarea:focus, select:focus {
     background: radial-gradient(circle, rgba(99, 102, 241, 0.05), transparent 70%);
     pointer-events: none;
 }
-.footer-grid { gap: var(--s-md); }
+.footer-grid { gap: var(--s-xs); }
 .footer-column {
     background: var(--c-onyx-light);
-    padding: var(--s-md);
+    padding: var(--s-sm);
     border: 1px solid var(--c-border);
     border-radius: var(--radius-md);
     transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1048,6 +1048,7 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     box-shadow: 0 0 60px rgba(var(--c-accent-rgb), 0.2);
     transform: scale(1.05);
     z-index: 2;
+    overflow: visible;
 }
 
 .pricing-item.featured-plan:hover {
@@ -1502,6 +1503,8 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     max-height: 500px;
     opacity: 1;
 }
+
+.faq-item.active { opacity: 1; transform: none; }
 
 /* General Layout Utilities */
 .aspect-square { aspect-ratio: 1/1; }

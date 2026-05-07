@@ -244,7 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('faq-open');
-                        otherItem.querySelector('.faq-header').setAttribute('aria-expanded', 'false');
+                        const otherHeader = otherItem.querySelector('.faq-header');
+                        if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
                     }
                 });
 
