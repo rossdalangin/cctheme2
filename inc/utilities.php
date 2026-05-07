@@ -101,7 +101,7 @@ function closeclient_get_defaults() {
         'closeclient_h1_size' => '4.5',
         'closeclient_h1_weight' => '800',
         'closeclient_header_cta_link' => '#audit',
-        'closeclient_header_cta_text' => 'Apply for Your Authority Audit →',
+        'closeclient_header_cta_text' => 'Apply for Strategic Audit →',
         'closeclient_header_glass' => '0.7',
         'closeclient_header_sticky' => '1',
         'closeclient_heading_font' => 'Inter',
@@ -115,7 +115,7 @@ function closeclient_get_defaults() {
         'closeclient_label_404_tag' => '404 - SYSTEM DISRUPTION',
         'closeclient_label_404_text' => 'The strategic asset you are looking for has either been relocated or is currently undergoing a technical audit. Return to the central hub to continue your authority journey.',
         'closeclient_label_404_title' => 'Protocol Interrupted: Resource Not Found.',
-        'closeclient_label_challenge' => '01. The Challenge',
+        'closeclient_label_challenge' => '01. Diagnostic: The Strategic Challenge',
         'closeclient_label_continue_reading' => 'Continue reading<span class="screen-reader-text"> "%s"</span>',
         'closeclient_label_edit_post' => 'Edit <span class="screen-reader-text">%s</span>',
         'closeclient_label_included' => 'System Components',
@@ -125,15 +125,15 @@ function closeclient_get_defaults() {
         'closeclient_label_none_search' => 'No strategic matches were found for your query. Refine your keywords or consult the central repository.',
         'closeclient_label_none_tag' => 'ZERO RESULTS',
         'closeclient_label_none_title' => 'No Strategic Matches Found.',
-        'closeclient_label_outcome' => '03. The Result',
+        'closeclient_label_outcome' => '03. Performance: The Strategic ROI',
         'closeclient_label_archive' => 'STRATEGIC INSIGHTS',
         'closeclient_label_page_links' => 'Pages:',
         'closeclient_label_popular' => 'MOST POPULAR',
-        'closeclient_label_portfolio_archive_desc' => 'Deep dives into how we transform digital presence into high-performance authority machines.',
-        'closeclient_label_portfolio_archive_tag' => 'CASE STUDIES',
-        'closeclient_label_portfolio_archive_title' => 'Engineered Success Stories',
-        'closeclient_label_portfolio_btn' => 'View Case Study',
-        'closeclient_label_portfolio_single' => 'SUCCESS STORY',
+        'closeclient_label_portfolio_archive_desc' => 'Deep dives into the technical and psychological infrastructure behind 8-figure authority brands.',
+        'closeclient_label_portfolio_archive_tag' => 'PROOF OF ARCHITECTURE',
+        'closeclient_label_portfolio_archive_title' => 'Engineered Success Case Studies',
+        'closeclient_label_portfolio_btn' => 'Analyze Protocol →',
+        'closeclient_label_portfolio_single' => 'PROTOCOL ANALYSIS',
         'closeclient_label_prev_post' => 'Previous Insight',
         'closeclient_label_read_more' => 'READ FULL ARTICLE →',
         'closeclient_label_related' => 'More Engineering Insights',
@@ -145,10 +145,10 @@ function closeclient_get_defaults() {
         'closeclient_label_service_archive_tag' => 'OUR CAPABILITIES',
         'closeclient_label_service_archive_title' => 'Strategic Systems',
         'closeclient_label_service_btn' => 'System Details →',
-        'closeclient_label_service_single' => 'SYSTEM DETAIL',
+        'closeclient_label_service_single' => 'SYSTEM ARCHITECTURE',
         'closeclient_label_share' => 'SHARE INSIGHTS:',
         'closeclient_label_skip_link' => 'Skip to content',
-        'closeclient_label_solution' => '02. The Architecture',
+        'closeclient_label_solution' => '02. Deployment: The Architectural Protocol',
         'closeclient_landing_headline_tpl' => 'Initiate Your High-Fidelity Authority Transformation.',
         'closeclient_landing_text_tpl' => 'Join the ranks of elite 8-figure authorities who have automated their market dominance and liquidated scaling friction.',
         'closeclient_leadmagnet_headline_tpl' => 'The High-Fidelity Authority Blueprint',
@@ -167,10 +167,10 @@ function closeclient_get_defaults() {
         'closeclient_logo_ticker_tag' => 'TRUSTED BY 8-FIGURE AUTHORITIES',
         'closeclient_menu_label_about' => 'The Method',
         'closeclient_menu_label_audit' => 'Book Audit',
-        'closeclient_menu_label_blog' => 'Blog',
-        'closeclient_menu_label_cases' => 'Case Studies',
-        'closeclient_menu_label_services' => 'Solutions',
-        'closeclient_menu_label_training' => 'Free Training',
+        'closeclient_menu_label_blog' => 'Strategic Insights',
+        'closeclient_menu_label_cases' => 'Success Proof',
+        'closeclient_menu_label_services' => 'The Protocol',
+        'closeclient_menu_label_training' => 'VSL Protocol',
         'closeclient_newsletter_button' => 'Join the Circle',
         'closeclient_newsletter_disclaimer' => 'No spam. Just high-fidelity engineering insights.',
         'closeclient_newsletter_form_action' => '',
@@ -407,11 +407,11 @@ function closeclient_generate_pages() {
 
     $pages = array(
         'Home' => array('content' => '[closeclient_hero][closeclient_logo_ticker][closeclient_authority][closeclient_stats][closeclient_portfolio][closeclient_about][closeclient_services][closeclient_vsl][closeclient_process][closeclient_testimonials][closeclient_pricing][closeclient_faq][closeclient_booking_cta]', 'template' => ''),
-        'Solutions' => array('content' => '[closeclient_hero][closeclient_services][closeclient_process][closeclient_pricing][closeclient_booking_cta]', 'template' => 'template-services.php'),
-        'The Method' => array('content' => '[closeclient_about][closeclient_team][closeclient_authority][closeclient_booking_cta]', 'template' => 'template-about.php'),
-        'Book Your Audit' => array('content' => '[closeclient_booking_cta][closeclient_faq]', 'template' => 'template-contact.php'),
-        'Insights' => array('content' => '', 'template' => 'home.php'),
-        'Success Stories' => array('content' => '', 'template' => 'archive-portfolio.php'),
+        'Solutions' => array('content' => '[closeclient_hero][closeclient_services][closeclient_process][closeclient_pricing][closeclient_booking_cta]', 'template' => 'template-services.php', 'slug' => 'solutions'),
+        'The Method' => array('content' => '[closeclient_about][closeclient_team][closeclient_authority][closeclient_booking_cta]', 'template' => 'template-about.php', 'slug' => 'the-method'),
+        'Book Your Audit' => array('content' => '[closeclient_booking_cta][closeclient_faq]', 'template' => 'template-contact.php', 'slug' => 'book-audit'),
+        'Strategic Insights' => array('content' => '', 'template' => 'index.php', 'slug' => 'strategic-insights'),
+        'Success Proof' => array('content' => '', 'template' => 'archive-portfolio.php', 'slug' => 'success-proof'),
         'Strategic Assets' => array('content' => '[closeclient_strategic_assets]', 'template' => ''),
         'Success Blueprint' => array('content' => '[closeclient_lead_magnet]', 'template' => 'template-lead-magnet.php'),
         'Thank You' => array('content' => '[closeclient_thank_you]', 'template' => 'template-thank-you.php'),
@@ -425,6 +425,9 @@ function closeclient_generate_pages() {
             'post_content' => $pdata['content'],
             'post_status'  => 'publish'
         );
+        if ( isset($pdata['slug']) ) {
+            $args['post_name'] = $pdata['slug'];
+        }
 
         if ( ! $check ) {
             $pid = wp_insert_post( $args );
@@ -462,7 +465,7 @@ function closeclient_setup_menus() {
 
     if ( ! $menu_exists ) {
         $menu_id = wp_create_nav_menu( $menu_name );
-        $pages = array('Home', 'Services', 'Success Stories', 'About', 'Insights', 'Contact');
+        $pages = array('Home', 'Solutions', 'Success Proof', 'The Method', 'Strategic Insights', 'Book Your Audit');
         foreach ( $pages as $title ) {
             $page = get_page_by_title( $title );
             if ( $page ) {

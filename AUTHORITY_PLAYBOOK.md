@@ -65,4 +65,21 @@ When working on this codebase, adhere to the following principles:
 -   **Performance**: Use hardware-accelerated CSS transforms. Avoid JS for layout-heavy tasks.
 
 ---
-*CloseClient Elite: Engineering the future of digital authority.*
+
+## 🛠 Strategic Integration: The Authority Hub
+As a CloseClient Elite partner, you have access to the **Authority Growth Hub** directly in your WordPress Admin.
+
+### What's Inside:
+1.  **Direct Strategic Access**: Immediate previews of all core playbooks and scaling frameworks.
+2.  **Encrypted Data**: High-fidelity operational protocols protected by elite-tier positioning.
+3.  **One-Click Optimization**: Quick links to the Customizer for rapid authority refinement.
+
+## 🧭 The Acquisition Protocol (Mindmap)
+Every visitor is guided through a predetermined psychological sequence:
+1.  **Strategic Insights (Blog)** -> Value Discovery.
+2.  **VSL Protocol (Training)** -> Belief Shift.
+3.  **Success Proof (Portfolio)** -> Validation.
+4.  **Authority Audit (Modal)** -> High-Ticket Conversion.
+
+---
+*CloseClient Elite: Absolute Market Dominance.*

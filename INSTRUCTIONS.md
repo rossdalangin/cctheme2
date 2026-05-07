@@ -32,21 +32,33 @@ Build custom funnels using our modular section shortcodes:
 - **No Inline Styles**: All design logic is centralized in `assets/css/main.css`.
 - **Exit Intent**: Built-in logic to trigger the Authority Audit modal when a prospect attempts to leave.
 
+## ⚡ The Conversion Architecture (Path to $100k/mo)
+
+This theme is not a "website"; it is a **Terminal Funnel**. Follow this exact path for maximum high-ticket conversion:
+
+1.  **Traffic Source**: Facebook/LinkedIn/YouTube Ads or Organic Content.
+2.  **Land**: Direct traffic to the `Home` or `Services` page (`[closeclient_hero]`).
+3.  **Indoctrinate**: Lead them into the `[closeclient_vsl]` (The Big Domino).
+4.  **Proof**: Force immersion into the `[closeclient_portfolio]` (Success Proof).
+5.  **Audit**: Every page ends with the `[closeclient_booking_cta]`.
+6.  **Conversion**: The CTA opens the `Authority Audit` modal (configured in Customizer).
+7.  **Closing**: Prospect submits their diagnostic data and is redirected to your Thank You page or Calendar.
+
 ## 🧭 Recommended Navigation
 
 For elite positioning, we recommend the following menu structure:
 
 ### Header (Primary Menu)
-1. **Solutions**: Link to `/services`
-2. **Success Stories**: Link to `/portfolio`
-3. **The Method**: Link to `/about`
-4. **Insights**: Link to `/blog`
+1. **The Protocol**: Link to `/solutions`
+2. **Success Proof**: Link to `/success-proof`
+3. **The Method**: Link to `/the-method`
+4. **Strategic Insights**: Link to `/strategic-insights`
 5. **[Book Authority Audit]**: High-contrast CTA link to `#audit`
 
 ### Footer (Strategic Menus)
-- **Solutions**: Core services and specialized frameworks.
-- **Resources**: Case studies, VSL training, and elite insights.
-- **Company**: About, contact, and legal compliance.
+- **Systems**: High-Fidelity Design, Revenue Engineering, Vortex Funnels.
+- **Blueprints**: Authority Playbook, 100K Scaling Framework, VSL Protocol.
+- **Command**: login to Authority Growth Hub, Terms of Service, Privacy Policy.
 
 ## 📖 Strategic Asset Suite
 

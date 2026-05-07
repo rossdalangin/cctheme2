@@ -11,10 +11,10 @@ We will use a "Hub and Spoke" model where all roads lead back to the **Elite Com
 ### Channel 1: LinkedIn (The Authority Engine)
 - **Goal:** Daily "micro-insights" on positioning and conversion.
 - **Action:** Post 3-5 times per week using screenshots of CloseClient Bento layouts as visual proof.
-- **Call to Action:** Link to the VSL "Free Training" page.
+- **Call to Action:** Link to the VSL Protocol (Training) page.
 
-### Channel 2: The "Big Domino" VSL
-- **Goal:** Shift the prospect's belief from "I need a website" to "I need an Authority Engine."
+### Channel 2: The "Big Domino" VSL Protocol
+- **Goal:** Shift the prospect's belief from "I need a website" to "I need an Authority Ecosystem."
 - **Action:** Drive all traffic to a standalone landing page with the VSL script.
 
 ### Channel 3: Strategic Partnerships
@@ -34,4 +34,13 @@ We will use a "Hub and Spoke" model where all roads lead back to the **Elite Com
 - **Tertiary:** SEO rankings for "High Ticket Coach Web Design" and "Authority Architecture."
 
 ---
-*CloseClient: Converting attention into authority.*
+
+## 5. Strategic Navigation (Command Infrastructure)
+To maintain the "Velvet Rope" effect, the navigation is architected to force deep strategic immersion:
+*   **The Protocol**: Showcases our core engineering capabilities.
+*   **Success Proof**: Mathematical validation of our success stories.
+*   **Strategic Insights**: High-signal intelligence on authority scale.
+*   **VSL Protocol**: The "Big Domino" belief shift mechanism.
+
+---
+*CloseClient Elite: Converting attention into absolute authority.*

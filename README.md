@@ -15,6 +15,7 @@ The high-performance authority system for coaches, consultants, and premium serv
 4. Set your global booking link (Calendly, etc.) in the Customizer.
 
 ## 📖 Documentation & Strategic Assets
+- [Authority Mindmap & Protocol](AUTHORITY_MINDMAP_PROTOCOL.md): The definitive client journey and conversion sequence.
 - [Authority Playbook](AUTHORITY_PLAYBOOK.md): Strategic guide to using the theme for conversion.
 - [90-Day Launch Plan](LAUNCH_PLAN_90_DAYS.md): Week-by-week roadmap to your first paying client.
 - [Market Research](MARKET_RESEARCH_REPORT.md): Deep dive into the $45B web design niche for coaches.
