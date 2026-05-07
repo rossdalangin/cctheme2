@@ -7,8 +7,8 @@
 
 get_header();
 
-$headline    = get_theme_mod( 'closeclient_services_hero_headline_tpl', 'Bespoke Systems for High-Ticket Experts.' );
-$subheadline = get_theme_mod( 'closeclient_services_subheadline_tpl', 'We don\'t just build websites. We architect the infrastructure of omnipresent authority.' );
+$headline    = get_theme_mod( 'closeclient_services_hero_headline_tpl', 'The Protocol for Strategic Dominance.' );
+$subheadline = get_theme_mod( 'closeclient_services_subheadline_tpl', 'We don\'t build pages; we engineer the tactical infrastructure required to command your market and scale beyond your current ceiling with mathematical certainty.' );
 ?>
 
 <main id="primary" class="site-main">

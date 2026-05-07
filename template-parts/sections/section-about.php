@@ -5,10 +5,10 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_about_headline_home', 'We Engineer High-Performance Digital Infrastructure for Elite Coaches & Consultants.' );
-$p1 = get_theme_mod( 'closeclient_about_text_p1', 'Most digital agencies focus on "pretty" designs. We focus on engineering high-fidelity digital machines that act as your top-performing sales associates.' );
-$p2 = get_theme_mod( 'closeclient_about_text_p2', 'By combining technical excellence with conversion psychology, we build the infrastructure that allows elite brands to scale without friction.' );
-$btn = get_theme_mod( 'closeclient_about_button_text', 'Explore Our Methodology' );
+$headline = get_theme_mod( 'closeclient_about_headline_home', 'We Architect High-Fidelity Digital Ecosystems for 8-Figure Authorities.' );
+$p1 = get_theme_mod( 'closeclient_about_text_p1', 'Most agencies peddle "pretty" designs that act as a liability. We engineer tactical digital assets that function as your most elite, 24/7 global sales force, pre-selling your expertise before you even enter the room.' );
+$p2 = get_theme_mod( 'closeclient_about_text_p2', 'By fusing surgical technical precision with deep-rooted conversion psychology, we eliminate the structural friction and "authority-debt" that kills high-ticket growth at scale.' );
+$btn = get_theme_mod( 'closeclient_about_button_text', 'Explore the Protocol' );
 $img = get_theme_mod( 'closeclient_about_image' );
 ?>
 

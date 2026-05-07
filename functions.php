@@ -7,6 +7,60 @@
  * @package CloseClient
  */
 
+/**
+ * Authority Growth Hub - Strategic Asset Integration
+ */
+function closeclient_authority_hub_page() {
+    add_menu_page(
+        'Authority Hub',
+        'Authority Hub',
+        'manage_options',
+        'authority-hub',
+        'closeclient_render_authority_hub',
+        'dashicons-performance',
+        3
+    );
+}
+add_action( 'admin_menu', 'closeclient_authority_hub_page' );
+
+function closeclient_render_authority_hub() {
+    ?>
+    <div class="wrap authority-hub-wrap" style="max-width: 1000px; margin: 40px auto; font-family: 'Inter', sans-serif;">
+        <div style="background: #020203; color: #fff; padding: 60px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.5em; color: #6366F1; text-transform: uppercase; display: block; margin-bottom: 20px;">CENTRAL COMMAND</span>
+                <h1 style="font-size: 3rem; font-weight: 900; letter-spacing: -0.05em; margin-bottom: 20px; line-height: 1;">Authority Growth Hub</h1>
+                <p style="font-size: 1.1rem; color: #94A3B8; max-width: 600px; margin: 0 auto; line-height: 1.6;">The definitive tactical repository for 8-figure agency scale and high-ticket authority engineering.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px;">
+                <?php
+                $docs = array(
+                    'AUTHORITY_PLAYBOOK.md' => array('title' => 'Authority Playbook', 'icon' => '📖', 'desc' => 'The definitive protocol for absolute market dominance.'),
+                    'SCALING_FRAMEWORK_100K.md' => array('title' => '100K Scaling Framework', 'icon' => '📈', 'desc' => 'Mathematical roadmap for high-fidelity revenue scale.'),
+                    'BUSINESS_PLAN.md' => array('title' => 'Operational Blueprint', 'icon' => '🛡️', 'desc' => 'Strategic foundations for multi-year sustainable growth.'),
+                    'MARKETING_PLAN.md' => array('title' => 'Tactical Acquisition', 'icon' => '🎯', 'desc' => 'Zero-friction client acquisition and authority systems.')
+                );
+
+                foreach ( $docs as $file => $data ) : ?>
+                    <div style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;">
+                        <div style="font-size: 2rem; margin-bottom: 20px;"><?php echo $data['icon']; ?></div>
+                        <h3 style="color: #fff; margin-bottom: 10px; font-size: 1.25rem; font-weight: 800;"><?php echo $data['title']; ?></h3>
+                        <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 25px; line-height: 1.5;"><?php echo $data['desc']; ?></p>
+                        <a href="<?php echo esc_url( home_url( '/' . $file ) ); ?>" target="_blank" style="display: inline-block; background: #6366F1; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 100px; font-weight: 900; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;">Read Strategic Document →</a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                <h4 style="color: #fff; margin-bottom: 15px; font-size: 1rem;">System Maintenance</h4>
+                <a href="<?php echo admin_url('customize.php?autofocus[section]=closeclient_utilities'); ?>" style="color: #6366F1; text-decoration: none; font-weight: 700; font-size: 0.85rem;">Access Strategic Customizer Tools →</a>
+            </div>
+        </div>
+    </div>
+    <?php
+}
+
 if ( ! defined( 'CLOSECLIENT_VERSION' ) ) {
 	define( 'CLOSECLIENT_VERSION', '1.0.0' );
 }

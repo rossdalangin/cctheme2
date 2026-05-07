@@ -19,9 +19,14 @@ $is_nested = isset( $args['is_nested'] ) && $args['is_nested'];
 
         <div class="stats-grid <?php echo $is_nested ? 'cc-grid-1' : 'cc-grid-3'; ?> gap-4">
             <?php for ( $i = 1; $i <= 3; $i++ ) :
-                $value = get_theme_mod( "closeclient_stat_{$i}_value", "10$i+" );
-                $label = get_theme_mod( "closeclient_stat_{$i}_label", "Success Stories" );
-                $desc  = get_theme_mod( "closeclient_stat_{$i}_desc", "Description of impact for stat $i" );
+                $defaults = array(
+                    1 => array('val' => '500+', 'label' => 'Authorities Engineered', 'desc' => 'Transforming specialized expertise into market-dominating digital brands.'),
+                    2 => array('val' => '$250M+', 'label' => 'Capital Engineered', 'desc' => 'Direct, attributable revenue growth engineered for our elite brand partners.'),
+                    3 => array('val' => '94%', 'label' => 'Performance Retention', 'desc' => 'High-fidelity strategic partnerships focused on sustainable, multi-year scale.')
+                );
+                $value = get_theme_mod( "closeclient_stat_{$i}_value", $defaults[$i]['val'] );
+                $label = get_theme_mod( "closeclient_stat_{$i}_label", $defaults[$i]['label'] );
+                $desc  = get_theme_mod( "closeclient_stat_{$i}_desc", $defaults[$i]['desc'] );
                 $reveal_class = ( ! $is_nested && $i <= 3 ) ? '' : ( $is_nested ? '' : 'reveal' );
                 ?>
                 <div class="stat-item cc-card text-center <?php echo esc_attr($reveal_class); ?> py-lg border-accent-soft">

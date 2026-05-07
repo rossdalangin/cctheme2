@@ -5,8 +5,8 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_testimonials_headline', 'Elite Success Stories' );
-$tag      = get_theme_mod( 'closeclient_testimonials_tag', 'SOCIAL PROOF' );
+$headline = get_theme_mod( 'closeclient_testimonials_headline', 'Strategic Authority Proof' );
+$tag      = get_theme_mod( 'closeclient_testimonials_tag', 'THE VALIDATION' );
 ?>
 
 <section id="testimonials" class="section section-lg section-testimonials">
@@ -76,8 +76,8 @@ $tag      = get_theme_mod( 'closeclient_testimonials_tag', 'SOCIAL PROOF' );
             else :
                 // Fallback
                 for ( $i = 1; $i <= 3; $i++ ) :
-                    $text = get_theme_mod( "closeclient_testimonial_{$i}_text", "The system CloseClient built allowed me to scale to $100k months while working fewer hours." );
-                    $name = get_theme_mod( "closeclient_testimonial_{$i}_name", "Elite Expert $i" );
+                    $text = get_theme_mod( "closeclient_testimonial_{$i}_text", "The digital architecture CloseClient engineered allowed us to triple our lead quality while liquidating manual sales effort by 60%. Their systems are absolute." );
+                    $name = get_theme_mod( "closeclient_testimonial_{$i}_name", "Brand Partner" );
                     ?>
                     <div class="testimonial-item cc-card glass reveal h-100 d-flex flex-column p-4 p-md-5">
                         <div class="testimonial-rating mb-4 d-flex gap-1">

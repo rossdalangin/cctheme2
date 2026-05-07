@@ -7,8 +7,8 @@
 
 get_header();
 
-$headline = get_theme_mod( 'closeclient_about_headline_tpl', 'Digital Architects for World-Class Experts' );
-$text     = get_theme_mod( 'closeclient_about_text_tpl', 'Engineering premium digital experiences that command authority, pre-qualify leads, and drive exponential growth for high-ticket service brands.' );
+$headline = get_theme_mod( 'closeclient_about_headline_tpl', 'The Architects of Unrivaled Digital Dominance' );
+$text     = get_theme_mod( 'closeclient_about_text_tpl', 'We don\'t build websites; we engineer high-fidelity digital infrastructure that commands absolute market authority, liquidates lead-cost, and scales high-ticket revenue with surgical precision.' );
 ?>
 
 <main id="primary" class="site-main about-page">
@@ -40,7 +40,7 @@ $text     = get_theme_mod( 'closeclient_about_text_tpl', 'Engineering premium di
             </div>
             <div class="bento-grid py-lg">
                 <?php
-                $values = get_theme_mod( 'closeclient_about_values', 'Precision: Data-driven systems, Authority: Strategic positioning, Performance: ROI focused engineering' );
+                $values = get_theme_mod( 'closeclient_about_values', 'Architectural Precision: Data-driven systems, Strategic Dominance: Elite positioning, Exponential Scale: ROI focused engineering' );
                 $items = explode( ',', $values );
                 $i = 0;
                 foreach ( $items as $item ) :

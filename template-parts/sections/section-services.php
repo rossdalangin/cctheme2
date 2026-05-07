@@ -5,7 +5,7 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_services_headline', 'The Architecture of Dominance' );
+$headline = get_theme_mod( 'closeclient_services_headline', 'Strategic Infrastructure Stack' );
 $tag      = get_theme_mod( 'closeclient_services_tag', 'SERVICES' );
 ?>
 
@@ -57,10 +57,10 @@ $tag      = get_theme_mod( 'closeclient_services_tag', 'SERVICES' );
                     $text  = get_theme_mod( "closeclient_service_{$s['id']}_text" );
 
                     if ( empty($title) ) {
-                        $defaults = array( 1 => 'Authority Infrastructure', 2 => 'Revenue Engineering', 3 => 'Vortex Funnels', 4 => 'Elite Positioning' );
+                        $defaults = array( 1 => 'Authority-First UI/UX Engineering', 2 => 'High-Fidelity Revenue Systems', 3 => 'Vortex Authority Funnels', 4 => 'Tactical Authority Positioning' );
                         $title = $defaults[$s['id']];
                     }
-                    if ( empty($text) ) { $text = "Engineered solutions designed to crush the complexity ceiling and scale your impact."; }
+                    if ( empty($text) ) { $text = "We architect the technical and psychological infrastructure required to command your market and scale beyond your current ceiling."; }
                     ?>
                     <?php $reveal_class = ( $s['id'] <= 3 ) ? '' : 'reveal'; ?>
                     <div class="service-item cc-card <?php echo esc_attr($reveal_class); ?> <?php echo esc_attr($s['span']); ?> d-flex flex-column">

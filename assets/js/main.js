@@ -111,10 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Custom Cursor Logic ---
+    // --- Custom Cursor Logic with Trailing Effect ---
     const cursor = document.createElement('div');
     cursor.className = 'cc-cursor';
+    const cursorDot = document.createElement('div');
+    cursorDot.className = 'cc-cursor-dot';
     document.body.appendChild(cursor);
+    document.body.appendChild(cursorDot);
 
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
@@ -123,22 +126,24 @@ document.addEventListener('DOMContentLoaded', () => {
         mouseX = e.clientX;
         mouseY = e.clientY;
         cursor.style.opacity = '1';
+        cursorDot.style.opacity = '1';
+        cursorDot.style.transform = `translate3d(${mouseX - 2}px, ${mouseY - 2}px, 0)`;
     });
 
     const animateCursor = () => {
-        cursorX += (mouseX - cursorX) * 0.15;
-        cursorY += (mouseY - cursorY) * 0.15;
+        cursorX += (mouseX - cursorX) * 0.1;
+        cursorY += (mouseY - cursorY) * 0.1;
         cursor.style.transform = `translate3d(${cursorX - 10}px, ${cursorY - 10}px, 0)`;
         requestAnimationFrame(animateCursor);
     };
     animateCursor();
 
-    document.querySelectorAll('a, button, .cc-card, .social-icon').forEach(el => {
+    document.querySelectorAll('a, button, .cc-card, .social-icon, .faq-header').forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('is-active'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('is-active'));
     });
 
-    // --- Premium Magnetic Effect with Hardware Acceleration ---
+    // --- Premium Magnetic Effect with Hardware Acceleration & Tilt ---
     const magneticButtons = document.querySelectorAll('.cc-button, .social-icon, .cc-card');
     magneticButtons.forEach(btn => {
         btn.addEventListener('mousemove', (e) => {
@@ -147,14 +152,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const x = (e.clientX - position.left - position.width / 2) * strength;
             const y = (e.clientY - position.top - position.height / 2) * strength;
 
-            btn.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+            const rotateX = (y / (position.height / 2)) * -10; // Max 10deg tilt
+            const rotateY = (x / (position.width / 2)) * 10;
+
+            btn.style.transform = `translate3d(${x}px, ${y}px, 0) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
             btn.style.transition = 'none';
             btn.style.zIndex = '10';
         });
 
         btn.addEventListener('mouseleave', () => {
             btn.style.transition = 'transform 1s cubic-bezier(0.19, 1, 0.22, 1)';
-            btn.style.transform = 'translate3d(0, 0, 0)';
+            btn.style.transform = 'translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg)';
             btn.style.zIndex = '';
         });
     });

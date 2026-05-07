@@ -5,7 +5,7 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_process_headline', 'The Authority Roadmap' );
+$headline = get_theme_mod( 'closeclient_process_headline', 'The Authority Protocol' );
 $tag      = get_theme_mod( 'closeclient_process_tag', 'OUR PROCESS' );
 ?>
 
@@ -61,8 +61,21 @@ $tag      = get_theme_mod( 'closeclient_process_tag', 'OUR PROCESS' );
             else :
                 // Fallback to Customizer
                 for ( $i = 1; $i <= 3; $i++ ) :
-                    $title = get_theme_mod( "closeclient_process_step_{$i}_title", "Phase $i" );
-                    $text  = get_theme_mod( "closeclient_process_step_{$i}_text", "Description for step $i of your proven roadmap." );
+                    $title = get_theme_mod( "closeclient_process_step_{$i}_title" );
+                    $text  = get_theme_mod( "closeclient_process_step_{$i}_text" );
+
+                    if ( empty($title) ) {
+                        $defaults = array( 1 => 'The Technical Audit', 2 => 'The Ecosystem Build', 3 => 'The Scale Protocol' );
+                        $title = $defaults[$i];
+                    }
+                    if ( empty($text) ) {
+                        $defaults = array(
+                            1 => 'A deep-dive diagnostic scan of your current authority leaks, technical debt, and revenue bottlenecks.',
+                            2 => 'Rapid, high-fidelity installation of your core authority infrastructure, lead filters, and conversion assets.',
+                            3 => 'Continuous technical optimization and strategic traffic injection to reach your $100k/mo+ targets with absolute certainty.'
+                        );
+                        $text = $defaults[$i];
+                    }
                     $align_class = ( $i % 2 == 0 ) ? 'step-right' : 'step-left';
                     ?>
                     <div class="process-step-modern reveal <?php echo esc_attr($align_class); ?>">

@@ -17,8 +17,8 @@
         </div>
         <div class="lm-content">
             <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_lm_tag', 'FREE RESOURCE' ) ); ?></span>
-            <h2 class="section-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_lm_headline', 'The $100M Authority Blueprint' ) ); ?></h2>
-            <p class="section-subheadline lead text-muted mb-5"><?php echo esc_html( get_theme_mod( 'closeclient_lm_subheadline', 'Discover the exact infrastructure used by the world\'s top 1% of experts to scale to high-figures while working fewer hours.' ) ); ?></p>
+            <h2 class="section-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_lm_headline', 'The High-Fidelity Authority Blueprint' ) ); ?></h2>
+            <p class="section-subheadline lead text-muted mb-5"><?php echo esc_html( get_theme_mod( 'closeclient_lm_subheadline', 'Discover the exact high-performance infrastructure used by the world\'s top 1% of authorities to scale to 8-figures with mathematical certainty.' ) ); ?></p>
 
             <div class="cf7-integration-wrapper">
                 <?php
