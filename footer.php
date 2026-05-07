@@ -9,10 +9,10 @@
 
     <?php if ( ! is_page_template( 'template-canvas.php' ) ) : ?>
 	<footer id="colophon" class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
-        <div class="authority-ribbon border-bottom border-secondary py-5 mb-5 reveal">
+        <div class="authority-ribbon border-bottom border-secondary mb-5 reveal">
             <div class="container d-flex justify-content-between align-items-center flex-wrap gap-5">
-                <span class="small fw-bold letter-spacing-lg text-white-50 uppercase tracking-widest opacity-50"><?php echo esc_html( get_theme_mod( 'closeclient_footer_ribbon_tag', esc_html__( 'TRUSTED BY INNOVATORS AT:', 'closeclient' ) ) ); ?></span>
-                <div class="d-flex gap-5 flex-wrap opacity-50 grayscale invert">
+                <span class="small fw-black letter-spacing-lg text-white-50 uppercase tracking-widest opacity-50"><?php echo esc_html( get_theme_mod( 'closeclient_footer_ribbon_tag', esc_html__( 'TRUSTED BY INNOVATORS AT:', 'closeclient' ) ) ); ?></span>
+                <div class="d-flex gap-5 flex-wrap opacity-30 grayscale invert ticker-mode">
                     <?php
                     $logos = get_theme_mod( 'closeclient_footer_ribbon_logos', 'STRATEGY.CO, ELITE.IO, CORE.ENGINE, VORTEX.MEDIA' );
                     $logos_array = explode( ',', $logos );
@@ -31,9 +31,9 @@
                 </div>
             <?php endif; ?>
 
-            <div class="footer-grid bento-grid">
+            <div class="footer-grid bento-grid reveal-stagger">
                 <!-- Column 1: Branding & About -->
-                <div class="footer-column footer-branding bento-span-4">
+                <div class="footer-column footer-branding bento-span-5">
                     <div class="footer-logo mb-4">
                         <?php
                         if ( has_custom_logo() ) {
@@ -63,7 +63,7 @@
 
                 <!-- Column 2: Solutions -->
                 <div class="footer-column bento-span-2">
-                    <h3 class="footer-title h6 mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col2_title', esc_html__( 'Solutions', 'closeclient' ) ) ); ?></h3>
+                    <h3 class="footer-title h6"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col2_title', esc_html__( 'Solutions', 'closeclient' ) ) ); ?></h3>
                     <?php
                     wp_nav_menu(
                         array(
@@ -79,7 +79,7 @@
 
                 <!-- Column 3: Resources -->
                 <div class="footer-column bento-span-2">
-                    <h3 class="footer-title h6 mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col3_title', esc_html__( 'Resources', 'closeclient' ) ) ); ?></h3>
+                    <h3 class="footer-title h6"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col3_title', esc_html__( 'Resources', 'closeclient' ) ) ); ?></h3>
                     <?php
                     wp_nav_menu(
                         array(
@@ -94,9 +94,9 @@
                 </div>
 
                 <!-- Column 4: Connect/CTA -->
-                <div class="footer-column bento-span-4">
-                    <h3 class="footer-title h6 mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col4_title', esc_html__( 'Connect', 'closeclient' ) ) ); ?></h3>
-                    <p class="small text-muted mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_cta_text_label', esc_html__( 'Ready to engineer your authority?', 'closeclient' ) ) ); ?></p>
+                <div class="footer-column bento-span-3">
+                    <h3 class="footer-title h6"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col4_title', esc_html__( 'Connect', 'closeclient' ) ) ); ?></h3>
+                    <p class="small text-muted mb-5"><?php echo esc_html( get_theme_mod( 'closeclient_footer_cta_text_label', esc_html__( 'Ready to engineer your authority?', 'closeclient' ) ) ); ?></p>
                     <a href="<?php echo esc_url( get_theme_mod( 'closeclient_header_cta_link', '#audit' ) ); ?>" class="cc-button footer-cta-btn">
                         <?php echo esc_html( get_theme_mod( 'closeclient_header_cta_text', esc_html__( 'Apply for Your Authority Audit →', 'closeclient' ) ) ); ?>
                     </a>
