@@ -9,12 +9,13 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-    <header class="archive-header section text-center bg-dark overflow-hidden">
+    <header class="archive-header section section-xl text-center bg-dark overflow-hidden">
         <div class="mesh-gradient"></div>
+        <div class="hero-bg-glow"></div>
         <div class="container">
-            <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_archive_tag', 'CASE STUDIES' ) ); ?></span>
-            <h1 class="hero-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_archive_title', 'Engineered Success Stories' ) ); ?></h1>
-            <p class="lead text-muted mt-4"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_archive_desc', 'Deep dives into how we transform digital presence into high-performance authority machines.' ) ); ?></p>
+            <span class="section-tag reveal"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_archive_tag', 'CASE STUDIES' ) ); ?></span>
+            <h1 class="hero-headline gradient-text mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_archive_title', 'Engineered Success Stories' ) ); ?></h1>
+            <p class="lead text-muted mt-4 max-w-800 mx-auto fs-5"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_archive_desc', 'Deep dives into how we transform digital presence into high-performance authority machines.' ) ); ?></p>
         </div>
     </header>
 

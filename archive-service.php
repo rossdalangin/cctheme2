@@ -12,12 +12,13 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header section text-center bg-dark overflow-hidden">
+			<header class="page-header section section-xl text-center bg-dark overflow-hidden">
                 <div class="mesh-gradient"></div>
+                <div class="hero-bg-glow"></div>
                 <div class="container container-narrow">
-                    <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_label_service_archive_tag', 'OUR CAPABILITIES' ) ); ?></span>
-				<h1 class="hero-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_label_service_archive_title', 'Strategic Systems' ) ); ?></h1>
-                    <div class="section-subheadline section-subheadline-centered lead text-muted mt-4">
+                    <span class="section-tag reveal"><?php echo esc_html( get_theme_mod( 'closeclient_label_service_archive_tag', 'OUR CAPABILITIES' ) ); ?></span>
+				<h1 class="hero-headline gradient-text mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_label_service_archive_title', 'Strategic Systems' ) ); ?></h1>
+                    <div class="section-subheadline section-subheadline-centered lead text-muted mt-4 max-w-800 mx-auto fs-5">
                         <?php
                         $desc = get_the_archive_description();
                         echo $desc ? $desc : esc_html( get_theme_mod( 'closeclient_label_service_archive_desc', 'High-fidelity infrastructure components engineered to scale elite digital brands.' ) );

@@ -12,10 +12,11 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-        <header class="page-header section text-center reveal bg-dark overflow-hidden">
+        <header class="page-header section section-xl text-center reveal bg-dark overflow-hidden">
             <div class="mesh-gradient"></div>
+            <div class="hero-bg-glow"></div>
             <div class="container">
-                <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_blog_title', 'Insights & Engineering' ) ); ?></span>
+                <span class="section-tag reveal"><?php echo esc_html( get_theme_mod( 'closeclient_blog_title', 'Insights & Engineering' ) ); ?></span>
                 <h1 class="hero-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_blog_description', 'Systems, strategies, and engineering insights to scale your digital brand.' ) ); ?></h1>
             </div>
         </header>

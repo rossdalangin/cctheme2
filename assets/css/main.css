@@ -895,36 +895,52 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.01);
+    background: var(--c-onyx-light);
     border: 1px solid var(--c-border);
-    border-radius: var(--radius-xl);
-    transition: all 0.6s cubic-bezier(0.2, 1, 0.2, 1);
+    border-radius: var(--radius-lg);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100%;
 }
 
 .blog-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    border-color: var(--c-accent);
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(var(--c-accent-rgb), 0.1);
-    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-10px);
+    border-color: rgba(var(--c-accent-rgb), 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 20px rgba(var(--c-accent-rgb), 0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .blog-card .post-thumbnail {
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/10;
     overflow: hidden;
     border-bottom: 1px solid var(--c-border);
+    position: relative;
+}
+
+.blog-card .post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .blog-card:hover .post-thumbnail img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
+
 .blog-card .post-content {
     padding: var(--s-md);
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
+
 .blog-card .post-meta {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: var(--s-xs);
 }
 .blog-card .entry-title a {
     text-decoration: none;
@@ -1266,9 +1282,15 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     margin-bottom: var(--s-2xl);
     text-align: left;
     padding: var(--s-lg);
-    background: rgba(255, 255, 255, 0.01);
+    background: var(--c-onyx-light);
     border: 1px solid var(--c-border);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
+    transition: all 0.5s ease;
+}
+
+.featured-post-item:hover {
+    border-color: rgba(var(--c-accent-rgb), 0.3);
+    background: rgba(255, 255, 255, 0.05);
 }
 .featured-image {
     flex: 1;
@@ -1281,8 +1303,20 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
 }
 .blog-posts-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--s-lg);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-md);
+}
+
+@media (max-width: 1200px) {
+    .blog-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-posts-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Sticky Blog CTA Enhancements */
@@ -1460,11 +1494,60 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     color: var(--c-text-muted);
 }
 
+/* Pagination Styling */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-links .page-numbers {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--c-border);
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--c-text-muted);
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: var(--c-onyx-light);
+    font-size: 0.9rem;
+}
+
+.nav-links .page-numbers:hover,
+.nav-links .page-numbers.current {
+    background: var(--c-accent);
+    color: var(--c-white);
+    border-color: var(--c-accent);
+    box-shadow: 0 10px 20px rgba(var(--c-accent-rgb), 0.3);
+    transform: translateY(-3px);
+}
+
+.nav-links .page-numbers.dots {
+    border: none;
+    background: none;
+}
+
 /* Related Posts */
 .related-posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--s-sm);
+}
+
+@media (max-width: 991px) {
+    .related-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .related-posts-grid {
+        grid-template-columns: 1fr;
+    }
 }
 .related-post-card {
     padding: 30px;

@@ -12,10 +12,12 @@ get_header();
     <div class="container">
         <?php if ( have_posts() ) : ?>
 
-            <header class="page-header section section-lg text-center reveal">
+            <header class="page-header section section-xl text-center reveal bg-dark overflow-hidden">
+                <div class="mesh-gradient"></div>
+                <div class="hero-bg-glow"></div>
                 <?php
-                the_archive_title( '<h1 class="page-title gradient-text">', '</h1>' );
-                the_archive_description( '<div class="section-subheadline section-subheadline-centered py-md">', '</div>' );
+                the_archive_title( '<h1 class="hero-headline gradient-text mb-4">', '</h1>' );
+                the_archive_description( '<div class="archive-description text-muted py-md max-w-800 mx-auto fs-5">', '</div>' );
                 ?>
             </header>
 
