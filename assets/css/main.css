@@ -942,16 +942,36 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     color: var(--c-accent);
     margin-bottom: var(--s-xs);
 }
+.blog-card .entry-title {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.03em !important;
+    margin-bottom: var(--s-sm);
+}
+
 .blog-card .entry-title a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease;
 }
+
+.blog-card .entry-title a:hover {
+    color: var(--c-accent);
+}
+
 .blog-card .post-excerpt {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: var(--s-md) !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
+
 .blog-card .read-more-btn {
-    padding: 12px 32px;
-    font-size: 0.8rem;
+    padding: 10px 24px;
+    font-size: 0.7rem;
 }
 
 /* Lead Magnet Template */
@@ -1303,13 +1323,13 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
 }
 .blog-posts-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--s-md);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-lg);
 }
 
 @media (max-width: 1200px) {
     .blog-posts-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 }
 
