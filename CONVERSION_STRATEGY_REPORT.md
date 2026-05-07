@@ -47,4 +47,22 @@ Every strategic page on the site leads to a single, terminal conversion point: *
 *   **Bento Grid**: Signals organization and "Systems Thinking."
 
 ---
+
+## 5. Storytelling for Authority
+We use "The Architect's Narrative" to shift the focus from the service (Web Design) to the outcome (Revenue Infrastructure).
+*   **The Hero's Journey**: We position the client as the hero who is currently hindered by an inferior technical "sidekick" (their current website).
+*   **The Wise Guide**: We are the guide providing the tactical blueprint and the high-fidelity tools necessary for the hero's ultimate victory.
+
+## 6. The Salesman's Logic in Design
+Every design choice is a sales decision:
+*   **Minimalism**: Signals confidence. A brand that doesn't need to "shout" is a brand that is already in demand.
+*   **High Contrast (Onyx/Indigo)**: Evokes the feeling of a premium, exclusive terminal or high-end dashboard, which appeals to the coach's desire for sophisticated systems.
+*   **Reveal Animations**: Act as "Micro-Pacing," ensuring the prospect doesn't skip over key authority statements.
+
+## 7. Targeting Coaches & Consultants
+This demographic values **Time** and **Certainty**.
+*   **Certainty**: We provide this through "Mathematical Precision" and "ROI-Focused Engineering."
+*   **Time**: We provide this through "Automated Lead Pre-Qualification" and "Zero-Latency Systems."
+
+---
 **CloseClient Elite: Engineered for Absolute Market Dominance.**
