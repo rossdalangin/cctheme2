@@ -454,7 +454,7 @@ function closeclient_generate_pages() {
         }
 
         // Set Posts Page
-        if ( 'Insights' === $title ) {
+        if ( 'Strategic Insights' === $title ) {
             update_option( 'page_for_posts', $pid );
         }
     }

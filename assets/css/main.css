@@ -547,6 +547,12 @@ input:focus, textarea:focus, select:focus {
     100% { left: 200%; }
 }
 
+.ticker-mode-wrapper {
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
 .ticker-mode-content {
     animation: ticker-scroll 30s linear infinite;
     width: max-content;
@@ -576,6 +582,7 @@ input:focus, textarea:focus, select:focus {
     display: flex;
     flex-direction: column;
     position: relative;
+    min-height: 420px;
 }
 
 .footer-watermark {

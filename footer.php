@@ -88,7 +88,7 @@
                 <!-- Column 2: Navigation -->
                 <div class="footer-column bento-span-4 px-lg-5">
                     <div class="footer-icon-tag mb-3 opacity-20"><?php echo closeclient_get_svg('protocol'); ?></div>
-                    <h3 class="footer-title h6 mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col2_title', 'The Protocol' ) ); ?></h3>
+                    <h3 class="footer-title h6 mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col2_title', 'Navigation' ) ); ?></h3>
                     <div class="d-flex flex-wrap gap-5">
                         <div class="flex-grow-1">
                             <?php
@@ -117,7 +117,7 @@
                             ?>
                         </div>
                     </div>
-                    <div class="footer-meta-nav mt-5">
+                    <div class="footer-meta-nav mt-5 pt-4 border-top border-white-10">
                          <?php
                         wp_nav_menu(
                             array(

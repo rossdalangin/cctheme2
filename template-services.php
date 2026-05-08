@@ -71,6 +71,8 @@ $subheadline = get_theme_mod( 'closeclient_services_subheadline_tpl', 'We don\'t
         <?php endif; ?>
     </div>
 
+    <?php get_template_part( 'template-parts/sections/section-process' ); ?>
+    <?php get_template_part( 'template-parts/sections/section-pricing' ); ?>
     <?php get_template_part( 'template-parts/sections/section-booking-cta' ); ?>
 </main>
 
