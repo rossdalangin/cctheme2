@@ -307,6 +307,7 @@ function closeclient_get_defaults() {
         'closeclient_vsl_takeaways' => 'Identifying structural "Authority Leaks", The Precise Architecture of High-Ticket Scale, Engineering a Zero-Friction Lead Acquisition Engine',
         'closeclient_vsl_tag' => 'EXCLUSIVE STRATEGY TRAINING',
         'closeclient_vsl_video_url' => '',
+        'closeclient_gen_trigger' => '',
         'closeclient_assets_headline' => 'Elite Authority Asset Suite',
         'closeclient_assets_desc' => 'Strategic frameworks and high-fidelity protocols engineered for 8-figure coaches and consultants.',
         'closeclient_contact_email' => 'solutions@closeclient.io',
