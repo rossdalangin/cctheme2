@@ -270,9 +270,7 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_authority_desc' => 'Authority Section: Description',
         'closeclient_assets_headline' => 'Strategic Assets Headline',
         'closeclient_assets_desc' => 'Strategic Assets Description',
-        'closeclient_footer_col2_title' => 'Footer Col 2 Title',
-        'closeclient_footer_col3_title' => 'Footer Col 3 Title',
-        'closeclient_footer_col4_title' => 'Footer Col 4 Title',
+        'closeclient_footer_col2_title' => 'Footer Navigation Title',
         'closeclient_footer_status_text' => 'Footer Status Text',
         'closeclient_footer_status_color' => 'Footer Status Color',
         'closeclient_footer_ribbon_tag' => 'Footer Authority Ribbon Tag',
@@ -469,18 +467,6 @@ function closeclient_customize_register( $wp_customize ) {
             'selector'        => '.footer-grid > div:nth-child(2) .footer-title',
             'settings'        => array( 'closeclient_footer_col2_title' ),
             'render_callback' => function() { return get_theme_mod( 'closeclient_footer_col2_title' ); },
-        ) );
-
-        $wp_customize->selective_refresh->add_partial( 'closeclient_footer_col3_title', array(
-            'selector'        => '.footer-grid > div:nth-child(3) .footer-title',
-            'settings'        => array( 'closeclient_footer_col3_title' ),
-            'render_callback' => function() { return get_theme_mod( 'closeclient_footer_col3_title' ); },
-        ) );
-
-        $wp_customize->selective_refresh->add_partial( 'closeclient_footer_col4_title', array(
-            'selector'        => '.footer-grid > div:nth-child(4) .footer-title',
-            'settings'        => array( 'closeclient_footer_col4_title' ),
-            'render_callback' => function() { return get_theme_mod( 'closeclient_footer_col4_title' ); },
         ) );
 
         $wp_customize->selective_refresh->add_partial( 'closeclient_about_headline_tpl', array(

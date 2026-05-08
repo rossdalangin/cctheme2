@@ -16,14 +16,14 @@
                     <span class="small fw-black letter-spacing-lg text-white-50 uppercase tracking-widest opacity-50"><?php echo esc_html( get_theme_mod( 'closeclient_footer_ribbon_tag', 'TRUSTED BY INNOVATORS AT:' ) ); ?></span>
                 </div>
                 <div class="ticker-mode-wrapper overflow-hidden flex-grow-1">
-                    <div class="ticker-mode-content d-flex gap-5 opacity-30 grayscale invert">
+                    <div class="ticker-mode-content d-flex gap-5 opacity-20 grayscale" style="animation-duration: 60s;">
                         <?php
                         $logos = get_theme_mod( 'closeclient_footer_ribbon_logos', 'STRATEGY.CO, ELITE.IO, CORE.ENGINE, VORTEX.MEDIA, ATLAS.SYS, NEXUS.BND, OMNI.CORP, QUANTUM.LEAD' );
                         $logos_array = explode( ',', $logos );
                         // Output twice for seamless loop
                         for ($i = 0; $i < 2; $i++) {
                             foreach ( $logos_array as $logo ) :
-                                echo '<span class="h5 mb-0 fw-black whitespace-nowrap">' . esc_html( trim( $logo ) ) . '</span>';
+                                echo '<span class="small mb-0 fw-bold whitespace-nowrap uppercase letter-spacing-lg">' . esc_html( trim( $logo ) ) . '</span>';
                             endforeach;
                         }
                         ?>
@@ -41,7 +41,7 @@
 
             <div class="footer-grid bento-grid reveal-stagger">
                 <!-- Column 1: Branding -->
-                <div class="footer-column footer-branding bento-span-3 position-relative overflow-hidden">
+                <div class="footer-column footer-branding bento-span-4 position-relative overflow-hidden">
                     <div class="footer-watermark">CC</div>
                     <div class="footer-logo mb-4">
                         <?php
@@ -53,23 +53,11 @@
                         ?>
                         <span class="d-block small text-white-50 opacity-30 fw-bold letter-spacing-lg mt-2 node-sync-label" style="font-size: 0.5rem; text-transform: uppercase;">Authority Infrastructure</span>
                     </div>
-                    <p class="footer-about text-muted small mb-4">
+                    <p class="footer-about text-muted small mb-5">
                         <?php echo esc_html( get_theme_mod( 'closeclient_footer_about', 'Engineering high-fidelity digital infrastructure for the world\'s most ambitious high-ticket authorities.' ) ); ?>
                     </p>
 
-                    <div class="footer-node-map-wrapper mb-4 opacity-10" style="height: 80px;">
-                        <svg viewBox="0 0 800 400" class="w-100 h-100" style="filter: drop-shadow(0 0 10px var(--c-accent));">
-                            <path d="M150,150 L200,100 L300,120 L400,80 L500,150 L600,120 L700,200" fill="none" stroke="var(--c-accent)" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"></path>
-                            <circle cx="150" cy="150" r="3" fill="var(--c-accent)"><animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" /></circle>
-                            <circle cx="400" cy="80" r="3" fill="var(--c-accent)"><animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite" /></circle>
-                            <circle cx="600" cy="120" r="3" fill="var(--c-accent)"><animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite" /></circle>
-                        </svg>
-                    </div>
-
-                    <div class="footer-secure-network mb-3 opacity-20">
-                        <span class="small fw-black" style="font-size: 0.5rem; letter-spacing: 0.2em;">ENCRYPTED CHANNELS:</span>
-                    </div>
-                    <div class="footer-social-links d-flex gap-3 align-items-center mb-4">
+                    <div class="footer-social-links d-flex gap-3 align-items-center mb-5">
                         <?php
                         if ( current_user_can('manage_options') ) : ?>
                             <a href="<?php echo admin_url('admin.php?page=authority-hub'); ?>" class="social-icon" title="Terminal Access">
@@ -86,47 +74,8 @@
                             <?php endif;
                         endforeach; ?>
                     </div>
-                </div>
 
-                <!-- Column 2: Solutions -->
-                <div class="footer-column bento-span-2">
-                    <div class="footer-icon-tag mb-3 opacity-20"><?php echo closeclient_get_svg('protocol'); ?></div>
-                    <h3 class="footer-title h6"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col2_title', 'The Protocol' ) ); ?></h3>
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'footer-1',
-                            'menu_id'        => 'footer-menu-1',
-                            'container'      => false,
-                            'fallback_cb'    => 'closeclient_footer_1_fallback',
-                            'menu_class'     => 'list-unstyled small text-muted',
-                        )
-                    );
-                    ?>
-                </div>
-
-                <!-- Column 3: Strategic Assets -->
-                <div class="footer-column bento-span-2">
-                    <div class="footer-icon-tag mb-3 opacity-20"><?php echo closeclient_get_svg('asset'); ?></div>
-                    <h3 class="footer-title h6"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col3_title', 'Strategic' ) ); ?></h3>
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'footer-2',
-                            'menu_id'        => 'footer-menu-2',
-                            'container'      => false,
-                            'fallback_cb'    => 'closeclient_footer_2_fallback',
-                            'menu_class'     => 'list-unstyled small text-muted',
-                        )
-                    );
-                    ?>
-                </div>
-
-                <!-- Column 4: Resources -->
-                <div class="footer-column bento-span-2">
-                    <div class="footer-icon-tag mb-3 opacity-20"><?php echo closeclient_get_svg('structure'); ?></div>
-                    <h3 class="footer-title h6"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col4_title', 'Company' ) ); ?></h3>
-                    <div class="footer-contact-info mb-4">
+                    <div class="footer-contact-info">
                         <?php
                         $f_email = get_theme_mod( 'closeclient_contact_email', 'solutions@closeclient.io' );
                         $f_phone = get_theme_mod( 'closeclient_contact_phone', '+1 (888) 555-0123' );
@@ -134,39 +83,77 @@
                         if ($f_phone) echo '<div class="small text-muted mb-2 d-flex align-items-center gap-2">'.closeclient_get_svg('phone').' '.esc_html($f_phone).'</div>';
                         ?>
                     </div>
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'footer-3',
-                            'menu_id'        => 'footer-menu-3',
-                            'container'      => false,
-                            'fallback_cb'    => 'closeclient_footer_3_fallback',
-                            'menu_class'     => 'list-unstyled small text-muted mb-4',
-                        )
-                    );
-                    ?>
-                    <div class="footer-system-search mt-auto">
+                </div>
+
+                <!-- Column 2: Navigation -->
+                <div class="footer-column bento-span-4 px-lg-5">
+                    <div class="footer-icon-tag mb-3 opacity-20"><?php echo closeclient_get_svg('protocol'); ?></div>
+                    <h3 class="footer-title h6 mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col2_title', 'The Protocol' ) ); ?></h3>
+                    <div class="d-flex flex-wrap gap-5">
+                        <div class="flex-grow-1">
+                            <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'footer-1',
+                                    'menu_id'        => 'footer-menu-1',
+                                    'container'      => false,
+                                    'fallback_cb'    => 'closeclient_footer_1_fallback',
+                                    'menu_class'     => 'list-unstyled small text-muted',
+                                )
+                            );
+                            ?>
+                        </div>
+                        <div class="flex-grow-1">
+                            <?php
+                            wp_nav_menu(
+                                array(
+                                    'theme_location' => 'footer-2',
+                                    'menu_id'        => 'footer-menu-2',
+                                    'container'      => false,
+                                    'fallback_cb'    => 'closeclient_footer_2_fallback',
+                                    'menu_class'     => 'list-unstyled small text-muted',
+                                )
+                            );
+                            ?>
+                        </div>
+                    </div>
+                    <div class="footer-meta-nav mt-5">
+                         <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'footer-3',
+                                'menu_id'        => 'footer-menu-3',
+                                'container'      => false,
+                                'fallback_cb'    => 'closeclient_footer_3_fallback',
+                                'menu_class'     => 'list-unstyled small text-muted d-flex flex-wrap gap-3',
+                            )
+                        );
+                        ?>
+                    </div>
+                </div>
+
+                <!-- Column 3: Terminal Command -->
+                <div class="footer-column bento-span-4 footer-command">
+                    <div class="footer-icon-tag mb-3 opacity-20"><?php echo closeclient_get_svg('terminal'); ?></div>
+                    <h3 class="footer-title h6"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col5_title', 'Command' ) ); ?></h3>
+                    <p class="small text-muted mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_cta_text_label', 'Ready to engineer your authority?' ) ); ?></p>
+
+                    <div class="footer-system-search mb-4">
                         <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <div class="position-relative">
-                                <input type="search" class="search-field small py-3 ps-4" style="font-size: 0.7rem; border-radius: 8px; letter-spacing: 0.1em;" placeholder="ENGINE SEARCH..." value="<?php echo get_search_query(); ?>" name="s" />
+                                <input type="search" class="search-field small py-3 ps-4" style="font-size: 0.7rem; border-radius: 8px; letter-spacing: 0.1em; background: rgba(255,255,255,0.02);" placeholder="SEARCH PROTOCOLS..." value="<?php echo get_search_query(); ?>" name="s" />
                                 <button type="submit" class="search-submit social-icon position-absolute end-0 top-0 h-100 border-0 bg-transparent px-3 text-accent" style="width: auto; height: 100%; border-radius: 0;"><?php echo closeclient_get_svg('arrow-right'); ?></button>
                             </div>
                         </form>
                     </div>
-                </div>
 
-                <!-- Column 5: Terminal Command -->
-                <div class="footer-column bento-span-3 footer-command">
-                    <div class="footer-icon-tag mb-3 opacity-20"><?php echo closeclient_get_svg('terminal'); ?></div>
-                    <h3 class="footer-title h6"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col5_title', 'Command' ) ); ?></h3>
-                    <p class="small text-muted mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_cta_text_label', 'Ready to engineer your authority?' ) ); ?></p>
                     <div class="footer-quick-diagnostic mb-4">
                         <div class="position-relative cursor-pointer trigger-audit-modal">
                             <input type="text" class="small py-2 border-accent opacity-50 w-100" style="font-size: 0.65rem; background: rgba(var(--c-accent-rgb), 0.05); pointer-events: none;" placeholder="INITIATE DIAGNOSTIC..." readonly />
                             <span class="position-absolute end-0 top-0 h-100 d-flex align-items-center px-3 text-accent"><?php echo closeclient_get_svg('protocol'); ?></span>
                         </div>
                     </div>
-                    <a href="<?php echo esc_url( get_theme_mod( 'closeclient_header_cta_link', '#audit' ) ); ?>" class="cc-button footer-cta-btn">
+                    <a href="<?php echo esc_url( get_theme_mod( 'closeclient_header_cta_link', '#audit' ) ); ?>" class="cc-button footer-cta-btn w-100 text-center">
                         <?php echo esc_html( get_theme_mod( 'closeclient_footer_cta_btn_text', 'Initiate Audit Protocol →' ) ); ?>
                     </a>
                 </div>

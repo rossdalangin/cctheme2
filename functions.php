@@ -623,6 +623,36 @@ function closeclient_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'closeclient_excerpt_more' );
 
 /**
+ * Adjust Blog Query for Featured Post Offset
+ */
+function closeclient_adjust_blog_query( $query ) {
+    if ( ! is_admin() && $query->is_home() && $query->is_main_query() ) {
+        $offset = 1;
+        $ppp = get_option( 'posts_per_page' );
+
+        if ( $query->is_paged() ) {
+            $paged_offset = $offset + ( ( $query->query_vars['paged'] - 1 ) * $ppp );
+            $query->set( 'offset', $paged_offset );
+        } else {
+            $query->set( 'offset', $offset );
+        }
+    }
+}
+add_action( 'pre_get_posts', 'closeclient_adjust_blog_query' );
+
+/**
+ * Fix Pagination for Offset Query
+ */
+function closeclient_adjust_offset_pagination( $found_posts, $query ) {
+    $offset = 1;
+    if ( ! is_admin() && $query->is_home() && $query->is_main_query() ) {
+        return $found_posts - $offset;
+    }
+    return $found_posts;
+}
+add_filter( 'found_posts', 'closeclient_adjust_offset_pagination', 10, 2 );
+
+/**
  * SVG Icons.
  */
 require get_template_directory() . '/inc/icons.php';
