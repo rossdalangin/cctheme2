@@ -16,7 +16,7 @@
                     <span class="small fw-black letter-spacing-lg text-white-50 uppercase tracking-widest opacity-50"><?php echo esc_html( get_theme_mod( 'closeclient_footer_ribbon_tag', 'TRUSTED BY INNOVATORS AT:' ) ); ?></span>
                 </div>
                 <div class="ticker-mode-wrapper overflow-hidden flex-grow-1">
-                    <div class="ticker-mode-content d-flex gap-5 opacity-20 grayscale" style="animation-duration: 60s;">
+                    <div class="ticker-mode-content d-flex gap-5 opacity-20 grayscale">
                         <?php
                         $logos = get_theme_mod( 'closeclient_footer_ribbon_logos', 'STRATEGY.CO, ELITE.IO, CORE.ENGINE, VORTEX.MEDIA, ATLAS.SYS, NEXUS.BND, OMNI.CORP, QUANTUM.LEAD' );
                         $logos_array = explode( ',', $logos );
@@ -86,37 +86,34 @@
                 </div>
 
                 <!-- Column 2: Navigation -->
-                <div class="footer-column bento-span-4 px-lg-5">
+                <div class="footer-column bento-span-4 px-lg-5 d-flex flex-column">
                     <div class="footer-icon-tag mb-3 opacity-20"><?php echo closeclient_get_svg('protocol'); ?></div>
                     <h3 class="footer-title h6 mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col2_title', 'Navigation' ) ); ?></h3>
-                    <div class="d-flex flex-wrap gap-5">
-                        <div class="flex-grow-1">
-                            <?php
-                            wp_nav_menu(
-                                array(
-                                    'theme_location' => 'footer-1',
-                                    'menu_id'        => 'footer-menu-1',
-                                    'container'      => false,
-                                    'fallback_cb'    => 'closeclient_footer_1_fallback',
-                                    'menu_class'     => 'list-unstyled small text-muted',
-                                )
-                            );
-                            ?>
-                        </div>
-                        <div class="flex-grow-1">
-                            <?php
-                            wp_nav_menu(
-                                array(
-                                    'theme_location' => 'footer-2',
-                                    'menu_id'        => 'footer-menu-2',
-                                    'container'      => false,
-                                    'fallback_cb'    => 'closeclient_footer_2_fallback',
-                                    'menu_class'     => 'list-unstyled small text-muted',
-                                )
-                            );
-                            ?>
-                        </div>
+
+                    <div class="footer-nav-grid mb-auto">
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'footer-1',
+                                'menu_id'        => 'footer-menu-1',
+                                'container'      => false,
+                                'fallback_cb'    => 'closeclient_footer_1_fallback',
+                                'menu_class'     => 'list-unstyled small text-muted mb-4',
+                            )
+                        );
+
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'footer-2',
+                                'menu_id'        => 'footer-menu-2',
+                                'container'      => false,
+                                'fallback_cb'    => 'closeclient_footer_2_fallback',
+                                'menu_class'     => 'list-unstyled small text-muted',
+                            )
+                        );
+                        ?>
                     </div>
+
                     <div class="footer-meta-nav mt-5 pt-4 border-top border-white-10">
                          <?php
                         wp_nav_menu(
@@ -125,7 +122,7 @@
                                 'menu_id'        => 'footer-menu-3',
                                 'container'      => false,
                                 'fallback_cb'    => 'closeclient_footer_3_fallback',
-                                'menu_class'     => 'list-unstyled small text-muted d-flex flex-wrap gap-3',
+                                'menu_class'     => 'list-unstyled small text-muted d-flex flex-wrap gap-4',
                             )
                         );
                         ?>
