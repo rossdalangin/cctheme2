@@ -442,10 +442,10 @@ require get_template_directory() . '/inc/admin-guide.php';
 function closeclient_menu_fallback() {
     echo '<ul class="primary-menu-list">';
     echo '<li><a href="' . esc_url( home_url( '/solutions' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_services', 'The Protocol' ) ) . '</a></li>';
-    echo '<li><a href="' . esc_url( home_url( '/success-proof' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_cases', 'Success Proof' ) ) . '</a></li>';
-    echo '<li><a href="' . esc_url( home_url( '/the-method' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_about', 'The Method' ) ) . '</a></li>';
+    echo '<li><a href="' . esc_url( home_url( '/success-proof' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_cases', 'Protocol Analysis' ) ) . '</a></li>';
+    echo '<li><a href="' . esc_url( home_url( '/the-method' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_about', 'The Framework' ) ) . '</a></li>';
     echo '<li><a href="' . esc_url( home_url( '/strategic-insights' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_blog', 'Strategic Insights' ) ) . '</a></li>';
-    echo '<li><a href="' . esc_url( home_url( '/book-audit' ) ) . '" class="cc-button-nav">' . esc_html( get_theme_mod( 'closeclient_menu_label_audit', 'Book Audit' ) ) . '</a></li>';
+    echo '<li><a href="' . esc_url( home_url( '/book-audit' ) ) . '" class="cc-button-nav">' . esc_html( get_theme_mod( 'closeclient_menu_label_audit', 'Secure Audit' ) ) . '</a></li>';
     echo '</ul>';
 }
 
@@ -455,7 +455,7 @@ function closeclient_menu_fallback() {
 function closeclient_footer_1_fallback() {
     echo '<ul class="list-unstyled small text-muted">';
     echo '<li><a href="' . esc_url( home_url( '/solutions' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_services', 'The Protocol' ) ) . '</a></li>';
-    echo '<li><a href="' . esc_url( home_url( '/success-proof' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_cases', 'Success Proof' ) ) . '</a></li>';
+    echo '<li><a href="' . esc_url( home_url( '/success-proof' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_cases', 'Protocol Analysis' ) ) . '</a></li>';
     echo '<li><a href="' . esc_url( home_url( '/strategic-insights' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_blog', 'Strategic Insights' ) ) . '</a></li>';
     echo '<li><a href="' . esc_url( home_url( '/training' ) ) . '">' . esc_html( get_theme_mod( 'closeclient_menu_label_training', 'VSL Protocol' ) ) . '</a></li>';
     echo '</ul>';
@@ -467,7 +467,7 @@ function closeclient_footer_1_fallback() {
 function closeclient_footer_2_fallback() {
     echo '<ul class="list-unstyled small text-muted">';
     echo '<li><a href="' . esc_url( home_url( '/strategic-assets' ) ) . '">Authority Blueprints</a></li>';
-    echo '<li><a href="' . esc_url( home_url( '/training' ) ) . '">VSL Protocol</a></li>';
+    echo '<li><a href="' . esc_url( home_url( '/vsl-protocol' ) ) . '">VSL Protocol</a></li>';
     echo '<li><a href="' . esc_url( home_url( '/the-method' ) ) . '">The Framework</a></li>';
     echo '</ul>';
 }

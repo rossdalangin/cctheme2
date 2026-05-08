@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateClocks, 60000);
 
     // --- Dynamic Diagnostic Readouts ---
-    const latencyVal = document.querySelector('.footer-diagnostic-panel [data-latency]');
+    const latencyVal = document.querySelector('[data-latency]');
     if (latencyVal) {
         setInterval(() => {
             const fluc = (Math.random() * 0.05).toFixed(2);
@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    const loadVal = document.querySelector('.footer-diagnostic-panel [data-load]');
+    const loadVal = document.querySelector('[data-load]');
     if (loadVal) {
         setInterval(() => {
             const load = Math.floor(Math.random() * (22 - 8 + 1)) + 8;
@@ -324,10 +324,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4000);
     }
 
+    const rxVal = document.querySelector('[data-rx]');
+    const txVal = document.querySelector('[data-tx]');
+    if (rxVal && txVal) {
+        setInterval(() => {
+            rxVal.innerText = (Math.random() * 12).toFixed(1);
+            txVal.innerText = (Math.random() * 5).toFixed(1);
+        }, 2000);
+    }
+
     // --- Dynamic System Log ---
     const logContainer = document.querySelector('.footer-system-log .d-flex');
     if (logContainer) {
-        const events = ['CACHE_PURGE', 'PIXEL_SYNC', 'LEAD_FILTER_ACTIVE', 'SEO_OPTIMIZE', 'UI_REFRESH', 'HEX_SYNC_READY'];
+        const events = ['CACHE_PURGE', 'PIXEL_SYNC', 'LEAD_FILTER_ACTIVE', 'SEO_OPTIMIZE', 'UI_REFRESH', 'HEX_SYNC_READY', 'VORTEX_INITIALIZED', 'AUTHORITY_LOCKED', 'CAPITAL_ENGINEER_ONLINE'];
         setInterval(() => {
             const newEvent = events[Math.floor(Math.random() * events.length)];
             const span = document.createElement('span');
@@ -342,6 +351,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 logContainer.removeChild(logContainer.firstChild);
             }
         }, 10000);
+    }
+
+    // --- Session Timer ---
+    const sessionTimer = document.querySelector('[data-session-timer]');
+    if (sessionTimer) {
+        let seconds = 0;
+        setInterval(() => {
+            seconds++;
+            const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+            const secs = (seconds % 60).toString().padStart(2, '0');
+            sessionTimer.innerText = `${mins}:${secs}`;
+        }, 1000);
+    }
+
+    // --- Encryption Cipher Animation ---
+    const encrCipher = document.querySelector('[data-encryption-cipher]');
+    if (encrCipher) {
+        const ciphers = ['AES-256', 'RSA-4096', 'XOR-64', 'GCM-128', 'SHA-512'];
+        setInterval(() => {
+            const next = ciphers[Math.floor(Math.random() * ciphers.length)];
+            encrCipher.innerText = next;
+        }, 5000);
     }
 });
 

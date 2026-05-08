@@ -89,7 +89,6 @@ function closeclient_get_defaults() {
         'closeclient_footer_col2_title' => 'The Protocol',
         'closeclient_footer_col3_title' => 'Strategic',
         'closeclient_footer_col4_title' => 'Company',
-        'closeclient_footer_col5_title' => 'Command',
         'closeclient_footer_status_text' => 'System: 100% Operational',
         'closeclient_footer_status_color' => '#10B981',
         'closeclient_footer_ribbon_tag' => 'TRUSTED BY INNOVATORS AT:',
@@ -97,6 +96,7 @@ function closeclient_get_defaults() {
         'closeclient_footer_newsletter_show' => '0',
         'closeclient_footer_copyright' => '© {year} CloseClient. All rights reserved.',
         'closeclient_footer_cta_text_label' => 'Ready to engineer your authority?',
+        'closeclient_footer_cta_btn_text' => 'Initiate Audit Protocol →',
         'closeclient_footer_disclaimer' => 'Consulting and engineering services are subject to terms. Results may vary by market.',
         'closeclient_footer_privacy_label' => 'Privacy Policy',
         'closeclient_footer_terms_label' => 'Terms of Service',
@@ -129,7 +129,7 @@ function closeclient_get_defaults() {
         'closeclient_label_none_tag' => 'ZERO RESULTS',
         'closeclient_label_none_title' => 'No Strategic Matches Found.',
         'closeclient_label_outcome' => '03. Performance: The Strategic ROI',
-        'closeclient_label_archive' => 'STRATEGIC INSIGHTS',
+        'closeclient_label_archive' => 'INTELLECTUAL CAPITAL',
         'closeclient_label_page_links' => 'Pages:',
         'closeclient_label_popular' => 'MOST POPULAR',
         'closeclient_label_portfolio_archive_desc' => 'Deep dives into the technical and psychological infrastructure behind 8-figure authority brands.',
@@ -168,10 +168,10 @@ function closeclient_get_defaults() {
         'closeclient_line_height' => '1.6',
         'closeclient_lm_form_action' => '',
         'closeclient_logo_ticker_tag' => 'TRUSTED BY 8-FIGURE AUTHORITIES',
-        'closeclient_menu_label_about' => 'The Method',
-        'closeclient_menu_label_audit' => 'Book Audit',
+        'closeclient_menu_label_about' => 'The Framework',
+        'closeclient_menu_label_audit' => 'Secure Audit',
         'closeclient_menu_label_blog' => 'Strategic Insights',
-        'closeclient_menu_label_cases' => 'Success Proof',
+        'closeclient_menu_label_cases' => 'Protocol Analysis',
         'closeclient_menu_label_services' => 'The Protocol',
         'closeclient_menu_label_training' => 'VSL Protocol',
         'closeclient_newsletter_button' => 'Join the Circle',
@@ -220,7 +220,7 @@ function closeclient_get_defaults() {
         'closeclient_sales_value_stack_title' => 'The High-Fidelity Authority Stack',
         'closeclient_secondary_color' => '#0A0A0B',
         'closeclient_service_1_text' => 'We transform passive digital brochures into elite, high-performance sales associates that close deals 24/7.',
-        'closeclient_service_archive_tag' => 'THE ARCHITECTURE',
+        'closeclient_service_archive_tag' => 'ARCHITECTURAL STACK',
         'closeclient_service_1_title' => 'Authority-First UI/UX Engineering',
         'closeclient_service_2_text' => 'We architect the technical and psychological systems required to force lead quality and accelerate sales velocity.',
         'closeclient_service_2_title' => 'High-Fidelity Revenue Systems',
@@ -336,10 +336,10 @@ function closeclient_generate_cpt_data() {
             'Vortex Authority Funnels' => 'Dynamic, automated lead-intake systems that function as your most elite, 24/7 global sales associate. Our funnels are designed to liquidate lead costs while building immense perceived value, ensuring you only speak with highly qualified, ready-to-buy clients.'
         ),
         'portfolio' => array(
-            'The 340% Authority Pivot' => 'Re-architecting the digital ecosystem for a global consulting firm. By implementing our "Authority Flywheel" framework, we liquidated lead-cost and enabled the partner to manage $500k/mo in new inquiry volume with zero additional headcount.',
-            'The $10M Architectural Overhaul' => 'How we engineered the core digital infrastructure for a world-class education brand. By optimizing technical performance and strategic positioning, we helped them achieve eight figures in attributable revenue within 12 months of deployment.',
-            'Elite Performance Scaling' => 'Engineering a high-fidelity revenue engine for a premium SaaS brand. Our architectural protocol resulted in a 420% increase in deal velocity and absolute market dominance within 6 months.',
-            'Strategic Authority Protocol' => 'Deploying a high-performance digital ecosystem for a top-tier coaching brand. We engineered the tactical infrastructure necessary to command a 5x increase in high-ticket inquiry volume.'
+            'The $10M Architectural Overhaul' => 'Engineering the core digital infrastructure for a world-class consultancy. By optimizing technical performance and strategic positioning, we helped them achieve eight figures in attributable revenue within 12 months of deployment.',
+            'The 340% Authority Pivot' => 'Re-architecting the digital ecosystem for an elite coaching firm. By implementing our "Authority Flywheel" framework, we liquidated lead-cost and enabled the partner to manage $500k/mo in new inquiry volume with zero additional headcount.',
+            'Zero-Latency Scale Protocol' => 'Deploying high-fidelity revenue systems for a premium SaaS brand. Our architectural protocol resulted in a 420% increase in deal velocity and absolute market dominance within 6 months.',
+            'Strategic Dominance Engine' => 'Engineering a high-performance digital ecosystem for a global education brand. We installed the tactical infrastructure necessary to command a 5x increase in high-ticket inquiry volume while reducing manual sales effort by 60%.'
         ),
         'testimonial' => array(
             'Strategic Authority Partner' => 'CloseClient didn\'t just build a "website"; they engineered a high-fidelity revenue engine. Our lead quality tripled within 30 days of deployment, and for the first time, our digital presence actually matches the caliber of our expertise.'
@@ -386,12 +386,12 @@ function closeclient_generate_cpt_data() {
                 }
                 if ($type === 'portfolio') {
                     $metrics = array(
-                        'The 340% Authority Pivot' => '340% Lead Quality',
-                        'The $10M Architectural Overhaul' => '$10M Revenue',
-                        'Elite Performance Scaling' => '420% Deal Velocity',
-                        'Strategic Authority Protocol' => '5x Inquiry Volume'
+                        'The $10M Architectural Overhaul' => '$10.4M ATTRIBUTABLE',
+                        'The 340% Authority Pivot' => '340% LEAD QUALITY',
+                        'Zero-Latency Scale Protocol' => '420% VELOCITY',
+                        'Strategic Dominance Engine' => '5.2X ROI ENGINEERED'
                     );
-                    update_post_meta($pid, '_portfolio_metric', isset($metrics[$title]) ? $metrics[$title] : 'Strategic ROI');
+                    update_post_meta($pid, '_portfolio_metric', isset($metrics[$title]) ? $metrics[$title] : 'STRATEGIC ROI');
                     update_post_meta($pid, '_portfolio_challenge', 'Inconsistent high-ticket lead flow and structural authority leaks.');
                     update_post_meta($pid, '_portfolio_solution', 'Full-stack high-fidelity architecture build and Vortex funnel implementation.');
                     update_post_meta($pid, '_portfolio_outcome', 'Absolute market dominance and multi-year attributable revenue growth.');
@@ -418,9 +418,10 @@ function closeclient_generate_pages() {
         'Book Your Audit' => array('content' => '[closeclient_booking_cta][closeclient_faq]', 'template' => 'template-contact.php', 'slug' => 'book-audit'),
         'Strategic Insights' => array('content' => '', 'template' => 'index.php', 'slug' => 'strategic-insights'),
         'Success Proof' => array('content' => '', 'template' => 'archive-portfolio.php', 'slug' => 'success-proof'),
-        'Strategic Assets' => array('content' => '[closeclient_strategic_assets]', 'template' => ''),
-        'Success Blueprint' => array('content' => '[closeclient_lead_magnet]', 'template' => 'template-lead-magnet.php'),
-        'Thank You' => array('content' => '[closeclient_thank_you]', 'template' => 'template-thank-you.php'),
+        'Strategic Assets' => array('content' => '[closeclient_strategic_assets]', 'template' => '', 'slug' => 'strategic-assets'),
+        'Success Blueprint' => array('content' => '[closeclient_lead_magnet]', 'template' => 'template-lead-magnet.php', 'slug' => 'blueprint'),
+        'VSL Protocol' => array('content' => '[closeclient_vsl][closeclient_booking_cta]', 'template' => 'template-landing-page.php', 'slug' => 'vsl-protocol'),
+        'Thank You' => array('content' => '[closeclient_thank_you]', 'template' => 'template-thank-you.php', 'slug' => 'thank-you'),
     );
 
     foreach ( $pages as $title => $pdata ) {

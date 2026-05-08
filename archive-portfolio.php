@@ -32,36 +32,56 @@ get_header();
         <?php endif; ?>
 
         <?php if ( have_posts() ) : ?>
-            <div class="portfolio-grid">
+            <div class="portfolio-grid bento-grid reveal-stagger">
                 <?php
                 $i = 0;
                 while ( have_posts() ) :
                     the_post();
                     $i++;
+                    // Custom Bento Distribution: 8-4-4-4-8
                     $span = ( $i % 5 == 1 || $i % 5 == 0 ) ? 'bento-span-8' : 'bento-span-4';
-                    $reveal_class = ( $i <= 3 ) ? '' : 'reveal';
+                    $metric = get_post_meta( get_the_ID(), '_portfolio_metric', true );
                     ?>
-                    <article id="post-<?php the_ID(); ?>" <?php post_class( "portfolio-item cc-card $reveal_class $span d-flex flex-column h-100 p-0 border-0" ); ?>>
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <div class="portfolio-image" style="height: 350px; overflow: hidden; position: relative;">
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail( 'large', array( 'style' => 'width: 100%; height: 100%; object-fit: cover;' ) ); ?>
-                                </a>
-                                <?php $metric = get_post_meta( get_the_ID(), '_portfolio_metric', true ); ?>
-                                <?php if ( $metric ) : ?>
-                                    <div class="portfolio-metric-overlay" style="position: absolute; bottom: 30px; left: 30px;">
-                                        <div class="badge bg-accent text-white p-2 px-3 small fw-black letter-spacing-1"><?php echo esc_html( $metric ); ?></div>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class( "portfolio-item cc-card p-0 border-0 $span overflow-hidden" ); ?>>
+                        <div class="portfolio-card-inner d-flex flex-column h-100">
+                            <div class="portfolio-image-wrap position-relative overflow-hidden" style="height: 380px;">
+                                <?php if ( has_post_thumbnail() ) : ?>
+                                    <a href="<?php the_permalink(); ?>" class="d-block h-100">
+                                        <?php the_post_thumbnail( 'large', array( 'class' => 'w-100 h-100 object-cover transition-all' ) ); ?>
+                                    </a>
+                                <?php else : ?>
+                                    <div class="glass h-100 d-flex align-items-center justify-content-center">
+                                        <span class="h1 mb-0 opacity-10">ARCH.<?php echo $i; ?></span>
                                     </div>
                                 <?php endif; ?>
+
+                                <?php if ( $metric ) : ?>
+                                    <div class="portfolio-metric-badge position-absolute top-0 end-0 m-4">
+                                        <div class="glass p-3 px-4 border-accent rounded-pill">
+                                            <span class="d-block small text-accent fw-black letter-spacing-xs" style="font-size: 0.5rem; line-height: 1;">KEY METRIC</span>
+                                            <span class="h6 mb-0 text-white fw-black"><?php echo esc_html( $metric ); ?></span>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+
+                                <div class="portfolio-overlay-gradient"></div>
                             </div>
-                        <?php endif; ?>
-                        <div class="portfolio-content p-5 flex-grow-1 d-flex flex-column bg-dark">
-                            <span class="section-tag small mb-3" style="font-size: 0.6rem; opacity: 0.6;"><?php echo esc_html__( 'ARCHITECTURAL AUDIT', 'closeclient' ); ?></span>
-                            <h3 class="h3 mb-3"><a href="<?php the_permalink(); ?>" class="text-white text-decoration-none hover-text-accent transition-all"><?php the_title(); ?></a></h3>
-                            <div class="text-muted small mb-5 lead opacity-80"><?php echo wp_trim_words( get_the_excerpt(), 25 ); ?></div>
-                            <div class="mt-auto pt-4 border-top border-secondary d-flex justify-content-between align-items-center">
-                                <a href="<?php the_permalink(); ?>" class="text-accent fw-bold text-decoration-none small letter-spacing-1 uppercase"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_btn', 'Analyze Protocol →' ) ); ?></a>
-                                <span class="text-white-50 small opacity-30 fw-black">0<?php echo $i; ?></span>
+
+                            <div class="portfolio-content-wrap p-5 flex-grow-1 bg-secondary d-flex flex-column border-top border-secondary">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <span class="section-tag small mb-0" style="font-size: 0.55rem; padding-left: 0;"><?php echo esc_html__( 'PROTOCOL ANALYSIS', 'closeclient' ); ?></span>
+                                    <span class="small text-white-50 opacity-20 fw-black">NO.0<?php echo $i; ?></span>
+                                </div>
+                                <h3 class="h3 mb-4 tracking-tighter"><a href="<?php the_permalink(); ?>" class="text-white text-decoration-none hover-text-accent transition-all"><?php the_title(); ?></a></h3>
+                                <p class="text-muted small mb-5 opacity-70 lead" style="line-height: 1.6;"><?php echo wp_trim_words( get_the_excerpt(), 30 ); ?></p>
+
+                                <div class="mt-auto pt-4 border-top border-white-10 d-flex justify-content-between align-items-center">
+                                    <a href="<?php the_permalink(); ?>" class="cc-button cc-button-secondary py-2 px-4" style="font-size: 0.65rem;">Analyze Blueprint →</a>
+                                    <div class="d-flex gap-2 opacity-30">
+                                        <div class="status-dot-mini bg-accent" style="width: 4px; height: 4px;"></div>
+                                        <span class="small fw-bold" style="font-size: 0.45rem; letter-spacing: 0.1em;">ENCRYPTED</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </article>

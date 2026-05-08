@@ -273,13 +273,13 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_footer_col2_title' => 'Footer Col 2 Title',
         'closeclient_footer_col3_title' => 'Footer Col 3 Title',
         'closeclient_footer_col4_title' => 'Footer Col 4 Title',
-        'closeclient_footer_col5_title' => 'Footer Col 5 Title',
         'closeclient_footer_status_text' => 'Footer Status Text',
         'closeclient_footer_status_color' => 'Footer Status Color',
         'closeclient_footer_ribbon_tag' => 'Footer Authority Ribbon Tag',
         'closeclient_footer_ribbon_logos' => 'Footer Authority Ribbon Logos (Comma Sep)',
         'closeclient_footer_newsletter_show' => 'Show Newsletter in Footer',
         'closeclient_footer_cta_text_label' => 'Footer CTA Label',
+        'closeclient_footer_cta_btn_text' => 'Footer CTA Button Text',
         'closeclient_footer_privacy_label' => 'Footer Privacy Link Label',
         'closeclient_footer_terms_label' => 'Footer Terms Link Label',
         'closeclient_footer_back_top' => 'Footer Back to Top Label',
@@ -481,12 +481,6 @@ function closeclient_customize_register( $wp_customize ) {
             'selector'        => '.footer-grid > div:nth-child(4) .footer-title',
             'settings'        => array( 'closeclient_footer_col4_title' ),
             'render_callback' => function() { return get_theme_mod( 'closeclient_footer_col4_title' ); },
-        ) );
-
-        $wp_customize->selective_refresh->add_partial( 'closeclient_footer_col5_title', array(
-            'selector'        => '.footer-grid > div:nth-child(5) .footer-title',
-            'settings'        => array( 'closeclient_footer_col5_title' ),
-            'render_callback' => function() { return get_theme_mod( 'closeclient_footer_col5_title' ); },
         ) );
 
         $wp_customize->selective_refresh->add_partial( 'closeclient_about_headline_tpl', array(

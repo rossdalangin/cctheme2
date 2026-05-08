@@ -9,14 +9,18 @@ $headline = get_theme_mod( 'closeclient_process_headline', 'The Authority Protoc
 $tag      = get_theme_mod( 'closeclient_process_tag', 'OUR PROCESS' );
 ?>
 
-<section id="process" class="section section-lg section-process bg-secondary">
+<section id="process" class="section section-lg section-process bg-secondary overflow-hidden">
     <div class="container">
         <div class="section-header text-center reveal">
+            <div class="d-flex justify-content-center mb-4">
+                <span class="badge bg-accent text-dark rounded-pill py-2 px-4 fw-black letter-spacing-lg" style="font-size: 0.65rem;">HIGH-FIDELITY DEPLOYMENT</span>
+            </div>
             <span class="section-tag"><?php echo esc_html( $tag ); ?></span>
             <h2 class="section-headline gradient-text"><?php echo esc_html( $headline ); ?></h2>
+            <p class="section-subheadline text-muted lead max-w-600 mx-auto opacity-70">The exact architectural roadmap we use to engineer absolute market dominance and scale 8-figure authorities.</p>
         </div>
 
-        <div class="process-list pt-lg">
+        <div class="process-list pt-lg mt-5">
             <?php
             $process_query = new WP_Query( array(
                 'post_type'      => 'process',
