@@ -95,7 +95,7 @@ function closeclient_get_defaults() {
         'closeclient_footer_ribbon_tag' => 'TRUSTED BY INNOVATORS AT:',
         'closeclient_footer_ribbon_logos' => 'STRATEGY.CO, ELITE.IO, CORE.ENGINE, VORTEX.MEDIA, ATLAS.SYS, NEXUS.BND, OMNI.CORP, QUANTUM.LEAD',
         'closeclient_footer_newsletter_show' => '0',
-        'closeclient_footer_copyright' => '© CloseClient. All rights reserved.',
+        'closeclient_footer_copyright' => '© {year} CloseClient. All rights reserved.',
         'closeclient_footer_cta_text_label' => 'Ready to engineer your authority?',
         'closeclient_footer_disclaimer' => 'Consulting and engineering services are subject to terms. Results may vary by market.',
         'closeclient_footer_privacy_label' => 'Privacy Policy',

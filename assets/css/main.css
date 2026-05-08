@@ -598,6 +598,35 @@ input:focus, textarea:focus, select:focus {
     pointer-events: none;
 }
 
+.footer-global-footprint, .footer-system-log {
+    transition: opacity 0.5s ease;
+}
+
+.footer-global-footprint:hover {
+    opacity: 0.8 !important;
+}
+
+.footer-system-log:hover {
+    opacity: 0.4 !important;
+}
+
+.footer-system-search input:focus {
+    border-color: var(--c-accent);
+    box-shadow: 0 0 15px rgba(var(--c-accent-rgb), 0.2);
+}
+
+.footer-system-search input {
+    background: rgba(0,0,0,0.4) !important;
+    border: 1px solid var(--c-border) !important;
+    color: var(--c-white) !important;
+    transition: all 0.4s ease;
+}
+
+.footer-system-search .search-submit:hover {
+    color: var(--c-white) !important;
+    transform: scale(1.1);
+}
+
 .footer-diagnostic-panel {
     background: rgba(0,0,0,0.3);
     border-radius: var(--radius-md);
@@ -616,6 +645,30 @@ input:focus, textarea:focus, select:focus {
 @keyframes diagnostic-scan {
     0% { top: 0; }
     100% { top: 100%; }
+}
+
+@keyframes terminal-flicker {
+    0% { opacity: 0.1; }
+    5% { opacity: 0.5; }
+    10% { opacity: 0.2; }
+    15% { opacity: 0.8; }
+    30% { opacity: 0.4; }
+    55% { opacity: 0.9; }
+    80% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+.log-flicker {
+    animation: terminal-flicker 0.3s ease-out forwards;
+}
+
+@keyframes health-grow {
+    0%, 100% { height: 20%; }
+    50% { height: 80%; }
+}
+
+.system-health-bar {
+    border-radius: 1px;
 }
 .footer-column:hover {
     border-color: var(--c-accent);
@@ -737,8 +790,10 @@ input:focus, textarea:focus, select:focus {
     .footer-bottom .site-info { flex-direction: column; align-items: center !important; text-align: center; }
     .operational-status { border-left: none !important; border-top: 1px solid var(--c-border); padding-left: 0 !important; padding-top: 15px; margin-top: 15px; width: 100%; justify-content: center; }
     .footer-meta-links { display: flex; flex-direction: column; gap: 10px; align-items: center; }
-    .authority-ribbon .container { justify-content: center !important; text-align: center; flex-direction: column; }
+    .authority-ribbon .container { justify-content: center !important; text-align: center; flex-direction: column; padding: 20px; }
     .authority-ribbon .d-flex { justify-content: center !important; }
+    .footer-specs { justify-content: center; margin-bottom: 20px; }
+    .footer-diagnostic-panel { margin-bottom: 30px; }
 
     .site-header { height: 80px; }
     .menu-toggle {

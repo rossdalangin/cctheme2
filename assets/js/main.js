@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    document.querySelectorAll('a[href="#audit"]').forEach(btn => {
+    document.querySelectorAll('a[href="#audit"], .trigger-audit-modal').forEach(btn => {
         btn.addEventListener('click', openModal);
     });
 
@@ -289,6 +289,59 @@ document.addEventListener('DOMContentLoaded', () => {
                 floatingCta.classList.remove('is-visible');
             }
         });
+    }
+
+    // --- Footer Live Clocks ---
+    const updateClocks = () => {
+        const now = new Date();
+        document.querySelectorAll('.live-clock').forEach(clock => {
+            const offset = parseInt(clock.getAttribute('data-offset'));
+            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+            const cityTime = new Date(utc + (3600000 * offset));
+
+            const hours = cityTime.getHours().toString().padStart(2, '0');
+            const minutes = cityTime.getMinutes().toString().padStart(2, '0');
+            clock.innerText = `${hours}:${minutes}`;
+        });
+    };
+    updateClocks();
+    setInterval(updateClocks, 60000);
+
+    // --- Dynamic Diagnostic Readouts ---
+    const latencyVal = document.querySelector('.footer-diagnostic-panel [data-latency]');
+    if (latencyVal) {
+        setInterval(() => {
+            const fluc = (Math.random() * 0.05).toFixed(2);
+            latencyVal.innerText = `${fluc} MS`;
+        }, 3000);
+    }
+
+    const loadVal = document.querySelector('.footer-diagnostic-panel [data-load]');
+    if (loadVal) {
+        setInterval(() => {
+            const load = Math.floor(Math.random() * (22 - 8 + 1)) + 8;
+            loadVal.innerText = `${load}%`;
+        }, 4000);
+    }
+
+    // --- Dynamic System Log ---
+    const logContainer = document.querySelector('.footer-system-log .d-flex');
+    if (logContainer) {
+        const events = ['CACHE_PURGE', 'PIXEL_SYNC', 'LEAD_FILTER_ACTIVE', 'SEO_OPTIMIZE', 'UI_REFRESH', 'HEX_SYNC_READY'];
+        setInterval(() => {
+            const newEvent = events[Math.floor(Math.random() * events.length)];
+            const span = document.createElement('span');
+            span.className = 'small fw-black log-flicker';
+            span.style.fontSize = '0.5rem';
+            span.style.letterSpacing = '0.2em';
+            span.innerText = `[${newEvent}]`;
+
+            logContainer.appendChild(span);
+
+            if (logContainer.children.length > 50) {
+                logContainer.removeChild(logContainer.firstChild);
+            }
+        }, 10000);
     }
 });
 

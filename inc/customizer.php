@@ -454,6 +454,41 @@ function closeclient_customize_register( $wp_customize ) {
             'render_callback' => function() { return get_theme_mod( 'closeclient_footer_copyright' ); },
         ) );
 
+        $wp_customize->selective_refresh->add_partial( 'closeclient_footer_status_text', array(
+            'selector'        => '.operational-status',
+            'settings'        => array( 'closeclient_footer_status_text', 'closeclient_footer_status_color' ),
+            'render_callback' => function() {
+                $text = get_theme_mod( 'closeclient_footer_status_text', 'System: 100% Operational' );
+                $color = get_theme_mod( 'closeclient_footer_status_color', '#10B981' );
+                return '<span class="status-dot-mini" style="background: ' . esc_attr($color) . '; box-shadow: 0 0 8px ' . esc_attr($color) . '80;"></span>
+                        <span class="small text-white-50 fw-bold letter-spacing-xs opacity-50 uppercase" style="font-size: 0.6rem;">' . esc_html($text) . '</span>';
+            },
+        ) );
+
+        $wp_customize->selective_refresh->add_partial( 'closeclient_footer_col2_title', array(
+            'selector'        => '.footer-grid > div:nth-child(2) .footer-title',
+            'settings'        => array( 'closeclient_footer_col2_title' ),
+            'render_callback' => function() { return get_theme_mod( 'closeclient_footer_col2_title' ); },
+        ) );
+
+        $wp_customize->selective_refresh->add_partial( 'closeclient_footer_col3_title', array(
+            'selector'        => '.footer-grid > div:nth-child(3) .footer-title',
+            'settings'        => array( 'closeclient_footer_col3_title' ),
+            'render_callback' => function() { return get_theme_mod( 'closeclient_footer_col3_title' ); },
+        ) );
+
+        $wp_customize->selective_refresh->add_partial( 'closeclient_footer_col4_title', array(
+            'selector'        => '.footer-grid > div:nth-child(4) .footer-title',
+            'settings'        => array( 'closeclient_footer_col4_title' ),
+            'render_callback' => function() { return get_theme_mod( 'closeclient_footer_col4_title' ); },
+        ) );
+
+        $wp_customize->selective_refresh->add_partial( 'closeclient_footer_col5_title', array(
+            'selector'        => '.footer-grid > div:nth-child(5) .footer-title',
+            'settings'        => array( 'closeclient_footer_col5_title' ),
+            'render_callback' => function() { return get_theme_mod( 'closeclient_footer_col5_title' ); },
+        ) );
+
         $wp_customize->selective_refresh->add_partial( 'closeclient_about_headline_tpl', array(
             'selector'        => '.template-about-story h1',
             'settings'        => array( 'closeclient_about_headline_tpl' ),
