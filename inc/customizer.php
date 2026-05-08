@@ -233,6 +233,7 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_show_testimonials' => 'Show Testimonials Section',
         'closeclient_show_vsl' => 'Show VSL Section',
         'closeclient_show_strategic_assets' => 'Show Strategic Assets Section',
+        'closeclient_show_authority_ribbon' => 'Show Authority Ribbon (Footer Ticker)',
         'closeclient_social_facebook' => 'Facebook URL',
         'closeclient_social_instagram' => 'Instagram URL',
         'closeclient_social_linkedin' => 'LinkedIn URL',

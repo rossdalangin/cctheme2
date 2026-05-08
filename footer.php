@@ -9,28 +9,30 @@
 
     <?php if ( ! is_page_template( 'template-canvas.php' ) ) : ?>
 	<footer id="colophon" class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
-        <div class="authority-ribbon border-bottom border-secondary mb-5 reveal">
-            <div class="container d-flex align-items-center gap-5 overflow-hidden">
-                <div class="d-flex align-items-center gap-3 flex-shrink-0" style="z-index: 10; background: var(--c-bg); padding-right: 20px;">
-                    <div class="live-dot-mini"></div>
-                    <span class="small fw-black letter-spacing-lg text-white-50 uppercase tracking-widest opacity-50"><?php echo esc_html( get_theme_mod( 'closeclient_footer_ribbon_tag', 'TRUSTED BY INNOVATORS AT:' ) ); ?></span>
-                </div>
-                <div class="ticker-mode-wrapper overflow-hidden flex-grow-1">
-                    <div class="ticker-mode-content d-flex gap-5 opacity-20 grayscale">
-                        <?php
-                        $logos = get_theme_mod( 'closeclient_footer_ribbon_logos', 'STRATEGY.CO, ELITE.IO, CORE.ENGINE, VORTEX.MEDIA, ATLAS.SYS, NEXUS.BND, OMNI.CORP, QUANTUM.LEAD' );
-                        $logos_array = explode( ',', $logos );
-                        // Output twice for seamless loop
-                        for ($i = 0; $i < 2; $i++) {
-                            foreach ( $logos_array as $logo ) :
-                                echo '<span class="small mb-0 fw-bold whitespace-nowrap uppercase letter-spacing-lg">' . esc_html( trim( $logo ) ) . '</span>';
-                            endforeach;
-                        }
-                        ?>
+        <?php if ( get_theme_mod( 'closeclient_show_authority_ribbon', '1' ) === '1' ) : ?>
+            <div class="authority-ribbon border-bottom border-secondary mb-5 reveal">
+                <div class="container d-flex align-items-center gap-5 overflow-hidden">
+                    <div class="d-flex align-items-center gap-3 flex-shrink-0" style="z-index: 10; background: var(--c-bg); padding-right: 20px;">
+                        <div class="live-dot-mini"></div>
+                        <span class="small fw-black letter-spacing-lg text-white-50 uppercase tracking-widest opacity-50"><?php echo esc_html( get_theme_mod( 'closeclient_footer_ribbon_tag', 'TRUSTED BY INNOVATORS AT:' ) ); ?></span>
+                    </div>
+                    <div class="ticker-mode-wrapper overflow-hidden flex-grow-1">
+                        <div class="ticker-mode-content d-flex gap-5 opacity-20 grayscale">
+                            <?php
+                            $logos = get_theme_mod( 'closeclient_footer_ribbon_logos', 'STRATEGY.CO, ELITE.IO, CORE.ENGINE, VORTEX.MEDIA, ATLAS.SYS, NEXUS.BND, OMNI.CORP, QUANTUM.LEAD' );
+                            $logos_array = explode( ',', $logos );
+                            // Output twice for seamless loop
+                            for ($i = 0; $i < 2; $i++) {
+                                foreach ( $logos_array as $logo ) :
+                                    echo '<span class="small mb-0 fw-bold whitespace-nowrap uppercase letter-spacing-lg">' . esc_html( trim( $logo ) ) . '</span>';
+                                endforeach;
+                            }
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>
 
 		<div class="container">
             <?php if ( get_theme_mod( 'closeclient_footer_newsletter_show', '0' ) === '1' ) : ?>
@@ -246,22 +248,6 @@
 	</footer><!-- #colophon -->
     <?php endif; ?>
 
-    <div class="footer-system-log overflow-hidden border-top border-secondary py-2 opacity-10" role="status" aria-label="System Activity Log">
-        <div class="d-flex gap-5 whitespace-nowrap" style="animation: ticker-scroll 60s linear infinite;">
-            <div class="rx-tx-indicator d-flex gap-2 pe-5 border-end border-secondary">
-                <span class="small fw-black text-accent" style="font-size: 0.5rem;">RX: <span data-rx>0.0</span> KB/S</span>
-                <span class="small fw-black text-accent" style="font-size: 0.5rem;">TX: <span data-tx>0.0</span> KB/S</span>
-            </div>
-            <?php
-            $log_entries = array('INIT_SYNC', 'ESTABLISH_AUTHORITY', 'ENCRYPT_PIXELS', 'LIQUIDATE_FRICTION', 'DEPLOY_PROTOCOL', 'AUDIT_COMPLETE', 'READY_FOR_SCALE', 'BENTO_RENDER_STABLE');
-            for ($i = 0; $i < 4; $i++) {
-                foreach ($log_entries as $entry) {
-                    echo '<span class="small fw-black" style="font-size: 0.5rem; letter-spacing: 0.2em;">[' . $entry . ']</span>';
-                }
-            }
-            ?>
-        </div>
-    </div>
 
     <?php if ( get_theme_mod( 'closeclient_show_floating_cta', false ) ) : ?>
         <a href="#audit" class="floating-cta cc-button">

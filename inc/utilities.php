@@ -250,6 +250,7 @@ function closeclient_get_defaults() {
         'closeclient_show_testimonials' => '1',
         'closeclient_show_vsl' => '1',
         'closeclient_show_strategic_assets' => '1',
+        'closeclient_show_authority_ribbon' => '1',
         'closeclient_sidebar_insight_tag' => 'FEATURED INSIGHT',
         'closeclient_site_layout_type' => 'full-width',
         'closeclient_sidebar_insight_text' => 'Learn how to transform your expertise into an omnipresent brand that closes deals while you sleep.',
@@ -420,6 +421,7 @@ function closeclient_generate_pages() {
         'Strategic Assets' => array('content' => '[closeclient_strategic_assets]', 'template' => '', 'slug' => 'strategic-assets'),
         'Success Blueprint' => array('content' => '[closeclient_lead_magnet]', 'template' => 'template-lead-magnet.php', 'slug' => 'blueprint'),
         'VSL Protocol' => array('content' => '[closeclient_vsl][closeclient_booking_cta]', 'template' => 'template-landing-page.php', 'slug' => 'vsl-protocol'),
+        'Authority Protocol' => array('content' => '', 'template' => 'template-sales-page.php', 'slug' => 'protocol'),
         'Thank You' => array('content' => '[closeclient_thank_you]', 'template' => 'template-thank-you.php', 'slug' => 'thank-you'),
     );
 
