@@ -48,7 +48,7 @@ function closeclient_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'closeclient_typography', array( 'title' => 'Typography', 'panel' => 'closeclient_brand_panel' ) );
     $wp_customize->add_section( 'closeclient_utilities', array( 'title' => '5. Theme Setup & Tools' ) );
     $wp_customize->add_section( 'closeclient_vsl', array( 'title' => '2. VSL Training', 'panel' => 'closeclient_homepage_panel' ) );
-    $wp_customize->add_section( 'closeclient_assets', array( 'title' => 'Strategic Assets', 'panel' => 'closeclient_pages_panel' ) );
+    $wp_customize->add_section( 'closeclient_assets', array( 'title' => 'Strategic Assets', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_footer_section', array( 'title' => 'Strategic Footer', 'panel' => 'closeclient_layout_panel' ) );
 
     // Helpers
@@ -365,7 +365,8 @@ function closeclient_customize_register( $wp_customize ) {
         elseif (strpos($key, 'product') !== false) $section = 'closeclient_products';
         elseif (strpos($key, 'leadmagnet') !== false || strpos($key, 'lm_') !== false) $section = 'closeclient_leadmagnet_tpl';
         elseif (strpos($key, 'newsletter') !== false) $section = 'closeclient_forms';
-        elseif (strpos($key, 'assets_') !== false) $section = 'closeclient_assets';
+        elseif (strpos($key, 'strategic_assets') !== false || strpos($key, 'assets_') !== false) $section = 'closeclient_assets';
+        elseif (strpos($key, 'about') !== false) $section = 'closeclient_about_tpl';
 
         $label = isset($labels[$key]) ? $labels[$key] : $key;
 

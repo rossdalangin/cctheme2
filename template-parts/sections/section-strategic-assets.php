@@ -25,6 +25,7 @@ $desc     = get_theme_mod( 'closeclient_assets_desc', 'Strategic frameworks and 
                 $title = get_theme_mod( "closeclient_assets_item_{$i}_title" );
                 $tag   = get_theme_mod( "closeclient_assets_item_{$i}_tag" );
                 $item_desc  = get_theme_mod( "closeclient_assets_item_{$i}_desc" );
+                $link  = get_theme_mod( "closeclient_assets_item_{$i}_link", '#audit' );
                 $icon  = $icons[$i-1];
 
                 if ( empty($title) ) continue;
@@ -38,7 +39,7 @@ $desc     = get_theme_mod( 'closeclient_assets_desc', 'Strategic frameworks and 
                     <h3 class="h4 mb-3 text-white"><?php echo esc_html($title); ?></h3>
                     <p class="text-muted small mb-5 lead opacity-80"><?php echo esc_html($item_desc); ?></p>
                     <div class="mt-auto">
-                        <a href="#audit" class="cc-button cc-button-secondary py-2 px-4 trigger-audit-modal" style="font-size: 0.65rem;">Request Secure Access →</a>
+                        <a href="<?php echo esc_url($link); ?>" class="cc-button cc-button-secondary py-2 px-4 <?php echo ($link === '#audit') ? 'trigger-audit-modal' : ''; ?>" style="font-size: 0.65rem;">Request Secure Access →</a>
                     </div>
                 </div>
             <?php endfor; ?>

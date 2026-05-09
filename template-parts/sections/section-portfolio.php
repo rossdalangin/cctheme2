@@ -28,7 +28,7 @@ $tag      = get_theme_mod( 'closeclient_portfolio_tag', 'PROOF OF ARCHITECTURE' 
                 $i = 0;
                 while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post();
                     $i++;
-                    // Varied Distribution: 8-4, 4-8 for dynamic visual rhythm
+                    // Asymmetrical Bento Distribution: 8-4, 4-8
                     $span = ( $i == 1 || $i == 4 ) ? 'bento-span-8' : 'bento-span-4';
                     $metric = get_post_meta( get_the_ID(), '_portfolio_metric', true );
                     ?>

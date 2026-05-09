@@ -439,7 +439,7 @@ function closeclient_generate_pages() {
     closeclient_generate_cpt_data();
 
     $pages = array(
-        'Home' => array('content' => '[closeclient_hero][closeclient_logo_ticker][closeclient_authority][closeclient_stats][closeclient_portfolio][closeclient_about][closeclient_services][closeclient_vsl][closeclient_process][closeclient_strategic_assets][closeclient_testimonials][closeclient_pricing][closeclient_faq][closeclient_booking_cta]', 'template' => ''),
+        'Home' => array('content' => '[closeclient_hero][closeclient_logo_ticker][closeclient_authority][closeclient_stats][closeclient_portfolio][closeclient_about][closeclient_services][closeclient_vsl][closeclient_process][closeclient_strategic_assets][closeclient_testimonials][closeclient_team][closeclient_products][closeclient_lead_magnet][closeclient_newsletter][closeclient_pricing][closeclient_faq][closeclient_booking_cta]', 'template' => ''),
         'Solutions' => array('content' => '[closeclient_hero][closeclient_services][closeclient_process][closeclient_pricing][closeclient_booking_cta]', 'template' => 'template-services.php', 'slug' => 'solutions'),
         'The Method' => array('content' => '[closeclient_about][closeclient_team][closeclient_authority][closeclient_booking_cta]', 'template' => 'template-about.php', 'slug' => 'the-method'),
         'Book Your Audit' => array('content' => '[closeclient_booking_cta][closeclient_faq]', 'template' => 'template-contact.php', 'slug' => 'book-audit'),
