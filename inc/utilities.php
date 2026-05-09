@@ -87,6 +87,9 @@ function closeclient_get_defaults() {
         'closeclient_footer_about' => 'Engineering high-fidelity digital infrastructure for the world\'s most ambitious high-ticket authorities.',
         'closeclient_footer_back_top' => 'BACK TO TOP ↑',
         'closeclient_footer_col2_title' => 'Navigation',
+        'closeclient_footer_ribbon_speed' => '30s',
+        'closeclient_footer_ribbon_bg' => 'rgba(255, 255, 255, 0.01)',
+        'closeclient_footer_ribbon_color' => '#ffffff',
         'closeclient_footer_status_text' => 'System: 100% Operational',
         'closeclient_footer_status_color' => '#10B981',
         'closeclient_footer_ribbon_tag' => 'TRUSTED BY INNOVATORS AT:',
@@ -317,6 +320,25 @@ function closeclient_get_defaults() {
         'closeclient_contact_email' => 'solutions@closeclient.io',
         'closeclient_contact_phone' => '+1 (888) 555-0123',
         'closeclient_contact_address' => 'Technical HQ: 123 Innovation Drive, Silicon Valley, CA',
+        'closeclient_privacy_content' => 'Standard Privacy Policy text for CloseClient authorities.',
+        'closeclient_terms_content' => 'Standard Terms of Service for CloseClient protocols.',
+        'closeclient_about_image' => '',
+        'closeclient_assets_item_1_title' => 'Authority Playbook',
+        'closeclient_assets_item_1_tag' => 'BLUEPRINT',
+        'closeclient_assets_item_1_desc' => 'The definitive protocol for engineering absolute market authority and liquidating lead-cost.',
+        'closeclient_assets_item_1_link' => '#audit',
+        'closeclient_assets_item_2_title' => '100K Framework',
+        'closeclient_assets_item_2_tag' => 'STRATEGY',
+        'closeclient_assets_item_2_desc' => 'Mathematical roadmap for scaling to $100k/mo without manual outreach.',
+        'closeclient_assets_item_2_link' => '#audit',
+        'closeclient_assets_item_3_title' => 'VSL Protocol',
+        'closeclient_assets_item_3_tag' => 'CONVERSION',
+        'closeclient_assets_item_3_desc' => 'Scripting and engineering the "Big Domino" VSL for high-ticket acquisition.',
+        'closeclient_assets_item_3_link' => '#audit',
+        'closeclient_assets_item_4_title' => 'Operational HQ',
+        'closeclient_assets_item_4_tag' => 'SYSTEMS',
+        'closeclient_assets_item_4_desc' => 'Strategic foundation for managing high-fidelity agency operations at global scale.',
+        'closeclient_assets_item_4_link' => '#audit',
     );
 }
 
@@ -417,7 +439,7 @@ function closeclient_generate_pages() {
     closeclient_generate_cpt_data();
 
     $pages = array(
-        'Home' => array('content' => '[closeclient_hero][closeclient_logo_ticker][closeclient_authority][closeclient_stats][closeclient_portfolio][closeclient_about][closeclient_services][closeclient_vsl][closeclient_process][closeclient_testimonials][closeclient_pricing][closeclient_faq][closeclient_booking_cta]', 'template' => ''),
+        'Home' => array('content' => '[closeclient_hero][closeclient_logo_ticker][closeclient_authority][closeclient_stats][closeclient_portfolio][closeclient_about][closeclient_services][closeclient_vsl][closeclient_process][closeclient_strategic_assets][closeclient_testimonials][closeclient_pricing][closeclient_faq][closeclient_booking_cta]', 'template' => ''),
         'Solutions' => array('content' => '[closeclient_hero][closeclient_services][closeclient_process][closeclient_pricing][closeclient_booking_cta]', 'template' => 'template-services.php', 'slug' => 'solutions'),
         'The Method' => array('content' => '[closeclient_about][closeclient_team][closeclient_authority][closeclient_booking_cta]', 'template' => 'template-about.php', 'slug' => 'the-method'),
         'Book Your Audit' => array('content' => '[closeclient_booking_cta][closeclient_faq]', 'template' => 'template-contact.php', 'slug' => 'book-audit'),
@@ -427,6 +449,9 @@ function closeclient_generate_pages() {
         'Success Blueprint' => array('content' => '[closeclient_lead_magnet]', 'template' => 'template-lead-magnet.php', 'slug' => 'blueprint'),
         'VSL Protocol' => array('content' => '[closeclient_vsl][closeclient_booking_cta]', 'template' => 'template-landing-page.php', 'slug' => 'vsl-protocol'),
         'Authority Protocol' => array('content' => '', 'template' => 'template-sales-page.php', 'slug' => 'protocol'),
+        'Contact' => array('content' => '', 'template' => 'template-contact.php', 'slug' => 'contact'),
+        'Privacy Policy' => array('content' => get_theme_mod('closeclient_privacy_content', 'Standard Privacy Policy text for CloseClient authorities.'), 'template' => '', 'slug' => 'privacy-policy'),
+        'Terms of Service' => array('content' => get_theme_mod('closeclient_terms_content', 'Standard Terms of Service for CloseClient protocols.'), 'template' => '', 'slug' => 'terms-of-service'),
         'Thank You' => array('content' => '[closeclient_thank_you]', 'template' => 'template-thank-you.php', 'slug' => 'thank-you'),
     );
 

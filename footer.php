@@ -9,11 +9,16 @@
 
     <?php if ( ! is_page_template( 'template-canvas.php' ) ) : ?>
 	<footer id="colophon" class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
-        <?php if ( get_theme_mod( 'closeclient_show_authority_ribbon', '1' ) === '1' ) : ?>
-            <div class="authority-ribbon border-bottom border-secondary mb-5 reveal">
+        <?php
+        if ( get_theme_mod( 'closeclient_show_authority_ribbon', '1' ) === '1' ) :
+            $ticker_speed = get_theme_mod( 'closeclient_footer_ribbon_speed', '30s' );
+            $ticker_bg    = get_theme_mod( 'closeclient_footer_ribbon_bg', 'rgba(255, 255, 255, 0.01)' );
+            $ticker_color = get_theme_mod( 'closeclient_footer_ribbon_color', '#ffffff' );
+        ?>
+            <div class="authority-ribbon border-bottom border-secondary mb-5 reveal" style="background: <?php echo esc_attr($ticker_bg); ?>; --ticker-duration: <?php echo esc_attr($ticker_speed); ?>; color: <?php echo esc_attr($ticker_color); ?>;">
                 <div class="container d-flex align-items-center gap-5 overflow-hidden">
-                    <div class="d-flex align-items-center gap-3 flex-shrink-0" style="z-index: 10; background: var(--c-bg); padding-right: 20px;">
-                        <div class="live-dot-mini"></div>
+                    <div class="d-flex align-items-center gap-3 flex-shrink-0" style="z-index: 10; background: var(--c-bg); padding-right: 30px;">
+                        <div class="status-dot-mini bg-accent"></div>
                         <span class="small fw-black letter-spacing-lg text-white-50 uppercase tracking-widest opacity-50"><?php echo esc_html( get_theme_mod( 'closeclient_footer_ribbon_tag', 'TRUSTED BY INNOVATORS AT:' ) ); ?></span>
                     </div>
                     <div class="ticker-mode-wrapper overflow-hidden flex-grow-1">

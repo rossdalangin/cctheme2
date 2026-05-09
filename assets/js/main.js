@@ -333,26 +333,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     }
 
-    // --- Dynamic System Log ---
-    const logContainer = document.querySelector('.footer-system-log .d-flex');
-    if (logContainer) {
-        const events = ['CACHE_PURGE', 'PIXEL_SYNC', 'LEAD_FILTER_ACTIVE', 'SEO_OPTIMIZE', 'UI_REFRESH', 'HEX_SYNC_READY', 'VORTEX_INITIALIZED', 'AUTHORITY_LOCKED', 'CAPITAL_ENGINEER_ONLINE'];
-        setInterval(() => {
-            const newEvent = events[Math.floor(Math.random() * events.length)];
-            const span = document.createElement('span');
-            span.className = 'small fw-black log-flicker';
-            span.style.fontSize = '0.5rem';
-            span.style.letterSpacing = '0.2em';
-            span.innerText = `[${newEvent}]`;
-
-            logContainer.appendChild(span);
-
-            if (logContainer.children.length > 50) {
-                logContainer.removeChild(logContainer.firstChild);
-            }
-        }, 10000);
-    }
-
     // --- Session Timer ---
     const sessionTimer = document.querySelector('[data-session-timer]');
     if (sessionTimer) {

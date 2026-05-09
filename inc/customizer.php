@@ -34,6 +34,9 @@ function closeclient_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'closeclient_labels', array( 'title' => 'Global UI Labels', 'panel' => 'closeclient_pages_panel' ) );
     $wp_customize->add_section( 'closeclient_layout_section', array( 'title' => 'Global Layout', 'panel' => 'closeclient_layout_panel' ) );
     $wp_customize->add_section( 'closeclient_leadmagnet_tpl', array( 'title' => 'Lead Magnet Template', 'panel' => 'closeclient_pages_panel' ) );
+    $wp_customize->add_section( 'closeclient_portfolio', array( 'title' => 'Portfolio', 'panel' => 'closeclient_homepage_panel' ) );
+    $wp_customize->add_section( 'closeclient_authority_section', array( 'title' => 'Trust Bar (Logos)', 'panel' => 'closeclient_homepage_panel' ) );
+    $wp_customize->add_section( 'closeclient_logo_ticker_section', array( 'title' => 'Logo Ticker', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_pricing', array( 'title' => 'Pricing', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_process', array( 'title' => 'Process', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_services', array( 'title' => 'Services', 'panel' => 'closeclient_homepage_panel' ) );
@@ -44,7 +47,6 @@ function closeclient_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'closeclient_thankyou_tpl', array( 'title' => 'Thank You Template', 'panel' => 'closeclient_pages_panel' ) );
     $wp_customize->add_section( 'closeclient_typography', array( 'title' => 'Typography', 'panel' => 'closeclient_brand_panel' ) );
     $wp_customize->add_section( 'closeclient_utilities', array( 'title' => '5. Theme Setup & Tools' ) );
-    $wp_customize->add_section( 'closeclient_visibility', array( 'title' => '0. Visibility', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_vsl', array( 'title' => '2. VSL Training', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_assets', array( 'title' => 'Strategic Assets', 'panel' => 'closeclient_pages_panel' ) );
     $wp_customize->add_section( 'closeclient_footer_section', array( 'title' => 'Strategic Footer', 'panel' => 'closeclient_layout_panel' ) );
@@ -346,7 +348,10 @@ function closeclient_customize_register( $wp_customize ) {
         elseif (strpos($key, 'hero') !== false) $section = 'closeclient_hero';
         elseif (strpos($key, 'vsl') !== false) $section = 'closeclient_vsl';
         elseif (strpos($key, 'service') !== false) $section = 'closeclient_services';
-        elseif (strpos($key, 'portfolio') !== false) $section = 'closeclient_labels';
+        elseif (strpos($key, 'portfolio') !== false) $section = 'closeclient_portfolio';
+        elseif (strpos($key, 'authority_logo') !== false) $section = 'closeclient_authority_section';
+        elseif (strpos($key, 'logo_ticker') !== false) $section = 'closeclient_logo_ticker_section';
+        elseif (strpos($key, 'authority_') !== false) $section = 'closeclient_authority_section';
         elseif (strpos($key, 'stat') !== false) $section = 'closeclient_stats';
         elseif (strpos($key, 'team') !== false) $section = 'closeclient_team';
         elseif (strpos($key, 'faq') !== false) $section = 'closeclient_faq';
@@ -354,13 +359,13 @@ function closeclient_customize_register( $wp_customize ) {
         elseif (strpos($key, 'process') !== false) $section = 'closeclient_process';
         elseif (strpos($key, 'booking') !== false) $section = 'closeclient_booking';
         elseif (strpos($key, 'social') !== false) $section = 'closeclient_social';
-        elseif (strpos($key, 'show_') !== false) $section = 'closeclient_visibility';
         elseif (strpos($key, 'width') !== false || strpos($key, 'header') !== false) $section = 'closeclient_layout_section';
         elseif (strpos($key, 'footer') !== false) $section = 'closeclient_footer_section';
         elseif (strpos($key, 'form_action') !== false || strpos($key, 'shortcode') !== false) $section = 'closeclient_forms';
         elseif (strpos($key, 'product') !== false) $section = 'closeclient_products';
         elseif (strpos($key, 'leadmagnet') !== false || strpos($key, 'lm_') !== false) $section = 'closeclient_leadmagnet_tpl';
         elseif (strpos($key, 'newsletter') !== false) $section = 'closeclient_forms';
+        elseif (strpos($key, 'assets_') !== false) $section = 'closeclient_assets';
 
         $label = isset($labels[$key]) ? $labels[$key] : $key;
 
@@ -380,8 +385,8 @@ function closeclient_customize_register( $wp_customize ) {
             $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $key, array( 'label' => $label, 'section' => $section ) ) );
         } elseif (strpos($key, 'show_') !== false || $key === 'closeclient_header_sticky' || $key === 'closeclient_hero_typewriter') {
             $wp_customize->add_control( $key, array( 'label' => $label, 'section' => $section, 'type' => 'checkbox' ) );
-        } elseif (strpos($key, 'authority_logo_') !== false) {
-            $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $key, array( 'label' => $label, 'section' => 'closeclient_stats' ) ) );
+        } elseif (strpos($key, 'authority_logo_') !== false || $key === 'closeclient_about_image') {
+            $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $key, array( 'label' => $label, 'section' => $section ) ) );
         } elseif (strpos($key, 'headline') !== false || strpos($key, 'text') !== false || strpos($key, 'desc') !== false || strpos($key, 'subheadline') !== false || strpos($key, 'note') !== false || strpos($key, 'scarcity') !== false || strpos($key, 'disclaimer') !== false || strpos($key, 'about') !== false || strpos($key, 'methodology') !== false || strpos($key, 'search') !== false || strpos($key, 'general') !== false || strpos($key, 'placeholder') !== false) {
             $wp_customize->add_control( $key, array( 'label' => $label, 'section' => $section, 'type' => 'textarea' ) );
         } else {
@@ -396,6 +401,17 @@ function closeclient_customize_register( $wp_customize ) {
         'section' => 'closeclient_utilities',
         'type' => 'hidden'
     ) ) );
+
+    for ( $i = 1; $i <= 4; $i++ ) {
+        $wp_customize->add_setting( "closeclient_assets_item_{$i}_title", array( 'default' => '', 'sanitize_callback' => 'sanitize_text_field' ) );
+        $wp_customize->add_control( "closeclient_assets_item_{$i}_title", array( 'label' => "Asset {$i} Title", 'section' => 'closeclient_assets' ) );
+        $wp_customize->add_setting( "closeclient_assets_item_{$i}_tag", array( 'default' => '', 'sanitize_callback' => 'sanitize_text_field' ) );
+        $wp_customize->add_control( "closeclient_assets_item_{$i}_tag", array( 'label' => "Asset {$i} Tag", 'section' => 'closeclient_assets' ) );
+        $wp_customize->add_setting( "closeclient_assets_item_{$i}_desc", array( 'default' => '', 'sanitize_callback' => 'sanitize_text_field' ) );
+        $wp_customize->add_control( "closeclient_assets_item_{$i}_desc", array( 'label' => "Asset {$i} Desc", 'section' => 'closeclient_assets', 'type' => 'textarea' ) );
+        $wp_customize->add_setting( "closeclient_assets_item_{$i}_link", array( 'default' => '#audit', 'sanitize_callback' => 'esc_url_raw' ) );
+        $wp_customize->add_control( "closeclient_assets_item_{$i}_link", array( 'label' => "Asset {$i} Link", 'section' => 'closeclient_assets' ) );
+    }
 
     // Selective Refresh Partials
     if ( isset( $wp_customize->selective_refresh ) ) {

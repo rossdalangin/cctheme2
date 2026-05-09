@@ -62,7 +62,7 @@ function closeclient_render_authority_hub() {
                         </div>
                         <h3 style="color: #fff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 900; letter-spacing: -0.02em;"><?php echo $data['title']; ?></h3>
                         <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; font-style: italic;">"<?php echo esc_html($preview); ?>..."</p>
-                        <a href="<?php echo esc_url( home_url( '/' . $file ) ); ?>" target="_blank" style="display: inline-block; background: #6366F1; color: #fff; text-decoration: none; padding: 14px 28px; border-radius: 100px; font-weight: 900; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; box-shadow: 0 10px 30px rgba(99,102,241,0.3);">Access Strategic Data →</a>
+                        <a href="<?php echo esc_url( get_template_directory_uri() . '/' . $file ); ?>" target="_blank" style="display: inline-block; background: #6366F1; color: #fff; text-decoration: none; padding: 14px 28px; border-radius: 100px; font-weight: 900; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; box-shadow: 0 10px 30px rgba(99,102,241,0.3);">Access Strategic Data →</a>
                     </div>
                 <?php endforeach; ?>
             </div>

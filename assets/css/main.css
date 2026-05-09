@@ -549,13 +549,15 @@ input:focus, textarea:focus, select:focus {
 
 .ticker-mode-wrapper {
     position: relative;
-    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    padding: var(--s-xs) 0;
 }
 
 .ticker-mode-content {
-    animation: ticker-scroll 60s linear infinite;
+    animation: ticker-scroll var(--ticker-duration, 60s) linear infinite;
     width: max-content;
+    will-change: transform;
 }
 
 @keyframes ticker-scroll {
@@ -610,7 +612,7 @@ input:focus, textarea:focus, select:focus {
     pointer-events: none;
 }
 
-.footer-global-footprint, .footer-system-log {
+.footer-global-footprint {
     transition: opacity 0.5s ease;
     background: rgba(0,0,0,0.4);
     font-family: 'Courier New', Courier, monospace;
@@ -618,10 +620,6 @@ input:focus, textarea:focus, select:focus {
 
 .footer-global-footprint:hover {
     opacity: 0.8 !important;
-}
-
-.footer-system-log:hover {
-    opacity: 0.4 !important;
 }
 
 .footer-system-search input:focus {
@@ -1694,9 +1692,7 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     flex: 1.2;
 }
 .blog-posts-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--s-lg);
+    display: block;
 }
 
 @media (max-width: 1200px) {
