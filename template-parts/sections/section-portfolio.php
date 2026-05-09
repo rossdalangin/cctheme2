@@ -28,7 +28,7 @@ $tag      = get_theme_mod( 'closeclient_portfolio_tag', 'PROOF OF ARCHITECTURE' 
                 $i = 0;
                 while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post();
                     $i++;
-                    // Distribution: 7-5, 5-7
+                    // Custom Bento Distribution: 7-5, 5-7
                     $span = ( $i == 1 || $i == 4 ) ? 'bento-span-7' : 'bento-span-5';
                     $metric = get_post_meta( get_the_ID(), '_portfolio_metric', true );
                     ?>
