@@ -35,8 +35,7 @@ function closeclient_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'closeclient_layout_section', array( 'title' => 'Global Layout', 'panel' => 'closeclient_layout_panel' ) );
     $wp_customize->add_section( 'closeclient_leadmagnet_tpl', array( 'title' => 'Lead Magnet Template', 'panel' => 'closeclient_pages_panel' ) );
     $wp_customize->add_section( 'closeclient_portfolio', array( 'title' => 'Portfolio', 'panel' => 'closeclient_homepage_panel' ) );
-    $wp_customize->add_section( 'closeclient_authority_section', array( 'title' => 'Trust Bar (Logos)', 'panel' => 'closeclient_homepage_panel' ) );
-    $wp_customize->add_section( 'closeclient_logo_ticker_section', array( 'title' => 'Logo Ticker', 'panel' => 'closeclient_homepage_panel' ) );
+    $wp_customize->add_section( 'closeclient_authority_section', array( 'title' => 'Authority & Proof', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_pricing', array( 'title' => 'Pricing', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_process', array( 'title' => 'Process', 'panel' => 'closeclient_homepage_panel' ) );
     $wp_customize->add_section( 'closeclient_services', array( 'title' => 'Services', 'panel' => 'closeclient_homepage_panel' ) );
@@ -274,6 +273,7 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_assets_headline' => 'Strategic Assets Headline',
         'closeclient_assets_desc' => 'Strategic Assets Description',
         'closeclient_footer_col2_title' => 'Footer Navigation Title',
+        'closeclient_footer_col3_title' => 'Footer Command Title',
         'closeclient_footer_status_text' => 'Footer Status Text',
         'closeclient_footer_status_color' => 'Footer Status Color',
         'closeclient_footer_ribbon_tag' => 'Footer Authority Ribbon Tag',
@@ -284,6 +284,9 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_footer_privacy_label' => 'Footer Privacy Link Label',
         'closeclient_footer_terms_label' => 'Footer Terms Link Label',
         'closeclient_footer_back_top' => 'Footer Back to Top Label',
+        'closeclient_footer_ribbon_speed' => 'Footer Ribbon: Animation Speed',
+        'closeclient_footer_ribbon_bg' => 'Footer Ribbon: Background',
+        'closeclient_footer_ribbon_color' => 'Footer Ribbon: Text Color',
         'closeclient_sidebar_insight_tag' => 'Blog Sidebar: Insight Tag',
         'closeclient_sidebar_insight_title' => 'Blog Sidebar: Insight Title',
         'closeclient_sidebar_insight_text' => 'Blog Sidebar: Insight Text',
@@ -322,6 +325,13 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_label_none_publish_cta' => 'Empty State: Publish CTA',
         'closeclient_label_page_links' => 'Pagination: Page Links Label',
         'closeclient_label_edit_post' => 'Admin: Edit Post Label',
+        'closeclient_blog_title' => 'Blog: Section Tag',
+        'closeclient_blog_description' => 'Blog: Headline',
+        'closeclient_label_portfolio_archive_tag' => 'Portfolio: Section Tag',
+        'closeclient_label_portfolio_archive_title' => 'Portfolio: Headline',
+        'closeclient_label_portfolio_archive_desc' => 'Portfolio: Subheadline',
+        'closeclient_assets_headline' => 'Strategic Assets: Headline',
+        'closeclient_assets_desc' => 'Strategic Assets: Description',
     );
 
     // Dynamic Register
@@ -350,7 +360,7 @@ function closeclient_customize_register( $wp_customize ) {
         elseif (strpos($key, 'service') !== false) $section = 'closeclient_services';
         elseif (strpos($key, 'portfolio') !== false) $section = 'closeclient_portfolio';
         elseif (strpos($key, 'authority_logo') !== false) $section = 'closeclient_authority_section';
-        elseif (strpos($key, 'logo_ticker') !== false) $section = 'closeclient_logo_ticker_section';
+        elseif (strpos($key, 'logo_ticker') !== false) $section = 'closeclient_authority_section';
         elseif (strpos($key, 'authority_') !== false) $section = 'closeclient_authority_section';
         elseif (strpos($key, 'stat') !== false) $section = 'closeclient_stats';
         elseif (strpos($key, 'team') !== false) $section = 'closeclient_team';

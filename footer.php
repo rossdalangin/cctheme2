@@ -139,7 +139,7 @@
                 <!-- Column 3: Terminal Command -->
                 <div class="footer-column bento-span-4 footer-command">
                     <div class="footer-icon-tag mb-3 opacity-20"><?php echo closeclient_get_svg('terminal'); ?></div>
-                    <h3 class="footer-title h6"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col5_title', 'Command' ) ); ?></h3>
+                    <h3 class="footer-title h6"><?php echo esc_html( get_theme_mod( 'closeclient_footer_col3_title', 'Command' ) ); ?></h3>
                     <p class="small text-muted mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_footer_cta_text_label', 'Ready to engineer your authority?' ) ); ?></p>
 
                     <div class="footer-system-search mb-4">

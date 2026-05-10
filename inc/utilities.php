@@ -87,6 +87,7 @@ function closeclient_get_defaults() {
         'closeclient_footer_about' => 'Engineering high-fidelity digital infrastructure for the world\'s most ambitious high-ticket authorities.',
         'closeclient_footer_back_top' => 'BACK TO TOP ↑',
         'closeclient_footer_col2_title' => 'Navigation',
+        'closeclient_footer_col3_title' => 'Command',
         'closeclient_footer_ribbon_speed' => '30s',
         'closeclient_footer_ribbon_bg' => 'rgba(255, 255, 255, 0.01)',
         'closeclient_footer_ribbon_color' => '#ffffff',

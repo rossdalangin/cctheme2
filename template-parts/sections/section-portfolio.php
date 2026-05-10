@@ -28,12 +28,13 @@ $tag      = get_theme_mod( 'closeclient_portfolio_tag', 'PROOF OF ARCHITECTURE' 
                 $i = 0;
                 while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post();
                     $i++;
-                    // Asymmetrical Bento Distribution: 8-4, 4-8
+                    // Maximum Impact Asymmetrical Distribution
+                    // Card 1: Lead (8 cols), Card 2: Stack (4 cols), Card 3: Stack (4 cols), Card 4: Footer (8 cols)
                     $span = ( $i == 1 || $i == 4 ) ? 'bento-span-8' : 'bento-span-4';
                     $metric = get_post_meta( get_the_ID(), '_portfolio_metric', true );
                     ?>
                     <article class="portfolio-item-card cc-card <?php echo esc_attr($span); ?> p-0 overflow-hidden d-flex flex-column h-100 border-0">
-                        <div class="portfolio-image-wrap position-relative overflow-hidden" style="height: 440px;">
+                        <div class="portfolio-image-wrap position-relative overflow-hidden" style="height: <?php echo ($span == 'bento-span-8') ? '480px' : '400px'; ?>;">
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <a href="<?php the_permalink(); ?>" class="d-block h-100">
                                     <?php the_post_thumbnail( 'large', array( 'class' => 'w-100 h-100 object-cover transition-all' ) ); ?>
@@ -61,8 +62,8 @@ $tag      = get_theme_mod( 'closeclient_portfolio_tag', 'PROOF OF ARCHITECTURE' 
                                 <span class="section-tag small mb-0" style="font-size: 0.55rem; padding-left: 0;"><?php echo esc_html__( 'PROTOCOL ANALYSIS', 'closeclient' ); ?></span>
                                 <span class="small text-white-50 opacity-20 fw-black">CASE NO.0<?php echo $i; ?></span>
                             </div>
-                            <h3 class="h3 mb-4 tracking-tighter"><a href="<?php the_permalink(); ?>" class="text-white text-decoration-none hover-text-accent transition-all"><?php the_title(); ?></a></h3>
-                            <div class="text-muted small mb-5 lead opacity-80" style="font-size: 0.95rem; line-height: 1.7;"><?php echo wp_trim_words( get_the_excerpt(), 25 ); ?></div>
+                            <h3 class="<?php echo ($span == 'bento-span-8') ? 'h2' : 'h4'; ?> mb-4 tracking-tighter"><a href="<?php the_permalink(); ?>" class="text-white text-decoration-none hover-text-accent transition-all"><?php the_title(); ?></a></h3>
+                            <div class="text-muted small mb-5 lead opacity-80" style="font-size: 0.95rem; line-height: 1.7;"><?php echo wp_trim_words( get_the_excerpt(), ( $span == 'bento-span-8' ? 40 : 20 ) ); ?></div>
 
                             <div class="mt-auto pt-4 border-top border-white-10 d-flex justify-content-between align-items-center">
                                 <a href="<?php the_permalink(); ?>" class="cc-button cc-button-secondary py-2 px-4" style="font-size: 0.65rem;"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_btn', 'Analyze Protocol →' ) ); ?></a>
