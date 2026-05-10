@@ -57,14 +57,14 @@ $tag      = get_theme_mod( 'closeclient_portfolio_tag', 'PROOF OF ARCHITECTURE' 
                                 </div>
                             <?php endif; ?>
                             <div class="d-flex justify-content-between align-items-start mb-3">
-                                <span class="section-tag small mb-0" style="font-size: 0.55rem; padding-left: 0;"><?php echo esc_html__( 'PROTOCOL ANALYSIS', 'closeclient' ); ?></span>
+                                <span class="section-tag small mb-0" style="font-size: 0.55rem; padding-left: 0;"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_item_tag', 'PROTOCOL ANALYSIS' ) ); ?></span>
                                 <span class="small text-white-50 opacity-20 fw-black">CASE NO.0<?php echo $i; ?></span>
                             </div>
                             <h3 class="<?php echo ($span == 'bento-span-8') ? 'h2' : 'h4'; ?> mb-4 tracking-tighter"><a href="<?php the_permalink(); ?>" class="text-white text-decoration-none hover-text-accent transition-all"><?php the_title(); ?></a></h3>
                             <div class="text-muted small mb-5 lead opacity-80" style="font-size: 0.95rem; line-height: 1.7;"><?php echo wp_trim_words( get_the_excerpt(), ( $span == 'bento-span-8' ? 40 : 20 ) ); ?></div>
 
                             <div class="mt-auto pt-4 border-top border-white-10 d-flex justify-content-between align-items-center">
-                                <a href="<?php the_permalink(); ?>" class="cc-button cc-button-secondary py-2 px-4" style="font-size: 0.65rem;"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_btn', 'Analyze Protocol →' ) ); ?></a>
+                                <a href="<?php the_permalink(); ?>" class="cc-button cc-button-secondary py-2 px-4" style="font-size: 0.65rem;"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_item_btn', 'Analyze Protocol →' ) ); ?></a>
                                 <div class="d-flex gap-2 opacity-30">
                                     <div class="status-dot-mini bg-accent" style="width: 4px; height: 4px;"></div>
                                     <span class="small fw-bold" style="font-size: 0.45rem; letter-spacing: 0.1em;">ENCRYPTED</span>
