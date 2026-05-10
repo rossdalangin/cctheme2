@@ -86,6 +86,8 @@ function closeclient_get_defaults() {
         'closeclient_floating_cta_threshold' => '500',
         'closeclient_footer_about' => 'Engineering high-fidelity digital infrastructure for the world\'s most ambitious high-ticket authorities.',
         'closeclient_footer_back_top' => 'BACK TO TOP ↑',
+        'closeclient_show_footer_console' => '0',
+        'closeclient_show_footer_footprint' => '0',
         'closeclient_footer_col2_title' => 'Navigation',
         'closeclient_footer_col3_title' => 'Command',
         'closeclient_footer_ribbon_speed' => '30s',

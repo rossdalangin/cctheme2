@@ -34,7 +34,7 @@ $tag      = get_theme_mod( 'closeclient_portfolio_tag', 'PROOF OF ARCHITECTURE' 
                     $metric = get_post_meta( get_the_ID(), '_portfolio_metric', true );
                     ?>
                     <article class="portfolio-item-card cc-card <?php echo esc_attr($span); ?> p-0 overflow-hidden d-flex flex-column h-100 border-0">
-                        <div class="portfolio-image-wrap position-relative overflow-hidden" style="height: <?php echo ($span == 'bento-span-8') ? '480px' : '400px'; ?>;">
+                        <div class="portfolio-image-wrap position-relative overflow-hidden">
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <a href="<?php the_permalink(); ?>" class="d-block h-100">
                                     <?php the_post_thumbnail( 'large', array( 'class' => 'w-100 h-100 object-cover transition-all' ) ); ?>
@@ -46,18 +46,16 @@ $tag      = get_theme_mod( 'closeclient_portfolio_tag', 'PROOF OF ARCHITECTURE' 
                             <?php endif; ?>
 
                             <div class="portfolio-overlay-gradient"></div>
-
-                            <?php if ( $metric ) : ?>
-                                <div class="portfolio-metric-badge position-absolute top-0 end-0 m-4" style="z-index: 10;">
-                                    <div class="glass p-3 px-4 border-accent rounded-pill shadow-2xl">
-                                        <span class="d-block small text-accent fw-black letter-spacing-xs mb-1" style="font-size: 0.5rem; line-height: 1;">KEY METRIC</span>
-                                        <span class="h6 mb-0 text-white fw-black"><?php echo esc_html( $metric ); ?></span>
-                                    </div>
-                                </div>
-                            <?php endif; ?>
                         </div>
 
                         <div class="portfolio-content p-5 flex-grow-1 d-flex flex-column bg-secondary border-top border-secondary">
+                            <?php if ( $metric ) : ?>
+                                <div class="portfolio-metric-badge mb-4">
+                                    <div class="d-inline-flex align-items-center gap-2 py-1 px-3 border border-accent rounded-pill" style="background: rgba(var(--c-accent-rgb), 0.1);">
+                                        <span class="small text-accent fw-black letter-spacing-lg" style="font-size: 0.5rem;"><?php echo esc_html( $metric ); ?></span>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <span class="section-tag small mb-0" style="font-size: 0.55rem; padding-left: 0;"><?php echo esc_html__( 'PROTOCOL ANALYSIS', 'closeclient' ); ?></span>
                                 <span class="small text-white-50 opacity-20 fw-black">CASE NO.0<?php echo $i; ?></span>

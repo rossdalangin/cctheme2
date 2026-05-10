@@ -284,6 +284,8 @@ function closeclient_customize_register( $wp_customize ) {
         'closeclient_footer_privacy_label' => 'Footer Privacy Link Label',
         'closeclient_footer_terms_label' => 'Footer Terms Link Label',
         'closeclient_footer_back_top' => 'Footer Back to Top Label',
+        'closeclient_show_footer_console' => 'Show Technical Telemetry Console',
+        'closeclient_show_footer_footprint' => 'Show Global Footprint (Clocks)',
         'closeclient_footer_ribbon_speed' => 'Footer Ribbon: Animation Speed',
         'closeclient_footer_ribbon_bg' => 'Footer Ribbon: Background',
         'closeclient_footer_ribbon_color' => 'Footer Ribbon: Text Color',

@@ -458,6 +458,11 @@ input:focus, textarea:focus, select:focus {
     position: relative;
     overflow: hidden;
 }
+.ribbon-tag-wrapper {
+    background: var(--c-bg);
+    position: relative;
+    z-index: 10;
+}
 
 .bento-style-card::after {
     content: "";
@@ -525,33 +530,17 @@ input:focus, textarea:focus, select:focus {
 }
 
 .authority-ribbon {
-    padding: var(--s-md) 0;
-    background: rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(5px);
+    padding: var(--s-xs) 0;
     transition: all 0.5s ease;
-    border-top: 1px solid var(--c-border);
     position: relative;
     overflow: hidden;
 }
 
-.authority-ribbon::before {
-    content: "";
-    position: absolute;
-    top: 0; left: -100%; width: 50%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
-    animation: ribbon-shimmer 10s infinite linear;
-}
-
-@keyframes ribbon-shimmer {
-    0% { left: -100%; }
-    100% { left: 200%; }
-}
-
 .ticker-mode-wrapper {
     position: relative;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    padding: var(--s-xs) 0;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    padding: var(--s-2xs) 0;
 }
 
 .ticker-mode-content {
@@ -2069,12 +2058,15 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     padding: 0;
     overflow: hidden;
 }
-.portfolio-item-card .portfolio-image {
-    aspect-ratio: 16/9;
+.portfolio-item-card .portfolio-image-wrap {
+    aspect-ratio: 16/10;
     overflow: hidden;
 }
 .portfolio-item-card .portfolio-content {
-    padding: var(--s-md);
+    padding: var(--s-lg);
+}
+.portfolio-item-card.bento-span-8 .portfolio-image-wrap {
+    aspect-ratio: 21/9;
 }
 .portfolio-empty-card {
     grid-column: span 12;

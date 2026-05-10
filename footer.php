@@ -11,15 +11,15 @@
 	<footer id="colophon" class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
         <?php
         if ( get_theme_mod( 'closeclient_show_authority_ribbon', '1' ) === '1' ) :
-            $ticker_speed = get_theme_mod( 'closeclient_footer_ribbon_speed', '30s' );
-            $ticker_bg    = get_theme_mod( 'closeclient_footer_ribbon_bg', 'rgba(255, 255, 255, 0.01)' );
-            $ticker_color = get_theme_mod( 'closeclient_footer_ribbon_color', '#ffffff' );
+            $ticker_speed = get_theme_mod( 'closeclient_footer_ribbon_speed', '60s' );
+            $ticker_bg    = get_theme_mod( 'closeclient_footer_ribbon_bg', 'transparent' );
+            $ticker_color = get_theme_mod( 'closeclient_footer_ribbon_color', 'rgba(255,255,255,0.2)' );
         ?>
-            <div class="authority-ribbon border-bottom border-secondary mb-5 reveal" style="background: <?php echo esc_attr($ticker_bg); ?>; --ticker-duration: <?php echo esc_attr($ticker_speed); ?>; color: <?php echo esc_attr($ticker_color); ?>;">
-                <div class="container d-flex align-items-center gap-5 overflow-hidden">
-                    <div class="d-flex align-items-center gap-3 flex-shrink-0" style="z-index: 10; background: var(--c-bg); padding-right: 30px;">
-                        <div class="status-dot-mini bg-accent"></div>
-                        <span class="small fw-black letter-spacing-lg text-white-50 uppercase tracking-widest opacity-50"><?php echo esc_html( get_theme_mod( 'closeclient_footer_ribbon_tag', 'TRUSTED BY INNOVATORS AT:' ) ); ?></span>
+            <div class="authority-ribbon mb-5 reveal" style="background: <?php echo esc_attr($ticker_bg); ?>; --ticker-duration: <?php echo esc_attr($ticker_speed); ?>; color: <?php echo esc_attr($ticker_color); ?>;">
+                <div class="container d-flex align-items-center gap-4 overflow-hidden">
+                    <div class="ribbon-tag-wrapper d-flex align-items-center gap-2 flex-shrink-0 pe-4">
+                        <div class="status-dot-mini bg-accent opacity-50" style="width: 4px; height: 4px;"></div>
+                        <span class="small fw-bold letter-spacing-lg text-white uppercase tracking-widest opacity-30" style="font-size: 0.5rem;"><?php echo esc_html( get_theme_mod( 'closeclient_footer_ribbon_tag', 'TRUSTED BY INNOVATORS AT:' ) ); ?></span>
                     </div>
                     <div class="ticker-mode-wrapper overflow-hidden flex-grow-1">
                         <div class="ticker-mode-content d-flex gap-5 opacity-20 grayscale">
@@ -164,6 +164,7 @@
             </div>
 
             <!-- Infrastructure Console: Technical Telemetry Layer -->
+            <?php if ( get_theme_mod( 'closeclient_show_footer_console', '0' ) === '1' ) : ?>
             <div class="footer-console glass border-accent rounded-lg mt-5 p-4 reveal">
                 <div class="console-grid d-flex flex-wrap justify-content-between align-items-center gap-5">
                     <div class="console-specs d-flex gap-5 opacity-40">
@@ -208,14 +209,17 @@
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
 
             <div class="footer-bottom mt-5 pt-5 border-top border-secondary">
+                <?php if ( get_theme_mod( 'closeclient_show_footer_footprint', '0' ) === '1' ) : ?>
                 <div class="footer-global-footprint d-flex justify-content-center gap-5 mb-5 opacity-20 reveal" aria-label="Global Operations Times">
                     <div class="small fw-black" style="font-size: 0.55rem; letter-spacing: 0.2em;">NYC / <span class="live-clock" data-offset="-5">--:--</span></div>
                     <div class="small fw-black" style="font-size: 0.55rem; letter-spacing: 0.2em;">LDN / <span class="live-clock" data-offset="0">--:--</span></div>
                     <div class="small fw-black" style="font-size: 0.55rem; letter-spacing: 0.2em;">SIN / <span class="live-clock" data-offset="8">--:--</span></div>
                     <div class="small fw-black" style="font-size: 0.55rem; letter-spacing: 0.2em;">SYD / <span class="live-clock" data-offset="11">--:--</span></div>
                 </div>
+                <?php endif; ?>
                 <div class="footer-disclaimer mb-4">
                     <p class="small text-muted mb-0"><?php echo esc_html( get_theme_mod( 'closeclient_footer_disclaimer', 'Consulting and engineering services are subject to terms. Results may vary by market.' ) ); ?></p>
                 </div>
