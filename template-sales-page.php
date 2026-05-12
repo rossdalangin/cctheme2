@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main sales-page">
+<main class="position-relative overflow-hidden" id="primary" class="site-main sales-page"><div class="blueprint-watermark opacity-05">TECHNICAL_BLUEPRINT_V2.0</div>
     <section class="section section-lg sales-hero">
         <div class="container text-center reveal">
             <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_sales_hero_tag_tpl', 'THE ARCHITECTURAL PROTOCOL' ) ); ?></span>

@@ -1,0 +1,31 @@
+[Tue May 12 20:01:23 2026] PHP 8.3.6 Development Server (http://localhost:3000) started
+[Tue May 12 20:01:28 2026] [::1]:42506 Accepted
+[Tue May 12 20:01:28 2026] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /app/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /app/index.php on line 15
+[Tue May 12 20:01:28 2026] [::1]:42506 [500]: GET / - Uncaught Error: Call to undefined function get_header() in /app/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /app/index.php on line 15
+[Tue May 12 20:01:28 2026] [::1]:42506 Closing
+[Tue May 12 20:01:32 2026] [::1]:59136 Accepted
+[Tue May 12 20:01:32 2026] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /app/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /app/index.php on line 15
+[Tue May 12 20:01:32 2026] [::1]:59136 [500]: GET /the-method - Uncaught Error: Call to undefined function get_header() in /app/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /app/index.php on line 15
+[Tue May 12 20:01:32 2026] [::1]:59136 Closing
+[Tue May 12 20:01:33 2026] [::1]:59152 Accepted
+[Tue May 12 20:01:33 2026] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /app/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /app/index.php on line 15
+[Tue May 12 20:01:33 2026] [::1]:59152 [500]: GET /protocol - Uncaught Error: Call to undefined function get_header() in /app/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /app/index.php on line 15
+[Tue May 12 20:01:33 2026] [::1]:59152 Closing

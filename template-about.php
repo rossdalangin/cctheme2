@@ -11,7 +11,7 @@ $headline = get_theme_mod( 'closeclient_about_headline_tpl', 'The Architects of 
 $text     = get_theme_mod( 'closeclient_about_text_tpl', 'We don\'t build websites; we engineer high-fidelity digital infrastructure that commands absolute market authority, liquidates lead-cost, and scales high-ticket revenue with surgical precision.' );
 ?>
 
-<main id="primary" class="site-main about-page">
+<main class="position-relative overflow-hidden" id="primary" class="site-main about-page"><div class="blueprint-watermark opacity-05">TECHNICAL_BLUEPRINT_V2.0</div>
     <section class="section section-lg template-about-story bg-dark overflow-hidden">
         <div class="mesh-gradient"></div>
         <div class="container">

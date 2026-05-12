@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main lead-magnet-page">
+<main class="position-relative overflow-hidden" id="primary" class="site-main lead-magnet-page"><div class="blueprint-watermark opacity-05">TECHNICAL_BLUEPRINT_V2.0</div>
     <section class="section section-lg">
         <div class="container lead-magnet-grid reveal">
             <div class="lead-magnet-content py-lg">

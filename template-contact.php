@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
+<main class="position-relative overflow-hidden" id="primary" class="site-main"><div class="blueprint-watermark opacity-05">TECHNICAL_BLUEPRINT_V2.0</div>
     <section class="section section-lg">
         <div class="container">
             <div class="section-header text-center reveal mb-5">

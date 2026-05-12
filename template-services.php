@@ -11,7 +11,7 @@ $headline    = get_theme_mod( 'closeclient_services_hero_headline_tpl', 'The Pro
 $subheadline = get_theme_mod( 'closeclient_services_subheadline_tpl', 'We don\'t build pages; we engineer the tactical infrastructure required to command your market and scale beyond your current ceiling with mathematical certainty.' );
 ?>
 
-<main id="primary" class="site-main">
+<main class="position-relative overflow-hidden" id="primary" class="site-main"><div class="blueprint-watermark opacity-05">TECHNICAL_BLUEPRINT_V2.0</div>
     <div class="container section section-xl text-center reveal overflow-hidden">
         <div class="mesh-gradient"></div>
         <div class="hero-bg-glow"></div>
