@@ -77,14 +77,14 @@ get_header();
 
                             <div class="portfolio-content-wrap p-5 flex-grow-1 bg-secondary d-flex flex-column border-top border-secondary">
                                 <div class="d-flex justify-content-between align-items-start mb-3">
-                                    <span class="section-tag small mb-0" style="font-size: 0.55rem; padding-left: 0;"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_item_tag', 'PROTOCOL ANALYSIS' ) ); ?></span>
+                                    <span class="section-tag small mb-0" style="font-size: 0.55rem; padding-left: 0;"><?php echo esc_html__( 'PROTOCOL ANALYSIS', 'closeclient' ); ?></span>
                                     <span class="small text-white-50 opacity-20 fw-black">NO.0<?php echo $i; ?></span>
                                 </div>
                                 <h3 class="h3 mb-4 tracking-tighter"><a href="<?php the_permalink(); ?>" class="text-white text-decoration-none hover-text-accent transition-all"><?php the_title(); ?></a></h3>
                                 <p class="text-muted small mb-5 opacity-70 lead" style="line-height: 1.6;"><?php echo wp_trim_words( get_the_excerpt(), 30 ); ?></p>
 
                                 <div class="mt-auto pt-4 border-top border-white-10 d-flex justify-content-between align-items-center">
-                                    <a href="<?php the_permalink(); ?>" class="cc-button cc-button-secondary py-2 px-4" style="font-size: 0.65rem;"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_item_btn', 'Analyze Protocol →' ) ); ?></a>
+                                    <a href="<?php the_permalink(); ?>" class="cc-button cc-button-secondary py-2 px-4" style="font-size: 0.65rem;">Analyze Blueprint →</a>
                                     <div class="d-flex gap-2 opacity-30">
                                         <div class="status-dot-mini bg-accent" style="width: 4px; height: 4px;"></div>
                                         <span class="small fw-bold" style="font-size: 0.45rem; letter-spacing: 0.1em;">ENCRYPTED</span>

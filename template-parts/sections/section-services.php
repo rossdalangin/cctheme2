@@ -48,7 +48,7 @@ $tag      = get_theme_mod( 'closeclient_services_tag', 'SERVICES' );
                         <?php endif; ?>
 
                         <div class="mt-auto">
-                            <a href="<?php the_permalink(); ?>" class="cc-button cc-button-secondary py-2 px-4" style="font-size: 0.65rem;"><?php echo esc_html( get_theme_mod( 'closeclient_label_service_item_btn', 'System Details →' ) ); ?></a>
+                            <a href="<?php the_permalink(); ?>" class="cc-button cc-button-secondary py-2 px-4" style="font-size: 0.65rem;">System Details →</a>
                         </div>
                     </div>
                 <?php endwhile;
@@ -78,7 +78,7 @@ $tag      = get_theme_mod( 'closeclient_services_tag', 'SERVICES' );
                         <h3 class="h3 mb-3 text-white tracking-tighter"><?php echo esc_html( $title ); ?></h3>
                         <p class="text-muted small mb-5 lead opacity-80" style="font-size: 0.95rem; line-height: 1.7;"><?php echo esc_html( $text ); ?></p>
                         <div class="mt-auto">
-                            <a href="<?php echo esc_url( home_url( '/solutions' ) ); ?>" class="cc-button cc-button-secondary py-2 px-4" style="font-size: 0.65rem;"><?php echo esc_html( get_theme_mod( 'closeclient_label_service_item_btn', 'System Details →' ) ); ?></a>
+                            <a href="<?php echo esc_url( home_url( '/solutions' ) ); ?>" class="cc-button cc-button-secondary py-2 px-4" style="font-size: 0.65rem;">System Details →</a>
                         </div>
                     </div>
                 <?php endforeach;

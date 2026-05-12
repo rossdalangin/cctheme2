@@ -59,7 +59,7 @@ $subheadline = get_theme_mod( 'closeclient_services_subheadline_tpl', 'We don\'t
                         <?php endif; ?>
 
                         <div class="mt-auto">
-                            <a href="<?php echo esc_url( get_permalink() ); ?>" class="cc-button cc-button-secondary read-more-btn"><?php echo esc_html( get_theme_mod( 'closeclient_label_service_item_btn', 'System Details →' ) ); ?></a>
+                            <a href="<?php echo esc_url( get_permalink() ); ?>" class="cc-button cc-button-secondary read-more-btn"><?php echo esc_html( get_theme_mod( 'closeclient_label_service_btn', 'System Details →' ) ); ?></a>
                         </div>
                     </article>
                 <?php endwhile; wp_reset_postdata(); ?>
