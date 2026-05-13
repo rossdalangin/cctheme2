@@ -32,22 +32,22 @@ function closeclient_get_defaults() {
         "closeclient_accent_color" => "#6366F1",
         "closeclient_assets_desc" => "Strategic frameworks and high-fidelity protocols engineered for 8-figure coaches and consultants.",
         "closeclient_assets_headline" => "Elite Authority Asset Suite",
-        "closeclient_assets_item_1_desc" => "Architectural blueprint component.",
+        "closeclient_assets_item_1_desc" => "The definitive architectural framework for engineering absolute market dominance and scaling to \$10M+ with mathematical certainty.",
         "closeclient_assets_item_1_link" => "#audit",
-        "closeclient_assets_item_1_tag" => "EXCLUSIVE",
-        "closeclient_assets_item_1_title" => "Strategic Asset",
-        "closeclient_assets_item_2_desc" => "Architectural blueprint component.",
+        "closeclient_assets_item_1_tag" => "TECHNICAL BLUEPRINT",
+        "closeclient_assets_item_1_title" => "The Authority Flywheel",
+        "closeclient_assets_item_2_desc" => "Advanced filtration and pre-qualification systems designed to liquidate lead-cost and ensure you only speak with ready-to-buy partners.",
         "closeclient_assets_item_2_link" => "#audit",
-        "closeclient_assets_item_2_tag" => "EXCLUSIVE",
-        "closeclient_assets_item_2_title" => "Strategic Asset",
-        "closeclient_assets_item_3_desc" => "Architectural blueprint component.",
+        "closeclient_assets_item_2_tag" => "OPERATIONAL PROTOCOL",
+        "closeclient_assets_item_2_title" => "Zero-Latency Intake",
+        "closeclient_assets_item_3_desc" => "A surgical mapping of high-intent user journeys and psychological triggers required to accelerate high-ticket sales velocity.",
         "closeclient_assets_item_3_link" => "#audit",
-        "closeclient_assets_item_3_tag" => "EXCLUSIVE",
-        "closeclient_assets_item_3_title" => "Strategic Asset",
-        "closeclient_assets_item_4_desc" => "Architectural blueprint component.",
+        "closeclient_assets_item_3_tag" => "CONVERSION PSYCHOLOGY",
+        "closeclient_assets_item_3_title" => "Vortex Funnel Map",
+        "closeclient_assets_item_4_desc" => "The executive guide to managing digital infrastructure as a high-yield asset rather than a technical liability.",
         "closeclient_assets_item_4_link" => "#audit",
-        "closeclient_assets_item_4_tag" => "EXCLUSIVE",
-        "closeclient_assets_item_4_title" => "Strategic Asset",
+        "closeclient_assets_item_4_tag" => "CAPITAL PERFORMANCE",
+        "closeclient_assets_item_4_title" => "ROI Engineering Manual",
         "closeclient_audit_modal_btn" => "Request Your Audit →",
         "closeclient_audit_modal_desc" => "Submit your details and we’ll tailor a comprehensive digital audit and growth proposal based on your exact objectives.",
         "closeclient_audit_modal_email_placeholder" => "Business Email",
@@ -89,17 +89,9 @@ function closeclient_get_defaults() {
         "closeclient_contact_subheadline_tpl" => "Ready to engineer your scale? Fill out the form or apply for your Authority Audit directly.",
         "closeclient_contact_tag_tpl" => "GET IN TOUCH",
         "closeclient_default_layout" => "right-sidebar",
-        "closeclient_faq_a1" => "Strategic Answer.",
-        "closeclient_faq_a2" => "Strategic Answer.",
-        "closeclient_faq_a3" => "Strategic Answer.",
-        "closeclient_faq_a4" => "Strategic Answer.",
         "closeclient_faq_footer_btn" => "Consult with a Strategic Architect →",
         "closeclient_faq_footer_text" => "Have technical or strategic queries regarding your authority infrastructure?",
         "closeclient_faq_headline" => "Strategic Questions",
-        "closeclient_faq_q1" => "Strategic Question?",
-        "closeclient_faq_q2" => "Strategic Question?",
-        "closeclient_faq_q3" => "Strategic Question?",
-        "closeclient_faq_q4" => "Strategic Question?",
         "closeclient_faq_tag" => "FAQ",
         "closeclient_floating_cta_threshold" => "800",
         "closeclient_footer_about" => "Engineering high-fidelity digital infrastructure for the world's most ambitious high-ticket authorities.",
@@ -204,6 +196,7 @@ function closeclient_get_defaults() {
         "closeclient_pricing_trust_2" => "ROI-FOCUSED ENGINEERING",
         "closeclient_pricing_trust_3" => "WHITE-GLOVE ONBOARDING",
         "closeclient_primary_color" => "#020203",
+        "closeclient_privacy_content" => "Standard Elite Privacy Protocol for CloseClient Partners. Your data is managed with surgical technical security.",
         "closeclient_process_headline" => "The Authority Protocol",
         "closeclient_process_step_1_text" => "Deployment phase of the authority protocol.",
         "closeclient_process_step_1_title" => "Strategic Phase",
@@ -280,17 +273,18 @@ function closeclient_get_defaults() {
         "closeclient_team_4_role" => "Lead Architect",
         "closeclient_team_headline" => "The Strategic Architects",
         "closeclient_team_tag" => "THE BRAIN TRUST",
+        "closeclient_terms_content" => "Terms of Engagement for the Elite Authority Protocol. All architectural assets are subject to strategic non-disclosure.",
         "closeclient_testimonial_1_name" => "Brand Partner",
-        "closeclient_testimonial_1_result" => "3.4x ROI ENGINEERED",
+        "closeclient_testimonial_1_result" => "5.2x ROI ENGINEERED",
         "closeclient_testimonial_1_text" => "High-fidelity revenue engineering.",
         "closeclient_testimonial_2_name" => "Brand Partner",
-        "closeclient_testimonial_2_result" => "3.4x ROI ENGINEERED",
+        "closeclient_testimonial_2_result" => "5.2x ROI ENGINEERED",
         "closeclient_testimonial_2_text" => "High-fidelity revenue engineering.",
         "closeclient_testimonial_3_name" => "Brand Partner",
-        "closeclient_testimonial_3_result" => "3.4x ROI ENGINEERED",
+        "closeclient_testimonial_3_result" => "5.2x ROI ENGINEERED",
         "closeclient_testimonial_3_text" => "High-fidelity revenue engineering.",
         "closeclient_testimonial_4_name" => "Brand Partner",
-        "closeclient_testimonial_4_result" => "3.4x ROI ENGINEERED",
+        "closeclient_testimonial_4_result" => "5.2x ROI ENGINEERED",
         "closeclient_testimonial_4_text" => "High-fidelity revenue engineering.",
         "closeclient_testimonials_headline" => "Strategic Authority Proof",
         "closeclient_testimonials_sub" => "VERIFIED ROI ARCHITECTURE",
@@ -326,36 +320,43 @@ function closeclient_reset_defaults() {
 function closeclient_generate_cpt_data() {
     $cpts = array(
         'service' => array(
-            'High-Fidelity Authority Engineering' => "We don't build \"pretty\" websites; we architect high-performance digital infrastructure for 8-figure authorities. Our systems are engineered to position your expertise as the only logical choice, pre-qualify every lead with surgical precision, and accelerate sales velocity through advanced conversion psychology.",
-            'Conversion-First UI/UX Ecosystems' => "Strategic implementation of psychological triggers and frictionless user journeys. We engineer every pixel with a singular focus: transforming your intellectual property into a measurable revenue engine that operates with zero-latency and absolute reliability.",
-            'Vortex Authority Funnels' => 'Dynamic, automated lead-intake systems that function as your most elite, 24/7 global sales associate. Our funnels are designed to liquidate lead costs while building immense perceived value, ensuring you only speak with highly qualified, ready-to-buy clients.'
+            'High-Fidelity Authority Engineering' => 'We don\'t build websites; we architect high-performance digital infrastructure for the world\'s top 1% of authorities. Our systems are engineered to liquidate lead-cost, command absolute market dominance, and automate high-ticket sales velocity through surgical technical precision and deep conversion psychology.',
+            'Vortex Automated Revenue Systems' => 'A dynamic, multi-channel lead acquisition and filtration engine designed to capture, qualify, and pre-sell your most ideal prospects before you ever enter the room. We liquidate the "authority-debt" that kills high-ticket growth and replace it with a 24/7 global sales asset.',
+            'Omnipresent Brand Architecture' => 'Strategic installation of high-fidelity brand assets across all digital touchpoints. We ensure your expertise is perceived as the only logical solution in your niche by fusing frictionless UI/UX with proprietary positioning protocols that command a premium.',
+            'Strategic Acquisition Protocols' => 'Advanced performance engineering that transforms your digital footprint into a mathematical growth engine. We eliminate operational friction and technical bottlenecks, allowing you to scale to 8-figures with absolute certainty and zero latency.'
         ),
         'portfolio' => array(
-            'The $10M Architectural Overhaul' => "Engineering the core digital infrastructure for a world-class consultancy. By optimizing technical performance and strategic positioning, we helped them achieve eight figures in attributable revenue within 12 months of deployment.",
-            'The 340% Authority Pivot' => "Re-architecting the digital ecosystem for an elite coaching firm. By implementing our \"Authority Flywheel\" framework, we liquidated lead-cost and enabled the partner to manage \$500k/mo in new inquiry volume with zero additional headcount.",
-            'Zero-Latency Scale Protocol' => "Deploying high-fidelity revenue systems for a premium SaaS brand. Our architectural protocol resulted in a 420% increase in deal velocity and absolute market dominance within 6 months.",
-            'Strategic Dominance Engine' => 'Engineering a high-performance digital ecosystem for a global education brand. We installed the tactical infrastructure necessary to command a 5x increase in high-ticket inquiry volume while reducing manual sales effort by 60%.'
+            'The $10M Architectural Pivot' => 'We re-engineered the core digital infrastructure for an elite consultancy facing structural authority leaks and inconsistent high-ticket lead flow. By deploying our "Authority Flywheel" framework and full-stack high-fidelity architecture, we enabled them to achieve $10.4M in attributable revenue within 12 months.',
+            'Zero-Latency Scale Protocol' => 'Deploying high-performance revenue systems for a premium education brand. Our architectural protocol resulted in a 420% increase in deal velocity and absolute market dominance within 6 months, liquidating manual sales effort by 60% through automated filtration.',
+            'Strategic Dominance Engine' => 'Engineering a high-fidelity digital ecosystem for a global expert. We installed the tactical infrastructure necessary to command a 5x increase in high-ticket inquiry volume while maintaining a 94% retention rate through frictionless user journeys.',
+            'The 340% Authority Overhaul' => 'Re-architecting the digital presence of a top-tier coaching firm. By implementing our proprietary conversion-first UI/UX ecosystems, we increased lead quality by 340% and liquidated lead-acquisition costs through high-performance organic authority assets.'
         ),
         'testimonial' => array(
-            'Strategic Authority Partner' => 'CloseClient didn\'t just build a "website"; they engineered a high-fidelity revenue engine. Our lead quality tripled within 30 days of deployment, and for the first time, our digital presence actually matches the caliber of our expertise.'
+            'Managing Director, Elite Consulting' => 'CloseClient didn\'t just build a "website"; they engineered a high-fidelity revenue engine. Our lead quality tripled within 30 days of deployment, and for the first time, our digital presence actually matches the caliber of our expertise. They are the only choice for 8-figure scale.',
+            'CEO, Global Education Brand' => 'The technical precision and strategic depth CloseClient brought to our infrastructure build was unlike anything we\'ve experienced. They liquidated our manual sales debt and gave us a high-performance asset that closes deals while we sleep.',
+            'Founding Architect, Scale Systems' => 'Engineering absolute market authority requires more than just design; it requires a surgical understanding of conversion architecture. CloseClient delivered exactly that. Our ROI is measurable, our systems are frictionless, and our authority is unrivaled.'
         ),
         'faq' => array(
-            'Who is your ideal partner?' => "Our high-fidelity systems are engineered exclusively for established experts, coaches, and consultants doing \$20k-\$100k+ monthly who are ready to professionalize their infrastructure.",
-            'What is the typical deployment timeline?' => 'A standard Authority Ecosystem build takes 4-6 weeks from strategic audit to full-stack deployment.'
+            'Who is your ideal partner?' => 'Our high-fidelity systems are engineered exclusively for established experts, coaches, and consultants doing $30k-$200k+ monthly who are ready to professionalize their infrastructure and liquidate manual scaling friction.',
+            'What is the typical deployment timeline?' => 'A standard Elite Authority Ecosystem build takes 6-8 weeks from preliminary strategic audit to full-stack deployment, ensuring absolute architectural precision and deep strategic immersion.',
+            'Is this just another website agency?' => 'No. We don\'t build pages; we architect high-performance digital assets. We fuse surgical technical requirements with the psychological triggers of high-ticket buyers to build systems that command dominance.',
+            'How do you ensure measurable ROI?' => 'Every component we engineer—from the Vortex funnel to the frictionless UI—is rooted in data-driven performance. We focus on liquidating lead-cost and accelerating sales velocity through proven architectural protocols.'
         ),
         'team' => array(
-            'Julian Thorne' => 'Managing Director & Lead Architect. 15+ years specializing in high-ticket conversion architecture and high-fidelity authority positioning.'
+            'Julian Thorne' => 'Managing Director & Lead Architect. 15+ years specializing in high-ticket conversion architecture and high-fidelity authority positioning for the world\'s top 1% of experts.',
+            'Elena Vance' => 'Director of Conversion Psychology. Expert in engineering frictionless user journeys and high-fidelity trigger mechanisms that accelerate premium sales velocity.',
+            'Marcus Stone' => 'Lead Systems Engineer. Specializing in high-performance infrastructure and automated revenue engines for 8-figure scaling brands.'
         ),
         'process' => array(
-            'The Technical Audit' => "A deep-dive diagnostic scan of your current authority leaks, technical debt, and revenue bottlenecks.",
-            'The Ecosystem Build' => "Rapid, high-fidelity installation of your core authority infrastructure, lead filters, and tactical conversion assets.",
-            'The Scale Protocol' => 'Continuous technical optimization and strategic traffic injection to reach your $100k/mo+ targets with absolute certainty.'
+            'The Technical Diagnostic' => 'A deep-dive architectural audit of your current digital footprint to identify structural authority leaks, technical debt, and revenue bottlenecks that are killing your scale.',
+            'The Infrastructure Build' => 'Rapid, high-fidelity installation of your core authority assets, lead filters, and proprietary Vortex funnel architecture to liquidate manual delivery friction.',
+            'The Dominance Protocol' => 'Continuous technical optimization and strategic performance engineering to ensure your systems operate with zero-latency and reach your $100k/mo+ targets with mathematical certainty.'
         ),
         'pricing' => array(
-            'The Mastery Protocol' => 'The complete Authority Ecosystem build for experts ready to automate their scale and dominate their premium niche.'
+            'The Elite Mastery Protocol' => 'The definitive high-fidelity build for experts ready to professionalize their digital infrastructure and automate their market dominance at the highest level.'
         ),
         'product' => array(
-            'Authority OS' => 'The definitive strategic dashboard for managing elite, high-ticket coaching operations at scale.'
+            'Authority OS v2.0' => 'The definitive strategic command center for managing elite, high-ticket operations with surgical precision and zero operational friction.'
         )
     );
 
@@ -372,29 +373,31 @@ function closeclient_generate_cpt_data() {
 
                 // Meta fallbacks
                 if ($type === 'pricing') {
-                    update_post_meta($pid, '_plan_price', '$5,997');
+                    update_post_meta($pid, '_plan_price', '$15,000+');
                     update_post_meta($pid, '_plan_featured', '1');
                 }
                 if ($type === 'testimonial') {
                     update_post_meta($pid, '_testimonial_rating', '5');
-                    update_post_meta($pid, '_testimonial_result', '3.4x ROI');
+                    update_post_meta($pid, '_testimonial_result', '5.2x ROI ENGINEERED');
                 }
                 if ($type === 'portfolio') {
                     $metrics = array(
-                        'The $10M Architectural Overhaul' => "\$10.4M ATTRIBUTABLE",
-                        'The 340% Authority Pivot' => "340% LEAD QUALITY",
+                        'The $10M Architectural Pivot' => "$10.4M ATTRIBUTABLE",
+                        'The 340% Authority Overhaul' => "340% LEAD QUALITY",
                         'Zero-Latency Scale Protocol' => "420% VELOCITY",
                         'Strategic Dominance Engine' => '5.2X ROI ENGINEERED'
                     );
                     update_post_meta($pid, '_portfolio_metric', isset($metrics[$title]) ? $metrics[$title] : 'STRATEGIC ROI');
-                    update_post_meta($pid, '_portfolio_challenge', 'Inconsistent high-ticket lead flow and structural authority leaks.');
-                    update_post_meta($pid, '_portfolio_solution', 'Full-stack high-fidelity architecture build and Vortex funnel implementation.');
-                    update_post_meta($pid, '_portfolio_outcome', 'Absolute market dominance and multi-year attributable revenue growth.');
+                    update_post_meta($pid, '_portfolio_challenge', 'Inconsistent high-ticket lead flow and structural authority leaks that were killing sales velocity.');
+                    update_post_meta($pid, '_portfolio_solution', 'Full-stack high-fidelity architecture build, Vortex automated funnel deployment, and strategic positioning audit.');
+                    update_post_meta($pid, '_portfolio_outcome', 'Absolute market dominance, multi-year attributable growth, and liquidation of manual delivery friction.');
                 }
                 if ($type === 'service') {
-                    update_post_meta($pid, '_service_blueprint', 'Technical Audit, UI/UX Strategy, High-Fidelity Development, CRM Integration');
+                    update_post_meta($pid, '_service_blueprint', 'Technical Diagnostic, UI/UX Strategy, High-Fidelity Development, Vortex Funnel Integration, CRM Optimization');
                 }
-                if ($type === 'product') update_post_meta($pid, '_product_price', '$197');
+                if ($type === 'product') {
+                    update_post_meta($pid, '_product_price', '$997');
+                }
             }
         }
     }
