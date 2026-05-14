@@ -43,7 +43,7 @@ $tag      = get_theme_mod( 'closeclient_services_tag', 'SERVICES' );
                         $blueprint = get_post_meta( get_the_ID(), '_service_blueprint', true );
                         if ( $blueprint ) : ?>
                             <div class="service-blueprint-mini mb-4 opacity-40">
-                                <span class="small fw-black letter-spacing-xs uppercase" style="font-size: 0.5rem;"><?php echo esc_html__( 'CORE_SYSTEM_NODES:', 'closeclient' ); ?></span>
+                                <span class="small fw-black letter-spacing-xs uppercase" style="font-size: 0.5rem;"><?php echo esc_html( get_theme_mod( 'closeclient_label_sys_nodes', 'CORE_SYSTEM_NODES:' ) ); ?></span>
                             </div>
                         <?php endif; ?>
 

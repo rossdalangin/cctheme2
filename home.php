@@ -75,7 +75,7 @@ get_header();
                     ?>
                 </div>
 
-            <?php elseif ( 1 !== $paged ) : ?>
+            <?php else : ?>
                 <?php get_template_part( 'template-parts/content/content-none' ); ?>
             <?php endif; ?>
         </div>

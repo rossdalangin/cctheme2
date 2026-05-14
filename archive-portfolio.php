@@ -24,7 +24,7 @@ get_header();
         $terms = get_terms( array( 'taxonomy' => 'portfolio_cat', 'hide_empty' => true ) );
         if ( ! empty( $terms ) ) : ?>
             <div class="archive-filters mb-5 pb-5 d-flex justify-content-center gap-3 reveal">
-                <a href="<?php echo esc_url( get_post_type_archive_link( 'portfolio' ) ); ?>" class="filter-link glass p-2 px-4 small fw-bold active"><?php echo esc_html__( 'All Stories', 'closeclient' ); ?></a>
+                <a href="<?php echo esc_url( get_post_type_archive_link( 'portfolio' ) ); ?>" class="filter-link glass p-2 px-4 small fw-bold active"><?php echo esc_html( get_theme_mod( 'closeclient_label_all_stories', 'All Stories' ) ); ?></a>
                 <?php foreach ( $terms as $term ) : ?>
                     <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" class="filter-link glass p-2 px-4 small fw-bold"><?php echo esc_html( $term->name ); ?></a>
                 <?php endforeach; ?>
@@ -69,7 +69,7 @@ get_header();
 
                             <div class="portfolio-content-wrap p-5 flex-grow-1 bg-secondary d-flex flex-column border-top border-secondary">
                                 <div class="d-flex justify-content-between align-items-start mb-3">
-                                    <span class="section-tag small mb-0" style="font-size: 0.55rem; padding-left: 0;"><?php echo esc_html__( 'PROTOCOL ANALYSIS', 'closeclient' ); ?></span>
+                                    <span class="section-tag small mb-0" style="font-size: 0.55rem; padding-left: 0;"><?php echo esc_html( get_theme_mod( 'closeclient_label_portfolio_single', 'PROTOCOL ANALYSIS' ) ); ?></span>
                                     <span class="small text-white-50 opacity-20 fw-black">NO.0<?php echo $i; ?></span>
                                 </div>
                                 <h3 class="h3 mb-4 tracking-tighter"><a href="<?php the_permalink(); ?>" class="text-white text-decoration-none hover-text-accent transition-all"><?php the_title(); ?></a></h3>
