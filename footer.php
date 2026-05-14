@@ -75,7 +75,7 @@
                         foreach ( $socials as $social ) :
                             $link = get_theme_mod( "closeclient_social_{$social}", '#' );
                             if ( $link && '#' !== $link ) : ?>
-                                <a href="<?php echo esc_url( $link ); ?>" class="social-icon" target="_blank" rel="noopener">
+                                <a href="<?php echo esc_url( $link ); ?>" class="social-icon" target="_blank" rel="noopener" aria-label="<?php echo esc_attr( ucfirst( $social ) ); ?>">
                                     <?php echo closeclient_get_svg( $social ); ?>
                                 </a>
                             <?php endif;
@@ -145,8 +145,11 @@
                     <div class="footer-system-search mb-4">
                         <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <div class="position-relative">
-                                <input type="search" class="search-field small py-3 ps-4" style="font-size: 0.7rem; border-radius: 8px; letter-spacing: 0.1em; background: rgba(255,255,255,0.02);" placeholder="SEARCH PROTOCOLS..." value="<?php echo get_search_query(); ?>" name="s" />
-                                <button type="submit" class="search-submit social-icon position-absolute end-0 top-0 h-100 border-0 bg-transparent px-3 text-accent" style="width: auto; height: 100%; border-radius: 0;"><?php echo closeclient_get_svg('arrow-right'); ?></button>
+                                <label for="footer-search-field" class="screen-reader-text">Search Protocols</label>
+                                <input type="search" id="footer-search-field" class="search-field small py-3 ps-4" style="font-size: 0.7rem; border-radius: 8px; letter-spacing: 0.1em; background: rgba(255,255,255,0.02);" placeholder="SEARCH PROTOCOLS..." value="<?php echo get_search_query(); ?>" name="s" />
+                                <button type="submit" class="search-submit social-icon position-absolute end-0 top-0 h-100 border-0 bg-transparent px-3 text-accent" style="width: auto; height: 100%; border-radius: 0;" aria-label="Search">
+                                    <?php echo closeclient_get_svg('arrow-right'); ?>
+                                </button>
                             </div>
                         </form>
                     </div>

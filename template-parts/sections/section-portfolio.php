@@ -37,7 +37,11 @@ $tag      = get_theme_mod( 'closeclient_portfolio_tag', 'PROOF OF ARCHITECTURE' 
                         <div class="portfolio-image-wrap position-relative overflow-hidden">
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <a href="<?php the_permalink(); ?>" class="d-block h-100">
-                                    <?php the_post_thumbnail( 'large', array( 'class' => 'w-100 h-100 object-cover transition-all' ) ); ?>
+                                    <?php the_post_thumbnail( 'large', array(
+                                        'class' => 'w-100 h-100 object-cover transition-all',
+                                        'loading' => 'lazy',
+                                        'alt' => the_title_attribute( array( 'echo' => false ) )
+                                    ) ); ?>
                                 </a>
                             <?php else : ?>
                                 <div class="glass h-100 d-flex align-items-center justify-content-center opacity-30">

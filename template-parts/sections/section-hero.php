@@ -26,6 +26,9 @@
                 }
                 ?>
             </span>
+            <?php if ( get_theme_mod( 'closeclient_hero_typewriter', false ) ) : ?>
+                <span class="screen-reader-text"><?php echo esc_html( get_theme_mod( 'closeclient_hero_headline', 'We Engineer High-Fidelity Digital Infrastructure for 8-Figure Authorities.' ) ); ?></span>
+            <?php endif; ?>
         </h1>
 
         <div class="container-narrow">
@@ -41,7 +44,7 @@
 
         <?php if ( get_theme_mod( 'closeclient_hero_image' ) ) : ?>
             <div class="hero-image-box container reveal">
-                <img src="<?php echo esc_url( get_theme_mod( 'closeclient_hero_image' ) ); ?>" alt="Coach Authority" class="aspect-hero">
+                <img src="<?php echo esc_url( get_theme_mod( 'closeclient_hero_image' ) ); ?>" alt="<?php echo esc_attr( get_theme_mod( 'closeclient_hero_headline', 'Coach Authority' ) ); ?>" class="aspect-hero" loading="eager" decoding="async">
             </div>
         <?php endif; ?>
     </div>

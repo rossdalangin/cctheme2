@@ -487,37 +487,76 @@ function closeclient_footer_3_fallback() {
  * Global Schema JSON-LD
  */
 function closeclient_schema_json_ld() {
-    $schema = array(
-        '@context' => 'https://schema.org',
-    );
+    $schemas = array();
 
-    if ( is_front_page() ) {
-        $schema['@type'] = 'ProfessionalService';
-        $schema['name'] = get_bloginfo( 'name' );
-        $schema['url'] = home_url();
-        $schema['description'] = get_bloginfo( 'description' );
-    } elseif ( is_singular( 'service' ) ) {
-        global $post;
-        $schema['@type'] = 'Service';
-        $schema['serviceType'] = get_the_title();
-        $schema['provider'] = array(
-            '@type' => 'LocalBusiness',
-            'name' => get_bloginfo( 'name' )
+    // 1. Organization / Business Schema
+    $org_schema = array(
+        '@context' => 'https://schema.org',
+        '@type'    => 'ProfessionalService',
+        'name'     => get_bloginfo( 'name' ),
+        'url'      => home_url(),
+        'logo'     => has_custom_logo() ? wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), 'full' ) : '',
+        'description' => get_bloginfo( 'description' ),
+        'address'  => array(
+            '@type' => 'PostalAddress',
+            'addressCountry' => 'US'
+        )
+    );
+    $schemas[] = $org_schema;
+
+    // 2. BreadcrumbList Schema
+    if ( ! is_front_page() ) {
+        $breadcrumbs = array(
+            '@context' => 'https://schema.org',
+            '@type'    => 'BreadcrumbList',
+            'itemListElement' => array(
+                array(
+                    '@type' => 'ListItem',
+                    'position' => 1,
+                    'name' => 'Home',
+                    'item' => home_url()
+                )
+            )
         );
-        $schema['description'] = get_the_excerpt();
+
+        if ( is_singular() ) {
+            $breadcrumbs['itemListElement'][] = array(
+                '@type' => 'ListItem',
+                'position' => 2,
+                'name' => get_the_title(),
+                'item' => get_permalink()
+            );
+        }
+        $schemas[] = $breadcrumbs;
+    }
+
+    // 3. Page Specific Schema
+    if ( is_singular( 'service' ) ) {
+        $schemas[] = array(
+            '@context' => 'https://schema.org',
+            '@type' => 'Service',
+            'serviceType' => get_the_title(),
+            'provider' => array(
+                '@type' => 'LocalBusiness',
+                'name' => get_bloginfo( 'name' )
+            ),
+            'description' => get_the_excerpt()
+        );
     } elseif ( is_singular( 'portfolio' ) ) {
-        global $post;
-        $schema['@type'] = 'CreativeWork';
-        $schema['name'] = get_the_title();
-        $schema['description'] = get_the_excerpt();
-        $schema['author'] = array(
-            '@type' => 'Organization',
-            'name' => get_bloginfo( 'name' )
+        $schemas[] = array(
+            '@context' => 'https://schema.org',
+            '@type' => 'CreativeWork',
+            'name' => get_the_title(),
+            'description' => get_the_excerpt(),
+            'author' => array(
+                '@type' => 'Organization',
+                'name' => get_bloginfo( 'name' )
+            )
         );
     }
 
-    if ( count($schema) > 1 ) {
-        echo '<script type="application/ld+json">' . json_encode( $schema ) . '</script>';
+    foreach ( $schemas as $schema ) {
+        echo '<script type="application/ld+json">' . json_encode( $schema ) . '</script>' . "\n";
     }
 }
 add_action( 'wp_head', 'closeclient_schema_json_ld' );
@@ -539,22 +578,53 @@ add_filter( 'user_contactmethods', 'closeclient_user_contact_methods' );
 function closeclient_og_tags() {
     if ( is_singular() ) {
         global $post;
-        echo '<meta property="og:title" content="' . esc_attr( get_the_title() ) . '">';
-        echo '<meta property="og:type" content="article">';
-        echo '<meta property="og:url" content="' . esc_url( get_permalink() ) . '">';
+        echo '<meta property="og:title" content="' . esc_attr( get_the_title() ) . '">' . "\n";
+        echo '<meta property="og:type" content="article">' . "\n";
+        echo '<meta property="og:url" content="' . esc_url( get_permalink() ) . '">' . "\n";
         if ( has_post_thumbnail() ) {
             $img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-            echo '<meta property="og:image" content="' . esc_url( $img[0] ) . '">';
+            echo '<meta property="og:image" content="' . esc_url( $img[0] ) . '">' . "\n";
         }
-        echo '<meta property="og:description" content="' . esc_attr( wp_trim_words( $post->post_excerpt, 25 ) ) . '">';
+        $desc = has_excerpt() ? get_the_excerpt() : wp_trim_words( get_the_content(), 25 );
+        echo '<meta property="og:description" content="' . esc_attr( $desc ) . '">' . "\n";
+
+        // Twitter Cards
+        echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+        echo '<meta name="twitter:title" content="' . esc_attr( get_the_title() ) . '">' . "\n";
+        echo '<meta name="twitter:description" content="' . esc_attr( $desc ) . '">' . "\n";
     } else {
-        echo '<meta property="og:title" content="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
-        echo '<meta property="og:type" content="website">';
-        echo '<meta property="og:url" content="' . esc_url( home_url() ) . '">';
-        echo '<meta property="og:description" content="' . esc_attr( get_bloginfo( 'description' ) ) . '">';
+        echo '<meta property="og:title" content="' . esc_attr( get_bloginfo( 'name' ) ) . '">' . "\n";
+        echo '<meta property="og:type" content="website">' . "\n";
+        echo '<meta property="og:url" content="' . esc_url( home_url() ) . '">' . "\n";
+        echo '<meta property="og:description" content="' . esc_attr( get_bloginfo( 'description' ) ) . '">' . "\n";
     }
 }
 add_action( 'wp_head', 'closeclient_og_tags' );
+
+/**
+ * Defer non-critical scripts for better performance.
+ */
+function closeclient_defer_scripts( $tag, $handle, $src ) {
+    $defer = array( 'closeclient-navigation', 'closeclient-customizer' );
+    if ( in_array( $handle, $defer ) ) {
+        return '<script src="' . $src . '" defer></script>' . "\n";
+    }
+    return $tag;
+}
+add_filter( 'script_loader_tag', 'closeclient_defer_scripts', 10, 3 );
+
+/**
+ * Clean up wp_head for better performance and SEO.
+ */
+function closeclient_cleanup_head() {
+    remove_action( 'wp_head', 'wp_generator' );
+    remove_action( 'wp_head', 'rsd_link' );
+    remove_action( 'wp_head', 'wlwmanifest_link' );
+    remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+}
+add_action( 'init', 'closeclient_cleanup_head' );
 
 /**
  * Register Block Patterns

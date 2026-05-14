@@ -32,14 +32,18 @@ $tag      = get_theme_mod( 'closeclient_team_tag', 'THE BRAIN TRUST' );
                         <div class="member-image-wrapper mb-4">
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <div class="member-image-circle">
-                                    <?php the_post_thumbnail( 'medium', array( 'class' => 'member-img' ) ); ?>
+                                    <?php the_post_thumbnail( 'medium', array(
+                                        'class' => 'member-img',
+                                        'loading' => 'lazy',
+                                        'alt' => the_title_attribute( array( 'echo' => false ) )
+                                    ) ); ?>
                                 </div>
                             <?php else : ?>
                                 <div class="member-image-placeholder"></div>
                             <?php endif; ?>
 
                             <?php if ( $linkedin ) : ?>
-                                <a href="<?php echo esc_url($linkedin); ?>" class="member-social-link" target="_blank" rel="noopener">
+                            <a href="<?php echo esc_url($linkedin); ?>" class="member-social-link" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
                                     <?php echo closeclient_get_svg('linkedin'); ?>
                                 </a>
                             <?php endif; ?>

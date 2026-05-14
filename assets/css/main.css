@@ -81,20 +81,6 @@ body {
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     position: relative;
-    cursor: none;
-}
-
-/* Restore pointer for interactive elements when using custom cursor */
-@media (min-width: 1025px) {
-    a, button, .cursor-pointer, input, textarea, select {
-        cursor: none;
-    }
-}
-
-@media (max-width: 1024px) {
-    body {
-        cursor: auto;
-    }
 }
 
 body::after {
@@ -2170,7 +2156,7 @@ select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmln
     opacity: 1;
 }
 
-.faq-item.faq-open { opacity: 1; transform: none; }
+.faq-item.active { opacity: 1; transform: none; }
 
 /* General Layout Utilities */
 .aspect-square { aspect-ratio: 1/1; }

@@ -66,7 +66,11 @@ $tag      = get_theme_mod( 'closeclient_testimonials_tag', 'THE VALIDATION' );
                             <div class="testimonial-client-v2 d-flex align-items-center gap-4 mt-auto pt-5 border-top border-white-05">
                                 <?php if ( has_post_thumbnail() ) : ?>
                                     <div class="client-avatar-v2">
-                                        <?php the_post_thumbnail( 'thumbnail', array('class' => 'w-100 h-100 object-cover') ); ?>
+                                        <?php the_post_thumbnail( 'thumbnail', array(
+                                            'class' => 'w-100 h-100 object-cover',
+                                            'loading' => 'lazy',
+                                            'alt' => the_title_attribute( array( 'echo' => false ) )
+                                        ) ); ?>
                                     </div>
                                 <?php else : ?>
                                     <div class="client-avatar-v2-placeholder bg-secondary d-flex align-items-center justify-content-center">
