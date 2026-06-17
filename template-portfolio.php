@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying portfolio archives
+ * Template Name: Portfolio Template
  *
  * @package CloseClient
  */
@@ -31,12 +31,20 @@ get_header();
             </div>
         <?php endif; ?>
 
-        <?php if ( have_posts() ) : ?>
+        <?php
+        $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+        $portfolio_query = new WP_Query( array(
+            'post_type'      => 'portfolio',
+            'posts_per_page' => 12,
+            'paged'          => $paged
+        ) );
+
+        if ( $portfolio_query->have_posts() ) : ?>
             <div class="portfolio-grid bento-grid reveal-stagger">
                 <?php
                 $i = 0;
-                while ( have_posts() ) :
-                    the_post();
+                while ( $portfolio_query->have_posts() ) :
+                    $portfolio_query->the_post();
                     $i++;
                     // Custom Bento Distribution: 8-4-4-4-8
                     $span = ( $i % 5 == 1 || $i % 5 == 0 ) ? 'bento-span-8' : 'bento-span-4';
@@ -89,11 +97,16 @@ get_header();
                             </div>
                         </div>
                     </article>
-                <?php endwhile; ?>
+                <?php endwhile; wp_reset_postdata(); ?>
             </div>
 
-            <div class="pagination mt-5 text-center">
-                <?php the_posts_navigation(); ?>
+            <div class="pagination-wrapper mt-5 pt-5 text-center reveal">
+                <?php
+                echo paginate_links( array(
+                    'total'   => $portfolio_query->max_num_pages,
+                    'current' => $paged,
+                ) );
+                ?>
             </div>
         <?php endif; ?>
     </div>

@@ -14,18 +14,25 @@
         <div class="shape shape-2"></div>
     </div>
     <div class="container hero-content-wrapper text-center">
+        <div class="hero-status-bar mb-4 reveal no-reveal">
+            <span class="status-dot"></span>
+            <span class="status-text uppercase letter-spacing-lg small fw-black opacity-50">SYSTEM STATUS: ARCHITECTING DOMINANCE</span>
+        </div>
         <h1 class="hero-headline">
-            <span class="gradient-text <?php echo get_theme_mod( 'closeclient_hero_typewriter', false ) ? 'typewriter-text' : ''; ?>" data-text="<?php echo esc_attr( get_theme_mod( 'closeclient_hero_headline', 'We Architect High-Fidelity Digital Machines for the 1%.' ) ); ?>">
+            <span class="gradient-text <?php echo get_theme_mod( 'closeclient_hero_typewriter', false ) ? 'typewriter-text' : ''; ?>" data-text="<?php echo esc_attr( get_theme_mod( 'closeclient_hero_headline', 'We Engineer High-Fidelity Digital Infrastructure for 8-Figure Authorities.' ) ); ?>">
                 <?php
                 if ( ! get_theme_mod( 'closeclient_hero_typewriter', false ) ) {
-                    echo esc_html( get_theme_mod( 'closeclient_hero_headline', 'We Architect High-Fidelity Digital Machines for the 1%.' ) );
+                    echo esc_html( get_theme_mod( 'closeclient_hero_headline', 'We Engineer High-Fidelity Digital Infrastructure for 8-Figure Authorities.' ) );
                 }
                 ?>
             </span>
+            <?php if ( get_theme_mod( 'closeclient_hero_typewriter', false ) ) : ?>
+                <span class="screen-reader-text"><?php echo esc_html( get_theme_mod( 'closeclient_hero_headline', 'We Engineer High-Fidelity Digital Infrastructure for 8-Figure Authorities.' ) ); ?></span>
+            <?php endif; ?>
         </h1>
 
         <div class="container-narrow">
-            <p class="hero-subheadline"><?php echo esc_html( get_theme_mod( 'closeclient_hero_subheadline', 'Stop settling for "pretty" websites. We engineer high-performance authority engines that pre-qualify, position, and close premium clients — automatically.' ) ); ?></p>
+            <p class="hero-subheadline"><?php echo esc_html( get_theme_mod( 'closeclient_hero_subheadline', 'Stop losing high-ticket revenue to passive, low-authority websites. We architect high-performance digital systems that command market dominance, pre-qualify every prospect, and close premium clients—on autopilot.' ) ); ?></p>
         </div>
 
         <div class="hero-cta mb-5">
@@ -37,7 +44,7 @@
 
         <?php if ( get_theme_mod( 'closeclient_hero_image' ) ) : ?>
             <div class="hero-image-box container reveal">
-                <img src="<?php echo esc_url( get_theme_mod( 'closeclient_hero_image' ) ); ?>" alt="Coach Authority" class="aspect-hero">
+                <img src="<?php echo esc_url( get_theme_mod( 'closeclient_hero_image' ) ); ?>" alt="<?php echo esc_attr( get_theme_mod( 'closeclient_hero_headline', 'Coach Authority' ) ); ?>" class="aspect-hero" loading="eager" decoding="async">
             </div>
         <?php endif; ?>
     </div>

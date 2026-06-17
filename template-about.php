@@ -7,17 +7,17 @@
 
 get_header();
 
-$headline = get_theme_mod( 'closeclient_about_headline_tpl', 'Digital Architects for Elite Brands' );
-$text     = get_theme_mod( 'closeclient_about_text_tpl', 'Engineering digital experiences that command attention and drive exponential growth.' );
+$headline = get_theme_mod( 'closeclient_about_headline_tpl', 'The Architects of Unrivaled Digital Dominance' );
+$text     = get_theme_mod( 'closeclient_about_text_tpl', 'We don\'t build websites; we engineer high-fidelity digital infrastructure that commands absolute market authority, liquidates lead-cost, and scales high-ticket revenue with surgical precision.' );
 ?>
 
-<main id="primary" class="site-main about-page">
+<main class="position-relative overflow-hidden" id="primary" class="site-main about-page"><div class="blueprint-watermark opacity-05">TECHNICAL_BLUEPRINT_V2.0</div>
     <section class="section section-lg template-about-story bg-dark overflow-hidden">
         <div class="mesh-gradient"></div>
         <div class="container">
             <div class="bento-grid reveal">
                 <div class="about-hero-content bento-span-7">
-                    <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_hero_tag', 'OUR MISSION' ) ); ?></span>
+                    <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_hero_tag', 'OUR CORE MISSION' ) ); ?></span>
                     <h1 class="hero-headline gradient-text"><?php echo esc_html( $headline ); ?></h1>
                     <p class="lead text-muted mb-5"><?php echo nl2br( esc_html( $text ) ); ?></p>
                 </div>
@@ -36,11 +36,11 @@ $text     = get_theme_mod( 'closeclient_about_text_tpl', 'Engineering digital ex
         <div class="container reveal">
             <div class="section-header text-center mb-5">
                 <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_values_tag', 'THE CORE VALUES' ) ); ?></span>
-                <h2 class="h1"><?php echo esc_html( get_theme_mod( 'closeclient_about_values_title', 'Engineering Elite Excellence' ) ); ?></h2>
+                <h2 class="h1"><?php echo esc_html( get_theme_mod( 'closeclient_about_values_title', 'The High-Fidelity Standards' ) ); ?></h2>
             </div>
             <div class="bento-grid py-lg">
                 <?php
-                $values = get_theme_mod( 'closeclient_about_values', 'Precision: Data-driven systems, Authority: Strategic positioning, Performance: ROI focused engineering' );
+                $values = get_theme_mod( 'closeclient_about_values', 'Architectural Precision: Data-driven systems, Strategic Dominance: Elite positioning, Exponential Scale: ROI focused engineering' );
                 $items = explode( ',', $values );
                 $i = 0;
                 foreach ( $items as $item ) :
@@ -68,12 +68,12 @@ $text     = get_theme_mod( 'closeclient_about_text_tpl', 'Engineering digital ex
         <div class="container reveal">
             <div class="bento-grid py-lg align-items-stretch">
                 <div class="expertise-content bento-span-6 glass p-5">
-                    <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_expertise_tag', 'THE EXPERTISE' ) ); ?></span>
-                    <h2 class="h2 mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_about_method_title', 'The High-Fidelity Methodology' ) ); ?></h2>
-                    <p class="lead text-muted mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_about_method_text', 'We don\'t just build websites; we engineer authority. Our methodology is rooted in the psychological triggers of high-intent buyers and the technical requirements of modern scale.' ) ); ?></p>
+                    <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_expertise_tag', 'THE SPECIALIZATION' ) ); ?></span>
+                    <h2 class="h2 mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_about_method_title', 'The Proprietary Methodology' ) ); ?></h2>
+                    <p class="lead text-muted mb-4"><?php echo esc_html( get_theme_mod( 'closeclient_about_method_text', 'We don\'t just build websites; we engineer absolute authority. Our proprietary methodology is rooted in the psychological triggers of high-intent, high-ticket buyers and the surgical technical requirements of global scale.' ) ); ?></p>
                     <ul class="list-unstyled mb-0">
                         <?php
-                        $methodology = get_theme_mod( 'closeclient_about_methodology', 'Performance-First Engineering, Psych-Driven UI/UX Design, Conversion-Focused Architecture' );
+                        $methodology = get_theme_mod( 'closeclient_about_methodology', 'Psychological Trigger Engineering, Frictionless UI/UX Systems, Data-Driven Scale Architecture' );
                         $m_items = explode( ',', $methodology );
                         foreach ( $m_items as $m_item ) : ?>
                             <li class="mb-3 d-flex align-items-center"><span class="text-accent me-3">✓</span> <?php echo esc_html( trim( $m_item ) ); ?></li>
@@ -83,11 +83,11 @@ $text     = get_theme_mod( 'closeclient_about_text_tpl', 'Engineering digital ex
                 <div class="expertise-visual bento-span-6 d-grid gap-4">
                     <div class="glass p-5 d-flex flex-column justify-content-center border-accent-soft">
                         <div class="h1 gradient-text mb-2"><?php echo esc_html( get_theme_mod( 'closeclient_about_stat_1_val', '94%' ) ); ?></div>
-                        <p class="small text-muted uppercase letter-spacing-2 fw-bold mb-0"><?php echo esc_html( get_theme_mod( 'closeclient_about_stat_1_label', 'Client Retention Rate' ) ); ?></p>
+                        <p class="small text-muted uppercase letter-spacing-2 fw-bold mb-0"><?php echo esc_html( get_theme_mod( 'closeclient_about_stat_1_label', 'High-Fidelity Retention' ) ); ?></p>
                     </div>
                     <div class="glass p-5 d-flex flex-column justify-content-center border-accent-soft">
                         <div class="h1 gradient-text mb-2"><?php echo esc_html( get_theme_mod( 'closeclient_about_stat_2_val', '$250M+' ) ); ?></div>
-                        <p class="small text-muted uppercase letter-spacing-2 fw-bold mb-0"><?php echo esc_html( get_theme_mod( 'closeclient_about_stat_2_label', 'Revenue Engineered for Clients' ) ); ?></p>
+                        <p class="small text-muted uppercase letter-spacing-2 fw-bold mb-0"><?php echo esc_html( get_theme_mod( 'closeclient_about_stat_2_label', 'Attributable Capital Engineered' ) ); ?></p>
                     </div>
                 </div>
             </div>

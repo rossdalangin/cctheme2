@@ -111,10 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Custom Cursor Logic ---
+    // --- Custom Cursor Logic with Trailing Effect ---
     const cursor = document.createElement('div');
     cursor.className = 'cc-cursor';
+    const cursorDot = document.createElement('div');
+    cursorDot.className = 'cc-cursor-dot';
     document.body.appendChild(cursor);
+    document.body.appendChild(cursorDot);
 
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
@@ -123,22 +126,24 @@ document.addEventListener('DOMContentLoaded', () => {
         mouseX = e.clientX;
         mouseY = e.clientY;
         cursor.style.opacity = '1';
+        cursorDot.style.opacity = '1';
+        cursorDot.style.transform = `translate3d(${mouseX - 2}px, ${mouseY - 2}px, 0)`;
     });
 
     const animateCursor = () => {
-        cursorX += (mouseX - cursorX) * 0.15;
-        cursorY += (mouseY - cursorY) * 0.15;
+        cursorX += (mouseX - cursorX) * 0.1;
+        cursorY += (mouseY - cursorY) * 0.1;
         cursor.style.transform = `translate3d(${cursorX - 10}px, ${cursorY - 10}px, 0)`;
         requestAnimationFrame(animateCursor);
     };
     animateCursor();
 
-    document.querySelectorAll('a, button, .cc-card, .social-icon').forEach(el => {
+    document.querySelectorAll('a, button, .cc-card, .social-icon, .faq-header').forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('is-active'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('is-active'));
     });
 
-    // --- Premium Magnetic Effect with Hardware Acceleration ---
+    // --- Premium Magnetic Effect with Hardware Acceleration & Tilt ---
     const magneticButtons = document.querySelectorAll('.cc-button, .social-icon, .cc-card');
     magneticButtons.forEach(btn => {
         btn.addEventListener('mousemove', (e) => {
@@ -147,14 +152,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const x = (e.clientX - position.left - position.width / 2) * strength;
             const y = (e.clientY - position.top - position.height / 2) * strength;
 
-            btn.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+            const rotateX = (y / (position.height / 2)) * -10; // Max 10deg tilt
+            const rotateY = (x / (position.width / 2)) * 10;
+
+            btn.style.transform = `translate3d(${x}px, ${y}px, 0) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
             btn.style.transition = 'none';
             btn.style.zIndex = '10';
         });
 
         btn.addEventListener('mouseleave', () => {
             btn.style.transition = 'transform 1s cubic-bezier(0.19, 1, 0.22, 1)';
-            btn.style.transform = 'translate3d(0, 0, 0)';
+            btn.style.transform = 'translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg)';
             btn.style.zIndex = '';
         });
     });
@@ -224,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    document.querySelectorAll('a[href="#audit"]').forEach(btn => {
+    document.querySelectorAll('a[href="#audit"], .trigger-audit-modal').forEach(btn => {
         btn.addEventListener('click', openModal);
     });
 
@@ -238,22 +246,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (header) {
             header.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
+                const isOpen = item.classList.contains('faq-open');
 
                 // Close other items
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                        otherItem.querySelector('.faq-header').setAttribute('aria-expanded', 'false');
+                        otherItem.classList.remove('faq-open');
+                        const otherHeader = otherItem.querySelector('.faq-header');
+                        if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
                     }
                 });
 
                 // Toggle current item
-                if (isActive) {
-                    item.classList.remove('active');
+                if (isOpen) {
+                    item.classList.remove('faq-open');
                     header.setAttribute('aria-expanded', 'false');
                 } else {
-                    item.classList.add('active');
+                    item.classList.add('faq-open');
                     header.setAttribute('aria-expanded', 'true');
                 }
             });
@@ -280,6 +289,70 @@ document.addEventListener('DOMContentLoaded', () => {
                 floatingCta.classList.remove('is-visible');
             }
         });
+    }
+
+    // --- Footer Live Clocks ---
+    const updateClocks = () => {
+        const now = new Date();
+        document.querySelectorAll('.live-clock').forEach(clock => {
+            const offset = parseInt(clock.getAttribute('data-offset'));
+            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+            const cityTime = new Date(utc + (3600000 * offset));
+
+            const hours = cityTime.getHours().toString().padStart(2, '0');
+            const minutes = cityTime.getMinutes().toString().padStart(2, '0');
+            clock.innerText = `${hours}:${minutes}`;
+        });
+    };
+    updateClocks();
+    setInterval(updateClocks, 60000);
+
+    // --- Dynamic Diagnostic Readouts ---
+    const latencyVal = document.querySelector('[data-latency]');
+    if (latencyVal) {
+        setInterval(() => {
+            const fluc = (Math.random() * 0.05).toFixed(2);
+            latencyVal.innerText = `${fluc} MS`;
+        }, 3000);
+    }
+
+    const loadVal = document.querySelector('[data-load]');
+    if (loadVal) {
+        setInterval(() => {
+            const load = Math.floor(Math.random() * (22 - 8 + 1)) + 8;
+            loadVal.innerText = `${load}%`;
+        }, 4000);
+    }
+
+    const rxVal = document.querySelector('[data-rx]');
+    const txVal = document.querySelector('[data-tx]');
+    if (rxVal && txVal) {
+        setInterval(() => {
+            rxVal.innerText = (Math.random() * 12).toFixed(1);
+            txVal.innerText = (Math.random() * 5).toFixed(1);
+        }, 2000);
+    }
+
+    // --- Session Timer ---
+    const sessionTimer = document.querySelector('[data-session-timer]');
+    if (sessionTimer) {
+        let seconds = 0;
+        setInterval(() => {
+            seconds++;
+            const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+            const secs = (seconds % 60).toString().padStart(2, '0');
+            sessionTimer.innerText = `${mins}:${secs}`;
+        }, 1000);
+    }
+
+    // --- Encryption Cipher Animation ---
+    const encrCipher = document.querySelector('[data-encryption-cipher]');
+    if (encrCipher) {
+        const ciphers = ['AES-256', 'RSA-4096', 'XOR-64', 'GCM-128', 'SHA-512'];
+        setInterval(() => {
+            const next = ciphers[Math.floor(Math.random() * ciphers.length)];
+            encrCipher.innerText = next;
+        }, 5000);
     }
 });
 

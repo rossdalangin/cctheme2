@@ -5,18 +5,22 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_process_headline', 'The Authority Roadmap' );
+$headline = get_theme_mod( 'closeclient_process_headline', 'The Authority Protocol' );
 $tag      = get_theme_mod( 'closeclient_process_tag', 'OUR PROCESS' );
 ?>
 
-<section id="process" class="section section-lg section-process bg-secondary">
+<section id="process" class="section section-lg section-process bg-secondary overflow-hidden">
     <div class="container">
         <div class="section-header text-center reveal">
+            <div class="d-flex justify-content-center mb-4">
+                <span class="badge bg-accent text-dark rounded-pill py-2 px-4 fw-black letter-spacing-lg" style="font-size: 0.65rem;">HIGH-FIDELITY DEPLOYMENT</span>
+            </div>
             <span class="section-tag"><?php echo esc_html( $tag ); ?></span>
             <h2 class="section-headline gradient-text"><?php echo esc_html( $headline ); ?></h2>
+            <p class="section-subheadline text-muted lead max-w-600 mx-auto opacity-70">The exact architectural roadmap we use to engineer absolute market dominance and scale 8-figure authorities.</p>
         </div>
 
-        <div class="process-list pt-lg">
+        <div class="process-list pt-lg mt-5">
             <?php
             $process_query = new WP_Query( array(
                 'post_type'      => 'process',
@@ -61,8 +65,21 @@ $tag      = get_theme_mod( 'closeclient_process_tag', 'OUR PROCESS' );
             else :
                 // Fallback to Customizer
                 for ( $i = 1; $i <= 3; $i++ ) :
-                    $title = get_theme_mod( "closeclient_process_step_{$i}_title", "Phase $i" );
-                    $text  = get_theme_mod( "closeclient_process_step_{$i}_text", "Description for step $i of your proven roadmap." );
+                    $title = get_theme_mod( "closeclient_process_step_{$i}_title" );
+                    $text  = get_theme_mod( "closeclient_process_step_{$i}_text" );
+
+                    if ( empty($title) ) {
+                        $defaults = array( 1 => 'The Technical Audit', 2 => 'The Ecosystem Build', 3 => 'The Scale Protocol' );
+                        $title = $defaults[$i];
+                    }
+                    if ( empty($text) ) {
+                        $defaults = array(
+                            1 => 'A deep-dive diagnostic scan of your current authority leaks, technical debt, and revenue bottlenecks.',
+                            2 => 'Rapid, high-fidelity installation of your core authority infrastructure, lead filters, and conversion assets.',
+                            3 => 'Continuous technical optimization and strategic traffic injection to reach your $100k/mo+ targets with absolute certainty.'
+                        );
+                        $text = $defaults[$i];
+                    }
                     $align_class = ( $i % 2 == 0 ) ? 'step-right' : 'step-left';
                     ?>
                     <div class="process-step-modern reveal <?php echo esc_attr($align_class); ?>">

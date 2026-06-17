@@ -5,8 +5,8 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_team_headline', 'The Digital Architects' );
-$tag      = get_theme_mod( 'closeclient_team_tag', 'MEET THE TEAM' );
+$headline = get_theme_mod( 'closeclient_team_headline', 'The Strategic Architects' );
+$tag      = get_theme_mod( 'closeclient_team_tag', 'THE BRAIN TRUST' );
 ?>
 
 <section id="team" class="section section-lg section-team bg-secondary">
@@ -32,14 +32,18 @@ $tag      = get_theme_mod( 'closeclient_team_tag', 'MEET THE TEAM' );
                         <div class="member-image-wrapper mb-4">
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <div class="member-image-circle">
-                                    <?php the_post_thumbnail( 'medium', array( 'class' => 'member-img' ) ); ?>
+                                    <?php the_post_thumbnail( 'medium', array(
+                                        'class' => 'member-img',
+                                        'loading' => 'lazy',
+                                        'alt' => the_title_attribute( array( 'echo' => false ) )
+                                    ) ); ?>
                                 </div>
                             <?php else : ?>
                                 <div class="member-image-placeholder"></div>
                             <?php endif; ?>
 
                             <?php if ( $linkedin ) : ?>
-                                <a href="<?php echo esc_url($linkedin); ?>" class="member-social-link" target="_blank" rel="noopener">
+                            <a href="<?php echo esc_url($linkedin); ?>" class="member-social-link" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
                                     <?php echo closeclient_get_svg('linkedin'); ?>
                                 </a>
                             <?php endif; ?>
@@ -58,8 +62,8 @@ $tag      = get_theme_mod( 'closeclient_team_tag', 'MEET THE TEAM' );
             else :
                 // Fallback
                 for ( $i = 1; $i <= 3; $i++ ) :
-                    $name = get_theme_mod( "closeclient_team_{$i}_name", "Expert Architect $i" );
-                    $role = get_theme_mod( "closeclient_team_{$i}_role", "Strategy Lead" );
+                    $name = get_theme_mod( "closeclient_team_{$i}_name", "Julian Thorne" );
+                    $role = get_theme_mod( "closeclient_team_{$i}_role", "Managing Director" );
                     ?>
                     <div class="team-item cc-card glass text-center reveal p-4 p-md-5">
                         <div class="member-image-wrapper mb-4">

@@ -16,9 +16,9 @@
             <?php endif; ?>
         </div>
         <div class="lm-content">
-            <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_lm_tag', 'FREE RESOURCE' ) ); ?></span>
-            <h2 class="section-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_lm_headline', 'The $100M Authority Blueprint' ) ); ?></h2>
-            <p class="section-subheadline lead text-muted mb-5"><?php echo esc_html( get_theme_mod( 'closeclient_lm_subheadline', 'Discover the exact infrastructure used by the world\'s top 1% of experts to scale to high-figures while working fewer hours.' ) ); ?></p>
+            <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_lm_tag', 'FREE STRATEGIC ASSET' ) ); ?></span>
+            <h2 class="section-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_lm_headline', 'The High-Fidelity Authority Blueprint' ) ); ?></h2>
+            <p class="section-subheadline lead text-muted mb-5"><?php echo esc_html( get_theme_mod( 'closeclient_lm_subheadline', 'Discover the exact high-performance infrastructure used by the world\'s top 1% of authorities to scale to 8-figures with mathematical certainty.' ) ); ?></p>
 
             <div class="cf7-integration-wrapper">
                 <?php
@@ -28,12 +28,12 @@
                         <div class="mb-4">
                             <input type="email" name="email" placeholder="Enter your business email" required>
                         </div>
-                        <button type="submit" class="cc-button w-100"><?php echo esc_html( get_theme_mod( 'closeclient_lm_button', 'Access The Blueprint' ) ); ?></button>
+                        <button type="submit" class="cc-button w-100"><?php echo esc_html( get_theme_mod( 'closeclient_lm_button', 'Secure The Blueprint' ) ); ?></button>
                     </form>
                 <?php else : ?>
                     <form class="wpcf7-form">
                         <input type="email" placeholder="Enter your business email" required>
-                        <button type="submit" class="cc-button w-100 mt-4"><?php echo esc_html( get_theme_mod( 'closeclient_lm_button', 'Access The Blueprint' ) ); ?></button>
+                        <button type="submit" class="cc-button w-100 mt-4"><?php echo esc_html( get_theme_mod( 'closeclient_lm_button', 'Secure The Blueprint' ) ); ?></button>
                     </form>
                 <?php endif; ?>
             </div>

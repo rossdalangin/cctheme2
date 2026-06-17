@@ -10,7 +10,7 @@
     <div class="section-divider-top"></div>
     <div class="container container-narrow text-center">
         <p class="section-tag reveal"><?php echo esc_html( get_theme_mod( 'closeclient_vsl_tag', 'EXCLUSIVE STRATEGY TRAINING' ) ); ?></p>
-        <h2 class="section-headline gradient-text reveal"><?php echo esc_html( get_theme_mod( 'closeclient_vsl_headline', 'The Precise Mechanism: Why Most Digital Brands Stagnate (And How to Force Growth)' ) ); ?></h2>
+        <h2 class="section-headline gradient-text reveal"><?php echo esc_html( get_theme_mod( 'closeclient_vsl_headline', 'The High-Fidelity Protocol: Why Your Current Digital Presence is Killing Your Scale (And How to Force Growth)' ) ); ?></h2>
         <div class="vsl-video-container reveal glass p-3 p-md-4 mb-5">
             <?php
             $video_url = get_theme_mod( 'closeclient_vsl_video_url' );
@@ -24,7 +24,7 @@
         </div>
 
         <?php
-        $takeaways = get_theme_mod( 'closeclient_vsl_takeaways', 'The hidden technical bottlenecks, The precise architecture of scale, Engineering a frictionless lead engine' );
+        $takeaways = get_theme_mod( 'closeclient_vsl_takeaways', 'Identifying structural "Authority Leaks", The Precise Architecture of High-Ticket Scale, Engineering a Zero-Friction Lead Acquisition Engine' );
         if ( $takeaways ) : ?>
             <div class="vsl-takeaways reveal mt-5">
                 <h3 class="h6 mb-4 text-white-50 letter-spacing-lg"><?php echo esc_html__( 'CORE STRATEGIC TAKEAWAYS:', 'closeclient' ); ?></h3>

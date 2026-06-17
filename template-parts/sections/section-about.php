@@ -5,10 +5,10 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_about_headline_home', 'We Build High-Performance Digital Infrastructure for the 1%.' );
-$p1 = get_theme_mod( 'closeclient_about_text_p1', 'Most digital agencies focus on "pretty" designs. We focus on engineering high-fidelity digital machines that act as your top-performing sales associates.' );
-$p2 = get_theme_mod( 'closeclient_about_text_p2', 'By combining technical excellence with conversion psychology, we build the infrastructure that allows elite brands to scale without friction.' );
-$btn = get_theme_mod( 'closeclient_about_button_text', 'Explore Our Methodology' );
+$headline = get_theme_mod( 'closeclient_about_headline_home', 'We Architect High-Fidelity Digital Ecosystems for 8-Figure Authorities.' );
+$p1 = get_theme_mod( 'closeclient_about_text_p1', 'Most agencies peddle "pretty" designs that act as a liability. We engineer tactical digital assets that function as your most elite, 24/7 global sales force, pre-selling your expertise before you even enter the room.' );
+$p2 = get_theme_mod( 'closeclient_about_text_p2', 'By fusing surgical technical precision with deep-rooted conversion psychology, we eliminate the structural friction and "authority-debt" that kills high-ticket growth at scale.' );
+$btn = get_theme_mod( 'closeclient_about_button_text', 'Explore the Protocol' );
 $img = get_theme_mod( 'closeclient_about_image' );
 ?>
 
@@ -24,7 +24,7 @@ $img = get_theme_mod( 'closeclient_about_image' );
             </div>
 
             <div class="about-content bento-span-7 glass p-5 p-md-5 reveal">
-                <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_tag_home', 'OUR PHILOSOPHY' ) ); ?></span>
+                <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_about_tag_home', 'THE CORE MECHANISM' ) ); ?></span>
                 <h2 class="section-headline gradient-text mb-5"><?php echo esc_html( $headline ); ?></h2>
                 <div class="about-text mb-5">
                     <p class="lead text-muted mb-4"><?php echo esc_html( $p1 ); ?></p>
@@ -32,7 +32,7 @@ $img = get_theme_mod( 'closeclient_about_image' );
                 </div>
 
                 <?php
-                $methodology = get_theme_mod( 'closeclient_about_methodology', 'Performance-First Engineering, Psych-Driven UI/UX Design, Conversion-Focused Architecture' );
+                $methodology = get_theme_mod( 'closeclient_about_methodology', 'Psychological Trigger Engineering, Frictionless UI/UX Systems, Data-Driven Scale Architecture' );
                 if ( $methodology ) : ?>
                     <div class="about-pillars mb-5 d-flex flex-column gap-3">
                         <?php

@@ -5,8 +5,8 @@
  * @package CloseClient
  */
 
-$headline = get_theme_mod( 'closeclient_products_headline', 'Essential Engineering Tools' );
-$desc     = get_theme_mod( 'closeclient_products_desc', 'Technical assets and templates trusted by elite brands to streamline operations.' );
+$headline = get_theme_mod( 'closeclient_products_headline', 'Strategic Engineering Assets' );
+$desc     = get_theme_mod( 'closeclient_products_desc', 'High-fidelity technical assets and strategic frameworks engineered to liquidate operational friction.' );
 ?>
 
 <section id="products" class="section section-lg section-products bg-dark">

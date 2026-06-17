@@ -7,9 +7,9 @@ This framework is for elite consultants ready to move from "Hustle" to "Infrastr
 *   **Goal**: Reach $30k/mo with a single offer before adding complexity.
 
 ## Pillar 2: The Authority Engine (Your Website)
-*   **Infrastructure**: Deploy the **Success Stories (Portfolio)** and **VSL** sections.
-*   **Conversion**: Use the **Authority Audit** modal to filter out tire-kickers.
-*   **Social Proof**: Curate 3 specific client outcomes that show the *mechanism* of your success.
+*   **Infrastructure**: Deploy the **Success Proof (Portfolio)** and **VSL Protocol** sections.
+*   **Conversion**: Use the **Authority Audit** modal to liquidate lead-cost and filter tire-kickers.
+*   **Social Proof**: Curate 4 high-fidelity client outcomes that show the *mechanism* of your success.
 
 ## Pillar 3: Traffic Stacking
 1.  **Direct Outreach**: Using our `SALES_OUTREACH_SCRIPTS.md`.

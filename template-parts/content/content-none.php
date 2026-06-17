@@ -9,8 +9,8 @@
 <section class="no-results not-found section section-lg text-center reveal">
     <div class="container container-narrow py-xl">
         <header class="page-header mb-5">
-            <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_label_none_tag', 'NO RESULTS' ) ); ?></span>
-            <h1 class="hero-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_label_none_title', 'Nothing Found' ) ); ?></h1>
+            <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_label_none_tag', 'ZERO RESULTS' ) ); ?></span>
+            <h1 class="hero-headline gradient-text"><?php echo esc_html( get_theme_mod( 'closeclient_label_none_title', 'No Strategic Matches Found.' ) ); ?></h1>
         </header>
 
         <div class="page-content glass p-5">
@@ -19,7 +19,7 @@
 
                 printf(
                     '<p class="lead text-muted">' . wp_kses(
-                        get_theme_mod( 'closeclient_label_none_publish_cta', 'Ready to publish your first post? <a href="%1$s" class="text-accent">Get started here</a>.' ),
+                        get_theme_mod( 'closeclient_label_none_publish_cta', 'Ready to initiate your first authority post? <a href="%1$s" class="text-accent">Begin the protocol here</a>.' ),
                         array(
                             'a' => array(
                                 'href' => array(),
@@ -33,7 +33,7 @@
             elseif ( is_search() ) :
                 ?>
 
-                <p class="lead text-muted mb-5"><?php echo esc_html( get_theme_mod( 'closeclient_label_none_search', 'Sorry, but nothing matched your search terms. Please try again with some different keywords.' ) ); ?></p>
+                <p class="lead text-muted mb-5"><?php echo esc_html( get_theme_mod( 'closeclient_label_none_search', 'No strategic matches were found for your query. Refine your keywords or consult the central repository.' ) ); ?></p>
                 <div class="search-form-wrapper max-w-500 mx-auto">
                     <?php get_search_form(); ?>
                 </div>
@@ -42,7 +42,7 @@
             else :
                 ?>
 
-                <p class="lead text-muted mb-5"><?php echo esc_html( get_theme_mod( 'closeclient_label_none_general', 'It seems we can’t find what you’re looking for. Perhaps searching can help.' ) ); ?></p>
+                <p class="lead text-muted mb-5"><?php echo esc_html( get_theme_mod( 'closeclient_label_none_general', 'Our archives do not contain the specific data you are requesting. Refine your parameters or return to the growth hub.' ) ); ?></p>
                 <div class="search-form-wrapper max-w-500 mx-auto">
                     <?php get_search_form(); ?>
                 </div>

@@ -14,26 +14,30 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header section section-lg text-center reveal bg-dark overflow-hidden">
+			<header class="page-header section section-xl text-center reveal bg-dark overflow-hidden">
                 <div class="mesh-gradient"></div>
+                <div class="hero-bg-glow"></div>
                 <div class="container">
-                    <span class="section-tag"><?php echo esc_html( get_theme_mod( 'closeclient_label_archive', 'INSIGHTS ARCHIVE' ) ); ?></span>
+                    <span class="section-tag reveal"><?php echo esc_html( get_theme_mod( 'closeclient_label_archive', 'INTELLECTUAL CAPITAL' ) ); ?></span>
 				<?php
-				the_archive_title( '<h1 class="hero-headline gradient-text">', '</h1>' );
-				the_archive_description( '<div class="archive-description text-muted py-md">', '</div>' );
+				the_archive_title( '<h1 class="hero-headline gradient-text mb-4">', '</h1>' );
+				the_archive_description( '<div class="archive-description text-muted py-md max-w-800 mx-auto fs-5">', '</div>' );
 				?>
                 </div>
 			</header>
 
             <div class="container section">
-			<div class="blog-posts-grid">
-				<?php
-				while ( have_posts() ) :
-					the_post();
-					get_template_part( 'template-parts/content/content', 'archive' );
-				endwhile;
-				?>
-			</div>
+                <div class="blog-layout-wrapper">
+                    <div class="blog-posts-grid">
+                        <?php
+                        while ( have_posts() ) :
+                            the_post();
+                            get_template_part( 'template-parts/content/content', 'archive' );
+                        endwhile;
+                        ?>
+                    </div>
+                    <?php get_sidebar(); ?>
+                </div>
 
                 <div class="pagination-wrapper mt-5 text-center">
                     <?php the_posts_navigation(); ?>

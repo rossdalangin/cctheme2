@@ -41,7 +41,7 @@
 			</nav><!-- #site-navigation -->
 
 			<div class="header-cta">
-				<a href="<?php echo esc_url( get_theme_mod( 'closeclient_header_cta_link', '#audit' ) ); ?>" class="cc-button"><?php echo esc_html( get_theme_mod( 'closeclient_header_cta_text', 'Apply for Your Authority Audit →' ) ); ?></a>
+				<a href="<?php echo esc_url( get_theme_mod( 'closeclient_header_cta_link', '#audit' ) ); ?>" class="cc-button"><?php echo esc_html( get_theme_mod( 'closeclient_header_cta_text', 'Apply for Strategic Audit →' ) ); ?></a>
 			</div>
 		</div>
 	</header><!-- #masthead -->
